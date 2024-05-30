@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_elsa/hobbies.dart';
 import 'assets/constants.dart' as constants;
 
 void main() {
@@ -14,18 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Elsa Demaine',
-      theme: ThemeData(
-        colorScheme: /*ColorScheme(
-          brightness: Brightness.dark,
-          primary: constants.Constants.backgroundThemeColor,
-          onPrimary: constants.Constants.fontThemeColor,
-        )*/
-        ColorScheme.fromSeed(
-          seedColor: constants.Constants.myPurple,
-          brightness: Brightness.dark,
-        ),
-        useMaterial3: true,
-      ),
+      theme: constants.Constants.myTheme(),
       home: const MyHomePage(title: 'Elsa Demaine\'s Portfolio'),
     );
   }
@@ -41,41 +29,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-            tooltip: 'Main menu',
-            icon: Icon(
-              Icons.menu,
-              color: Theme.of(context).colorScheme.onPrimary,
-            ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const MyHobbies();
-                  },
-                ),
-              );
-            },
-          ),
-        ],
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        foregroundColor: Theme.of(context).colorScheme.onPrimary,
-        title: Text(widget.title),
-      ),
+      bottomNavigationBar: constants.Constants.myFooter(context),
+      appBar: constants.Constants.myAppBar(context, widget.title),
       body: LayoutBuilder(builder: (context, constraints) {
         return SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -88,12 +47,12 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 const Text(
                   'You have pushed the button this many times: '
-                      'You have pushed the button this many times:'
-                      'You have pushed the button this many times:'
-                      'You have pushed the button this many times:',
+                  'You have pushed the button this many times: '
+                  'You have pushed the button this many times:'
+                  'You have pushed the button this many times:',
                 ),
                 Text(
-                  '$_counter',
+                  '3',
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ],
@@ -101,11 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       }),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }
