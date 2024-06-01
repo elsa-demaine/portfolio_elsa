@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'assets/constants.dart' as constants;
+import 'package:carousel_slider/carousel_slider.dart';
+import 'constants.dart';
 
 class MyHobbies extends StatefulWidget {
   const MyHobbies({super.key});
@@ -16,8 +16,8 @@ class _MyHobbiesPageState extends State<MyHobbies> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: constants.Constants.myFooter(context),
-      appBar: constants.Constants.myAppBar(context, widget.title),
+      bottomNavigationBar: myFooter(context),
+      appBar: myAppBar(context, widget.title),
               //Navigator.pop(context);
       body: LayoutBuilder(builder: (context, constraints) {
         return SingleChildScrollView(
@@ -53,12 +53,34 @@ class _MyHobbiesPageState extends State<MyHobbies> {
                   width: 500,
                   color: Theme.of(context).colorScheme.tertiary,
                   child: Text(
-                    'Teircery',
+                    'Tertiary',
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.onTertiary,
                   ),
                 ),
                 ),
+                Row (
+                  children: [
+                    const Text('data'),
+                    /*CarouselSlider(
+                      options: CarouselOptions(height: 400.0),
+                      items: [1,2,3,4,5].map((i) {
+                        return Builder(
+                          builder: (BuildContext context) {
+                            return Container(
+                                width: MediaQuery.of(context).size.width,
+                                margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                                decoration: const BoxDecoration(
+                                    color: Colors.amber
+                                ),
+                                child: Text('text $i', style: const TextStyle(fontSize: 16.0),)
+                            );
+                          },
+                        );
+                      }).toList(),
+                    ),*/
+                  ],
+                )
               ],
             ),
           ),

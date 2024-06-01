@@ -1,5 +1,7 @@
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/material.dart';
-import 'assets/constants.dart' as constants;
+import 'constants.dart';
+import 'generated/l10n.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +13,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       title: 'Elsa Demaine',
-      theme: constants.Constants.myTheme(),
+      theme: myTheme(),
       home: const MyHomePage(title: 'Elsa Demaine\'s Portfolio'),
     );
   }
@@ -33,8 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: constants.Constants.myFooter(context),
-      appBar: constants.Constants.myAppBar(context, widget.title),
+      bottomNavigationBar: myFooter(context),
+      appBar: myAppBar(context, widget.title),
       body: LayoutBuilder(builder: (context, constraints) {
         return SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -45,15 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                const Text(
-                  'You have pushed the button this many times: '
-                  'You have pushed the button this many times: '
-                  'You have pushed the button this many times:'
-                  'You have pushed the button this many times:',
-                ),
                 Text(
-                  '3',
-                  style: Theme.of(context).textTheme.headlineMedium,
+                  S.of(context).testLang,
                 ),
               ],
             ),
