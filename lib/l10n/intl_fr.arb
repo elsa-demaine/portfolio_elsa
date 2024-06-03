@@ -1,3 +1,5 @@
 {
-  "testLang": "Test du language français"
+  "textLang": "Text du language français",
+  "textBold": "Voici du <strong>text</strong> en gras",
+  "menu": "Menu"
 }

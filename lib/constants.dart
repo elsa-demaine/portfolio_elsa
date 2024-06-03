@@ -1,6 +1,11 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'hobbies.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import 'generated/l10n.dart';
+import 'hobbies.dart';
 
 const Color myDeepPurple = Color.fromARGB(255, 24, 14, 35);
 const Color myLightPurple = Color.fromARGB(255, 150, 94, 225);
@@ -26,11 +31,20 @@ ThemeData myTheme() {
   );
 }
 
+Map<String, Style> myHtmlStyle = {
+  "b": Style(
+    fontWeight: FontWeight.bold,
+  ),
+  "strong": Style(
+    fontWeight: FontWeight.bold,
+  ),
+};
+
 AppBar myAppBar(BuildContext context, String title) {
   return AppBar(
     actions: [
       IconButton(
-        tooltip: 'Menu',
+        tooltip: S.of(context).menu,
         icon: Icon(
           Icons.menu,
           color: Theme.of(context).colorScheme.onPrimary,
@@ -38,11 +52,7 @@ AppBar myAppBar(BuildContext context, String title) {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(
-              builder: (context) {
-                return const MyHobbies();
-              },
-            ),
+            MaterialPageRoute(builder: (context) =>  const MyHobbies()),
           );
         },
       ),
@@ -93,6 +103,15 @@ Container myFooter(BuildContext context) {
   );
 }
 
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+    PointerDeviceKind.touch,
+    PointerDeviceKind.mouse,
+  };
+}
+
+// Urls
 _launchLinkedInURL() async {
   final Uri url = Uri.parse('https://www.linkedin.com/in/elsa-demaine');
   if (!await launchUrl(url)) {
