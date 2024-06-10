@@ -25,7 +25,7 @@ class _MyHobbiesPageState extends State<MyHobbies> {
           scrollDirection: Axis.vertical,
           padding: const EdgeInsets.all(15),
           children: const [
-             Carousel(),
+            Carousel(),
           ],
         );
       }),

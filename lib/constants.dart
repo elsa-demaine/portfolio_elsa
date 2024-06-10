@@ -12,6 +12,10 @@ const Color myLightPurple = Color.fromARGB(255, 150, 94, 225);
 const Color myLightGreen = Color.fromARGB(255, 0, 204, 125);
 const Color myLightBlue = Color.fromARGB(255, 55, 134, 255);
 
+bool isOrientationWidth(BuildContext context) {
+  return MediaQuery.of(context).size.width > MediaQuery.of(context).size.height;
+}
+
 ThemeData myTheme() {
   return ThemeData(
     colorScheme: const ColorScheme(
