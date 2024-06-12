@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'carousel.dart';
-import 'constants.dart';
+import 'package:portfolio_elsa/carousel.dart';
+import 'package:portfolio_elsa/constants.dart';
+import 'package:portfolio_elsa/routing.dart';
 
 class MyHobbies extends StatefulWidget {
   const MyHobbies({super.key});
@@ -16,7 +16,7 @@ class MyHobbies extends StatefulWidget {
 class _MyHobbiesPageState extends State<MyHobbies> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return RouteAwareWidget( child: Scaffold(
       bottomNavigationBar: myFooter(context),
       appBar: myAppBar(context, widget.title),
       //Navigator.pop(context);
@@ -29,6 +29,7 @@ class _MyHobbiesPageState extends State<MyHobbies> {
           ],
         );
       }),
+    )
     );
   }
 }

@@ -51,31 +51,91 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Texting English Language`
-  String get textLang {
-    return Intl.message(
-      'Texting English Language',
-      name: 'textLang',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `My <strong>text</strong> in bold`
-  String get textBold {
-    return Intl.message(
-      'My <strong>text</strong> in bold',
-      name: 'textBold',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Menu`
   String get menu {
     return Intl.message(
       'Menu',
       name: 'menu',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Experiences`
+  String get experiences {
+    return Intl.message(
+      'Experiences',
+      name: 'experiences',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hobbies`
+  String get hobbies {
+    return Intl.message(
+      'Hobbies',
+      name: 'hobbies',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Github`
+  String get github {
+    return Intl.message(
+      'My Github',
+      name: 'github',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Linkedin`
+  String get linkedin {
+    return Intl.message(
+      'My Linkedin',
+      name: 'linkedin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Okami`
+  String get okami {
+    return Intl.message(
+      'Okami',
+      name: 'okami',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Outer Wilds`
+  String get outerWilds {
+    return Intl.message(
+      'Outer Wilds',
+      name: 'outerWilds',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monster Hunter`
+  String get monsterHunter {
+    return Intl.message(
+      'Monster Hunter',
+      name: 'monsterHunter',
       desc: '',
       args: [],
     );

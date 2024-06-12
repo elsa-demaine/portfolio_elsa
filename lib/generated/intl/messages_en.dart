@@ -22,10 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "experiences": MessageLookupByLibrary.simpleMessage("Experiences"),
+        "github": MessageLookupByLibrary.simpleMessage("My Github"),
+        "hobbies": MessageLookupByLibrary.simpleMessage("Hobbies"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "linkedin": MessageLookupByLibrary.simpleMessage("My Linkedin"),
         "menu": MessageLookupByLibrary.simpleMessage("Menu"),
-        "textBold": MessageLookupByLibrary.simpleMessage(
-            "My <strong>text</strong> in bold"),
-        "textLang":
-            MessageLookupByLibrary.simpleMessage("Texting English Language")
+        "monsterHunter": MessageLookupByLibrary.simpleMessage("Monster Hunter"),
+        "okami": MessageLookupByLibrary.simpleMessage("Okami"),
+        "outerWilds": MessageLookupByLibrary.simpleMessage("Outer Wilds")
       };
 }

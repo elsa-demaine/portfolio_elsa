@@ -1,5 +1,12 @@
 {
-  "textLang": "Text du language français",
-  "textBold": "Voici du <strong>text</strong> en gras",
-  "menu": "Menu"
+  "menu": "Menu",
+  "home": "Accueil",
+  "experience": "Experiences",
+  "hobbies": "Loisirs",
+  "github": "Mon Github",
+  "linkedin": "Mon Linkedin",
+
+  "okami": "Okami",
+  "outerWilds": "Outer Wilds",
+  "monsterHunter": "Monster Hunter"
 }

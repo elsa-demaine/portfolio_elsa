@@ -1,5 +1,12 @@
 {
-  "textLang": "Texting English Language",
-  "textBold": "My <strong>text</strong> in bold",
-  "menu": "Menu"
+  "menu": "Menu",
+  "home": "Home",
+  "experiences": "Experiences",
+  "hobbies": "Hobbies",
+  "github": "My Github",
+  "linkedin": "My Linkedin",
+
+  "okami": "Okami",
+  "outerWilds": "Outer Wilds",
+  "monsterHunter": "Monster Hunter"
 }

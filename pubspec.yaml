@@ -27,6 +27,17 @@ flutter:
   assets:
     - assets/
     - assets/images/
+  fonts:
+    - family: Luciole
+      fonts:
+        - asset: assets/fonts/Luciole-Regular.ttf
+        - asset: assets/fonts/Luciole-Regular-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Luciole-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Luciole-Bold-Italic.ttf
+          style: italic
+          weight: 700
 
 flutter_intl:
   enabled: true
