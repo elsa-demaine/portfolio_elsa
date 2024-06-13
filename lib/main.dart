@@ -46,31 +46,25 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-    return RouteAwareWidget( child: Scaffold(
+    return RouteAwareWidget(
+        child: Scaffold(
       bottomNavigationBar: myFooter(context),
       appBar: myAppBar(context, widget.title),
       body: LayoutBuilder(builder: (context, constraints) {
         return SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.all(15),
-          child: SizedBox(
-            // Width minus padding size so the text is not stuck on right side
-            width: MediaQuery.of(context).size.width - 15,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                titleText(
-                  S.of(context).experiences, null
-                ),
-              ],
-            ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              titleText(S.of(context).experiences, null),
+              normalText(S.of(context).experiences, null),
+            ],
           ),
         );
       }),
-    )
-    );
+    ));
   }
 }

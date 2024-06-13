@@ -1,10 +1,7 @@
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
-
-import 'constants.dart';
-import 'generated/l10n.dart';
+import 'package:portfolio_elsa/constants.dart';
+import 'package:portfolio_elsa/generated/l10n.dart';
 
 class Carousel extends StatefulWidget {
   const Carousel({super.key});
@@ -29,13 +26,9 @@ class _CarouselWithIndicatorState extends State<Carousel> {
       Expanded(
         child: Container(
           margin: const EdgeInsets.all(15),
-          alignment: Alignment.center,
+          alignment: Alignment.centerLeft,
           color: const Color.fromARGB(100, 0, 0, 0),
-          child: Html(
-            shrinkWrap: true,
-            data: text,
-            style: myHtmlStyle,
-            ),
+          child: normalText(text, null),
         )),
     ];
   }
@@ -48,10 +41,10 @@ class _CarouselWithIndicatorState extends State<Carousel> {
           child: isOrientationWidth(context)
                   ? Row(
                       children: carouselItem(
-                          'images/Okami.jpeg', S.of(context).textBold, true))
+                          'images/Okami.jpeg', S.of(context).okami, true))
                   : Column(
                       children: carouselItem(
-                          'images/Okami.jpeg', S.of(context).textBold, false))
+                          'images/Okami.jpeg', S.of(context).okami, false))
               ),
       Container(
           width: MediaQuery.of(context).size.width,
@@ -59,10 +52,10 @@ class _CarouselWithIndicatorState extends State<Carousel> {
           child: isOrientationWidth(context)
                   ? Row(
                       children: carouselItem(
-                          'images/Outer_Wilds.jpeg', S.of(context).textBold, true))
+                          'images/Outer_Wilds.jpeg', S.of(context).outerWilds, true))
                   : Column(
                       children: carouselItem(
-                          'images/Outer_Wilds.jpeg', S.of(context).textBold, false))
+                          'images/Outer_Wilds.jpeg', S.of(context).outerWilds, false))
           ),
       Container(
         width: MediaQuery.of(context).size.width,
@@ -70,10 +63,10 @@ class _CarouselWithIndicatorState extends State<Carousel> {
         child: isOrientationWidth(context)
                 ? Row(
                     children: carouselItem(
-                        'images/MHW.jpeg', S.of(context).textBold, true))
+                        'images/MHW.jpeg', S.of(context).monsterHunter, true))
                 : Column(
                     children: carouselItem(
-                        'images/MHW.jpeg', S.of(context).textBold, false))
+                        'images/MHW.jpeg', S.of(context).monsterHunter, false))
         ),
     ];
   }
@@ -104,8 +97,8 @@ class _CarouselWithIndicatorState extends State<Carousel> {
               return GestureDetector(
                 onTap: () => _controller.animateToPage(entry.key),
                 child: Container(
-                  width: 6.0,
-                  height: 6.0,
+                  width: 8.0,
+                  height: 8.0,
                   margin:
                   const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
                   decoration: BoxDecoration(

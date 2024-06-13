@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_elsa/carousel.dart';
 import 'package:portfolio_elsa/constants.dart';
+import 'package:portfolio_elsa/generated/l10n.dart';
 import 'package:portfolio_elsa/routing.dart';
 
 class MyHobbies extends StatefulWidget {
@@ -19,13 +20,14 @@ class _MyHobbiesPageState extends State<MyHobbies> {
     return RouteAwareWidget( child: Scaffold(
       bottomNavigationBar: myFooter(context),
       appBar: myAppBar(context, widget.title),
-      //Navigator.pop(context);
       body: LayoutBuilder(builder: (context, constraints) {
         return ListView(
           scrollDirection: Axis.vertical,
           padding: const EdgeInsets.all(15),
-          children: const [
-            Carousel(),
+          children: [
+            titleText(S.of(context).experiences, null),
+            normalText(S.of(context).hobbies, null),
+            const Carousel(),
           ],
         );
       }),
