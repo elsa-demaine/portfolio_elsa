@@ -35,7 +35,7 @@ class RouteAwareWidgetState extends State<RouteAwareWidget> with RouteAware {
 
 void navigateTo(BuildContext context, String routeName) {
   final currentRoute = ModalRoute.of(context)?.settings.name;
-  if (currentRoute != routeName) {
+  if (currentRoute != routeName && !(currentRoute == '/' && routeName == '/home')) {
     Navigator.pushNamed(context, routeName);
   }
 }

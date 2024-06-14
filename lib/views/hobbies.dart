@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_elsa/carousel.dart';
-import 'package:portfolio_elsa/constants.dart';
 import 'package:portfolio_elsa/generated/l10n.dart';
-import 'package:portfolio_elsa/routing.dart';
+import 'package:portfolio_elsa/utils/appBar.dart';
+import 'package:portfolio_elsa/utils/custom.dart';
+import 'package:portfolio_elsa/utils/footer.dart';
+import 'package:portfolio_elsa/utils/routing.dart';
+import 'package:portfolio_elsa/views/carousel.dart';
 
 class MyHobbies extends StatefulWidget {
   const MyHobbies({super.key});
@@ -25,8 +27,8 @@ class _MyHobbiesPageState extends State<MyHobbies> {
           scrollDirection: Axis.vertical,
           padding: const EdgeInsets.all(15),
           children: [
-            titleText(S.of(context).experiences, null),
-            normalText(S.of(context).hobbies, null),
+            titleText(S.of(context).experiences),
+            normalText(S.of(context).hobbies),
             const Carousel(),
           ],
         );

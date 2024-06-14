@@ -22,6 +22,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "altecaDates":
+            MessageLookupByLibrary.simpleMessage("March 22 - Ongoing"),
+        "altecaInfos": MessageLookupByLibrary.simpleMessage(
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
+        "altecaTitre": MessageLookupByLibrary.simpleMessage("Alteca"),
         "experiences": MessageLookupByLibrary.simpleMessage("Experiences"),
         "github": MessageLookupByLibrary.simpleMessage("My Github"),
         "hobbies": MessageLookupByLibrary.simpleMessage("Hobbies"),
@@ -30,6 +35,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "menu": MessageLookupByLibrary.simpleMessage("Menu"),
         "monsterHunter": MessageLookupByLibrary.simpleMessage("Monster Hunter"),
         "okami": MessageLookupByLibrary.simpleMessage("Okami"),
-        "outerWilds": MessageLookupByLibrary.simpleMessage("Outer Wilds")
+        "outerWilds": MessageLookupByLibrary.simpleMessage("Outer Wilds"),
+        "skillASP": MessageLookupByLibrary.simpleMessage("ASP.Net"),
+        "skillJira": MessageLookupByLibrary.simpleMessage("Jira"),
+        "skillTrello": MessageLookupByLibrary.simpleMessage("Trello"),
+        "soitecDates":
+            MessageLookupByLibrary.simpleMessage("Sept. 18 - June 20"),
+        "soitecInfos": MessageLookupByLibrary.simpleMessage(
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
+        "soitecTitre": MessageLookupByLibrary.simpleMessage("Soitec")
       };
 }

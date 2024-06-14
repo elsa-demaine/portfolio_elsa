@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_elsa/constants.dart';
 import 'package:portfolio_elsa/generated/l10n.dart';
+import 'package:portfolio_elsa/utils/custom.dart';
 
 class Carousel extends StatefulWidget {
   const Carousel({super.key});
@@ -28,7 +28,7 @@ class _CarouselWithIndicatorState extends State<Carousel> {
           margin: const EdgeInsets.all(15),
           alignment: Alignment.centerLeft,
           color: const Color.fromARGB(100, 0, 0, 0),
-          child: normalText(text, null),
+          child: normalText(text),
         )),
     ];
   }
