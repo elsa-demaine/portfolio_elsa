@@ -27,6 +27,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "altecaInfos": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
         "altecaTitre": MessageLookupByLibrary.simpleMessage("Alteca"),
+        "diplomas": MessageLookupByLibrary.simpleMessage("Diplômes"),
+        "experiencesExpand":
+            MessageLookupByLibrary.simpleMessage("Plus d\'expériences"),
         "github": MessageLookupByLibrary.simpleMessage("Mon Github"),
         "hobbies": MessageLookupByLibrary.simpleMessage("Loisirs"),
         "home": MessageLookupByLibrary.simpleMessage("Accueil"),
@@ -37,6 +40,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "outerWilds": MessageLookupByLibrary.simpleMessage("Outer Wilds"),
         "skillASP": MessageLookupByLibrary.simpleMessage("ASP.Net"),
         "skillJira": MessageLookupByLibrary.simpleMessage("Jira"),
+        "skillTitleHard": MessageLookupByLibrary.simpleMessage("Savoir-faire"),
+        "skillTitleMad":
+            MessageLookupByLibrary.simpleMessage("Compétences originales"),
+        "skillTitleSoft": MessageLookupByLibrary.simpleMessage("Savoir-être"),
         "skillTrello": MessageLookupByLibrary.simpleMessage("Trello"),
         "soitecDates":
             MessageLookupByLibrary.simpleMessage("Sept. 18 - Juin 20"),

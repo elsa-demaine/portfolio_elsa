@@ -5,6 +5,12 @@
 
   "home": "Home",
   "experiences": "Experiences",
+  "experiencesExpand": "More experiences",
+  "diplomas": "Diplomas",
+
+  "skillTitleHard": "Hard Skills",
+  "skillTitleSoft": "Soft Skills",
+  "skillTitleMad": "Mad Skills",
 
   "skillASP": "ASP.Net",
   "skillJira": "Jira",

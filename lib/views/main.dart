@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:portfolio_elsa/generated/l10n.dart';
-import 'package:portfolio_elsa/utils/appBar.dart';
-import 'package:portfolio_elsa/utils/custom.dart';
-import 'package:portfolio_elsa/utils/footer.dart';
-import 'package:portfolio_elsa/utils/routing.dart';
-import 'package:portfolio_elsa/utils/theme.dart';
+import 'package:portfolio_elsa/utils/all.dart';
 import 'package:portfolio_elsa/views/hobbies.dart';
 
 void main() {
@@ -28,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       scrollBehavior: MyCustomScrollBehavior(),
       title: 'Elsa Demaine',
-      theme: myTheme(),
+      theme: myTheme(context),
       home: const MyHomePage(),
       navigatorObservers: [routeObserver],
       routes: {
@@ -49,6 +45,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool isExpanded = false;
+
   @override
   Widget build(BuildContext context) {
     return RouteAwareWidget(
@@ -64,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Row(
                 children: [
-                  Image.asset('images/Logo_ED_Grand.png', width: MediaQuery.of(context).size.width * .25,),
+                  Image.asset('images/Logo_ED_Big.png', width: MediaQuery.of(context).size.width * .25,),
                   Column(
                     children: [
                       titleText(S.of(context).experiences),
@@ -75,165 +73,133 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
 
               titleText(S.of(context).experiences),
+              skillsTable(context, [
+                Skill(name: S.of(context).skillASP, type: SkillType.hard),
+                Skill(name: S.of(context).skillJira, type: SkillType.soft),
+                Skill(name: S.of(context).skillTrello, type: SkillType.mad),
+              ]),
+
+              titleText(S.of(context).experiences),
 
               Divider(
                 thickness: 2,
                 color: Theme.of(context).colorScheme.onPrimary,
               ),
               ExpItem(
-                  business: S.of(context).altecaTitre,
-                  dates: S.of(context).altecaDates,
-                  infos: S.of(context).altecaInfos,
-                  imageName: 'images/Alteca.png',
-                  isPair: false,
-                  skills: [S.of(context).skillASP, S.of(context).skillJira, S.of(context).skillTrello]
+                business: S.of(context).altecaTitre,
+                dates: S.of(context).altecaDates,
+                infos: S.of(context).altecaInfos,
+                imageName: 'images/Alteca.png',
+                isPair: false,
+                skills: [
+                  Skill(name: S.of(context).skillASP, type: SkillType.hard),
+                  Skill(name: S.of(context).skillJira, type: SkillType.soft),
+                  Skill(name: S.of(context).skillTrello, type: SkillType.mad),
+                ],
               ),
               Divider(
                 thickness: 2,
                 color: Theme.of(context).colorScheme.onPrimary,
               ),
               ExpItem(
-                  business: S.of(context).soitecTitre,
-                  dates: S.of(context).soitecDates,
-                  infos: S.of(context).soitecInfos,
-                  imageName: Theme.of(context).brightness == Brightness.light ?
-                    'images/Soitec2.png': 'images/Soitec.png',
-                  isPair: true,
-                  skills: [S.of(context).skillASP, S.of(context).skillJira, S.of(context).skillTrello]
+                business: S.of(context).soitecTitre,
+                dates: S.of(context).soitecDates,
+                infos: S.of(context).soitecInfos,
+                imageName: Theme.of(context).brightness == Brightness.light ?
+                  'images/Soitec2.png': 'images/Soitec.png',
+                isPair: true,
+                skills: [
+                  Skill(name: S.of(context).skillASP, type: SkillType.hard),
+                  Skill(name: S.of(context).skillJira, type: SkillType.soft),
+                  Skill(name: S.of(context).skillTrello, type: SkillType.mad),
+                ],
               ),
               Divider(
                 thickness: 2,
                 color: Theme.of(context).colorScheme.onPrimary,
               ),
+
+              ExpansionTile(
+                title: Text(
+                  S.of(context).experiencesExpand,
+                  style: const TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                trailing: Icon(
+                    isExpanded ?
+                      Icons.keyboard_arrow_up_rounded :
+                      Icons.keyboard_arrow_down_rounded,
+                  color: Theme.of(context).colorScheme.onPrimary,
+                  size: 30,
+                ),
+                onExpansionChanged: (bool expanded) {
+                  setState(() {
+                    isExpanded = expanded;
+                  });
+                },
+                children: [
+                  Divider(
+                    thickness: 2,
+                    color: Theme.of(context).colorScheme.onPrimary,
+                  ),
+                  ExpItem(
+                    business: S.of(context).altecaTitre,
+                    dates: S.of(context).altecaDates,
+                    infos: S.of(context).altecaInfos,
+                    imageName: 'images/Alteca.png',
+                    isPair: true,
+                    skills: [
+                      Skill(name: S.of(context).skillASP, type: SkillType.hard),
+                      Skill(name: S.of(context).skillJira, type: SkillType.soft),
+                      Skill(name: S.of(context).skillTrello, type: SkillType.mad),
+                    ],
+                  ),
+                  Divider(
+                    thickness: 2,
+                    color: Theme.of(context).colorScheme.onPrimary,
+                  ),
+                  ExpItem(
+                    business: S.of(context).soitecTitre,
+                    dates: S.of(context).soitecDates,
+                    infos: S.of(context).soitecInfos,
+                    imageName: Theme.of(context).brightness == Brightness.light ?
+                    'images/Soitec2.png': 'images/Soitec.png',
+                    isPair: false,
+                    skills: [
+                      Skill(name: S.of(context).skillASP, type: SkillType.hard),
+                      Skill(name: S.of(context).skillJira, type: SkillType.soft),
+                      Skill(name: S.of(context).skillTrello, type: SkillType.mad),
+                    ],
+                  ),
+                  Divider(
+                    thickness: 2,
+                    color: Theme.of(context).colorScheme.onPrimary,
+                  ),
+                  const SizedBox(height: 10,),
+                ],
+              ),
+
+              titleText(S.of(context).diplomas),
+              Divider(
+                thickness: 2,
+                color: Theme.of(context).colorScheme.onPrimary,
+              ),
+              Column(
+                children: [
+                  normalText(S.of(context).diplomas),
+                  normalText(S.of(context).diplomas),
+                ],
+              ),
+              Divider(
+                thickness: 2,
+                color: Theme.of(context).colorScheme.onPrimary,
+              ),
+
             ],
           ),
         );
       }),
     ));
-  }
-}
-
-class ExpItem extends StatefulWidget {
-  final String business;
-  final String dates;
-  final String infos;
-  final String imageName;
-  final bool isPair;
-  final List<String> skills;
-
-  const ExpItem({
-    super.key,
-    required this.business,
-    required this.dates,
-    required this.infos,
-    required this.imageName,
-    required this.isPair,
-    required this.skills
-  });
-
-  @override
-  ExpItemState createState() => ExpItemState();
-}
-
-class ExpItemState extends State<ExpItem> {
-
-  @override
-  Widget build(BuildContext context) {
-    bool orientation = isOrientationWidth(context);
-
-    if(orientation && !widget.isPair) {
-      return Row(
-        children: [
-          Image.asset(
-            widget.imageName,
-            width: MediaQuery.of(context).size.width * .25,
-          ),
-          Flexible(
-            child: Container(
-              decoration: BoxDecoration(
-                border: Border(
-                  left: BorderSide(
-                      width: 2,
-                      color: Theme.of(context).colorScheme.onPrimary
-                  ),
-                ),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  normalText(widget.business),
-                  normalText(widget.dates),
-                  normalText(widget.infos),
-                  Row(children: widget.skills.map((skill) => normalText(skill)).toList()),
-                ],
-              ),
-            ),
-          ),
-        ],
-      );
-    }
-    else if(orientation && widget.isPair) {
-      return Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Flexible(
-            child: Container(
-              decoration: BoxDecoration(
-                border: Border(
-                  right: BorderSide(
-                      width: 2,
-                      color: Theme.of(context).colorScheme.onPrimary
-                  ),
-                ),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  normalText(widget.business),
-                  normalText(widget.dates),
-                  //normalText(widget.infos),
-                  normalText("<div style='text-align: right'>${widget.infos}<div//>"),
-                  Row(mainAxisAlignment: MainAxisAlignment.end, children: widget.skills.map((skill) => normalText(skill)).toList()),
-                ],
-              ),
-            ),
-          ),
-          Image.asset(
-            widget.imageName,
-            width: MediaQuery.of(context).size.width * .25,
-          ),
-        ],
-      );
-    }
-    else {
-      return Column(
-        children: [
-          Row(
-            children: [
-              Image.asset(
-                widget.imageName,
-                width: MediaQuery.of(context).size.width * .5,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  normalText(widget.business),
-                  normalText(widget.dates),
-                ],
-              ),
-            ],
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              normalText(widget.infos),
-              Row(children: widget.skills.map((skill) => normalText(skill)).toList()),
-            ],
-          ),
-        ],
-      );
-    }
   }
 }

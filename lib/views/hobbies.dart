@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_elsa/generated/l10n.dart';
-import 'package:portfolio_elsa/utils/appBar.dart';
-import 'package:portfolio_elsa/utils/custom.dart';
-import 'package:portfolio_elsa/utils/footer.dart';
-import 'package:portfolio_elsa/utils/routing.dart';
+import 'package:portfolio_elsa/utils/all.dart';
 import 'package:portfolio_elsa/views/carousel.dart';
 
 class MyHobbies extends StatefulWidget {

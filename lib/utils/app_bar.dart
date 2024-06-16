@@ -44,15 +44,15 @@ AppBar myAppBar(BuildContext context, String title) {
             ),
             itemBuilder: (BuildContext context) => <PopupMenuEntry>[
               PopupMenuItem(
-                  child: ListTile(
-                    hoverColor: Colors.transparent,
-                    textColor: Theme.of(context).colorScheme.onSecondary,
-                    title: Text(S.of(context).home, textAlign: TextAlign.center),
-                    onTap: () {
-                      Navigator.of(context).pop();
-                      navigateTo(context, "/home");
-                    },
-                  )),
+                child: ListTile(
+                  hoverColor: Colors.transparent,
+                  textColor: Theme.of(context).colorScheme.onSecondary,
+                  title: Text(S.of(context).home, textAlign: TextAlign.center),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    navigateTo(context, "/home");
+                  },
+                )),
               PopupMenuItem(
                 child: ListTile(
                   hoverColor: Colors.transparent,

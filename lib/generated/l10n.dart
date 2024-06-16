@@ -101,6 +101,56 @@ class S {
     );
   }
 
+  /// `More experiences`
+  String get experiencesExpand {
+    return Intl.message(
+      'More experiences',
+      name: 'experiencesExpand',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diplomas`
+  String get diplomas {
+    return Intl.message(
+      'Diplomas',
+      name: 'diplomas',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hard Skills`
+  String get skillTitleHard {
+    return Intl.message(
+      'Hard Skills',
+      name: 'skillTitleHard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Soft Skills`
+  String get skillTitleSoft {
+    return Intl.message(
+      'Soft Skills',
+      name: 'skillTitleSoft',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mad Skills`
+  String get skillTitleMad {
+    return Intl.message(
+      'Mad Skills',
+      name: 'skillTitleMad',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `ASP.Net`
   String get skillASP {
     return Intl.message(

@@ -4,7 +4,13 @@
   "linkedin": "Mon Linkedin",
 
   "home": "Accueil",
-  "experience": "Experiences",
+  "experience": "Expériences",
+  "experiencesExpand": "Plus d'expériences",
+  "diplomas": "Diplômes",
+
+  "skillTitleHard": "Savoir-faire",
+  "skillTitleSoft": "Savoir-être",
+  "skillTitleMad": "Compétences originales",
 
   "skillASP": "ASP.Net",
   "skillJira": "Jira",
