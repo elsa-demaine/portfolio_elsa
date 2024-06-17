@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_elsa/Utils/routing.dart';
 import 'package:portfolio_elsa/generated/l10n.dart';
+import 'package:portfolio_elsa/utils/all.dart';
 
 AppBar myAppBar(BuildContext context, String title) {
+  bool isDark = darkNotifier.value;
+
   return AppBar(
     automaticallyImplyLeading: false,
     title:
@@ -19,6 +21,10 @@ AppBar myAppBar(BuildContext context, String title) {
     backgroundColor: Theme.of(context).colorScheme.primary,
     foregroundColor: Theme.of(context).colorScheme.onPrimary,
     actions: [
+      Transform.scale(
+        scale: .75,
+        child: const DropdownLang(),
+      ),
       MenuBar(
         style: const MenuStyle(
           backgroundColor: WidgetStatePropertyAll<Color>(Colors.transparent),
@@ -45,9 +51,12 @@ AppBar myAppBar(BuildContext context, String title) {
             itemBuilder: (BuildContext context) => <PopupMenuEntry>[
               PopupMenuItem(
                 child: ListTile(
+                  //Align text with switch widget
+                  leading: const Spacer(),
                   hoverColor: Colors.transparent,
-                  textColor: Theme.of(context).colorScheme.onSecondary,
-                  title: Text(S.of(context).home, textAlign: TextAlign.center),
+                  title: Text(S.of(context).home),
+                  //Align text with switch widget
+                  trailing: const Spacer(),
                   onTap: () {
                     Navigator.of(context).pop();
                     navigateTo(context, "/home");
@@ -55,13 +64,35 @@ AppBar myAppBar(BuildContext context, String title) {
                 )),
               PopupMenuItem(
                 child: ListTile(
+                  //Align text with switch widget
+                  leading: const Spacer(),
                   hoverColor: Colors.transparent,
-                  textColor: Theme.of(context).colorScheme.onSecondary,
-                  title:
-                  Text(S.of(context).hobbies, textAlign: TextAlign.center),
+                  title: Text(S.of(context).hobbies),
+                  //Align text with switch widget
+                  trailing: const Spacer(),
                   onTap: () {
                     Navigator.of(context).pop();
                     navigateTo(context, "/hobbies");
+                  },
+                ),
+              ),
+              PopupMenuItem(
+                child: SwitchListTile.adaptive(
+                  hoverColor: Colors.transparent,
+                  title: Text(S.of(context).theme),
+                  secondary: const Icon(Icons.brightness_medium_sharp),
+                  thumbColor: WidgetStatePropertyAll(Theme.of(context).colorScheme.onTertiary ),
+                  thumbIcon: WidgetStatePropertyAll(
+                    isDark ?
+                      Icon(Icons.dark_mode_sharp, color: Theme.of(context).colorScheme.tertiary,) :
+                      Icon(Icons.light_mode_sharp, color: Theme.of(context).colorScheme.tertiary,),
+                  ),
+                  inactiveTrackColor: Theme.of(context).colorScheme.tertiary,
+                  value: isDark,
+                  onChanged: (bool? value) {
+                    isDark = !isDark;
+                    darkNotifier.value = isDark;
+                    Navigator.of(context).pop();
                   },
                 ),
               ),

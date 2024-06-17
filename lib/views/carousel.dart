@@ -31,7 +31,7 @@ class _CarouselWithIndicatorState extends State<Carousel> {
           margin: const EdgeInsets.all(15),
           alignment: Alignment.centerLeft,
           color: const Color.fromARGB(75, 0, 0, 0),
-          child: isLight ? normalText(text, lightText) : normalText(text),
+          child: isLight ? htmlText(text, lightText) : htmlText(text),
         )),
     ];
   }

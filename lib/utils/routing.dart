@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import '../generated/l10n.dart';
 
 final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 
@@ -36,6 +39,20 @@ class RouteAwareWidgetState extends State<RouteAwareWidget> with RouteAware {
 void navigateTo(BuildContext context, String routeName) {
   final currentRoute = ModalRoute.of(context)?.settings.name;
   if (currentRoute != routeName && !(currentRoute == '/' && routeName == '/home')) {
+    setPageTitle(routeName, context);
     Navigator.pushNamed(context, routeName);
   }
+}
+
+void setPageTitle(String routeName, BuildContext context) {
+  String title = switch(routeName) {
+    '/home' => S.of(context).home,
+    '/hobbies' => S.of(context).hobbies,
+    _ => S.of(context).home,
+  };
+
+  SystemChrome.setApplicationSwitcherDescription(ApplicationSwitcherDescription(
+    label: "${S.of(context).appTitle} - $title",
+    primaryColor: Theme.of(context).primaryColor.value, // This line is required
+  ));
 }

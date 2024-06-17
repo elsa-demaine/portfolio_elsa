@@ -51,6 +51,26 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Elsa Demaine`
+  String get appTitle {
+    return Intl.message(
+      'Elsa Demaine',
+      name: 'appTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Theme`
+  String get theme {
+    return Intl.message(
+      'Theme',
+      name: 'theme',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Menu`
   String get menu {
     return Intl.message(

@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "altecaInfos": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
         "altecaTitre": MessageLookupByLibrary.simpleMessage("Alteca"),
+        "appTitle": MessageLookupByLibrary.simpleMessage("Elsa Demaine"),
         "diplomas": MessageLookupByLibrary.simpleMessage("Diplomas"),
         "experiences": MessageLookupByLibrary.simpleMessage("Experiences"),
         "experiencesExpand":
@@ -49,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sept. 18 - June 20"),
         "soitecInfos": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
-        "soitecTitre": MessageLookupByLibrary.simpleMessage("Soitec")
+        "soitecTitre": MessageLookupByLibrary.simpleMessage("Soitec"),
+        "theme": MessageLookupByLibrary.simpleMessage("Theme")
       };
 }

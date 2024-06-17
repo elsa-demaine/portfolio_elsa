@@ -1,205 +1,84 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:portfolio_elsa/generated/l10n.dart';
 import 'package:portfolio_elsa/utils/all.dart';
 import 'package:portfolio_elsa/views/hobbies.dart';
+import 'package:portfolio_elsa/views/home.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+
+  static void setLocale(BuildContext context, Locale newLocale) {
+    _MyAppState? state = context.findAncestorStateOfType<_MyAppState>();
+    state?.setLocale(newLocale);
+  }
+}
+
+class _MyAppState extends State<MyApp> {
+  Locale? _locale;
+
+  setLocale(Locale locale) {
+    setState(() {
+      _locale = locale;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      localizationsDelegates: const [
-        S.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: S.delegate.supportedLocales,
-      debugShowCheckedModeBanner: false,
-      scrollBehavior: MyCustomScrollBehavior(),
-      title: 'Elsa Demaine',
-      theme: myTheme(context),
-      home: const MyHomePage(),
-      navigatorObservers: [routeObserver],
-      routes: {
-        '/home': (context) => const MyHomePage(),
-        '/hobbies': (context) => const MyHobbies(),
+    return ValueListenableBuilder<bool>(
+      valueListenable: darkNotifier,
+      builder: (BuildContext context, bool isDark, Widget? child) {
+        return MaterialApp(
+          localizationsDelegates: const [
+            S.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
+          locale: _locale,
+          debugShowCheckedModeBanner: false,
+          scrollBehavior: MyCustomScrollBehavior(),
+          title: 'Elsa Demaine',
+          theme: myLightTheme(context),
+          darkTheme: myDarkTheme(context),
+          themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
+          home: const MyHomePage(),
+          navigatorObservers: [routeObserver],
+          routes: {
+            '/home': (context) => const MyHomePage(),
+            '/hobbies': (context) => const MyHobbies(),
+          },
+        );
       },
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class ThemeModel with ChangeNotifier {
+  ThemeMode _mode;
+  ThemeMode get mode => _mode;
+  ThemeModel({ThemeMode mode = ThemeMode.light}) : _mode = mode;
 
-  final String title = 'Elsa Demaine\'s Portfolio';
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  void toggleMode() {
+    _mode = _mode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+    notifyListeners();
+  }
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  bool isExpanded = false;
-
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
   @override
-  Widget build(BuildContext context) {
-    return RouteAwareWidget(
-      child: Scaffold(
-      bottomNavigationBar: myFooter(context),
-      appBar: myAppBar(context, widget.title),
-      body: LayoutBuilder(builder: (context, constraints) {
-        return SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          padding: const EdgeInsets.all(15),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Row(
-                children: [
-                  Image.asset('images/Logo_ED_Big.png', width: MediaQuery.of(context).size.width * .25,),
-                  Column(
-                    children: [
-                      titleText(S.of(context).experiences),
-                      normalText(S.of(context).experiences),
-                    ],
-                  ),
-                ],
-              ),
-
-              titleText(S.of(context).experiences),
-              skillsTable(context, [
-                Skill(name: S.of(context).skillASP, type: SkillType.hard),
-                Skill(name: S.of(context).skillJira, type: SkillType.soft),
-                Skill(name: S.of(context).skillTrello, type: SkillType.mad),
-              ]),
-
-              titleText(S.of(context).experiences),
-
-              Divider(
-                thickness: 2,
-                color: Theme.of(context).colorScheme.onPrimary,
-              ),
-              ExpItem(
-                business: S.of(context).altecaTitre,
-                dates: S.of(context).altecaDates,
-                infos: S.of(context).altecaInfos,
-                imageName: 'images/Alteca.png',
-                isPair: false,
-                skills: [
-                  Skill(name: S.of(context).skillASP, type: SkillType.hard),
-                  Skill(name: S.of(context).skillJira, type: SkillType.soft),
-                  Skill(name: S.of(context).skillTrello, type: SkillType.mad),
-                ],
-              ),
-              Divider(
-                thickness: 2,
-                color: Theme.of(context).colorScheme.onPrimary,
-              ),
-              ExpItem(
-                business: S.of(context).soitecTitre,
-                dates: S.of(context).soitecDates,
-                infos: S.of(context).soitecInfos,
-                imageName: Theme.of(context).brightness == Brightness.light ?
-                  'images/Soitec2.png': 'images/Soitec.png',
-                isPair: true,
-                skills: [
-                  Skill(name: S.of(context).skillASP, type: SkillType.hard),
-                  Skill(name: S.of(context).skillJira, type: SkillType.soft),
-                  Skill(name: S.of(context).skillTrello, type: SkillType.mad),
-                ],
-              ),
-              Divider(
-                thickness: 2,
-                color: Theme.of(context).colorScheme.onPrimary,
-              ),
-
-              ExpansionTile(
-                title: Text(
-                  S.of(context).experiencesExpand,
-                  style: const TextStyle(
-                    fontSize: 20,
-                  ),
-                ),
-                trailing: Icon(
-                    isExpanded ?
-                      Icons.keyboard_arrow_up_rounded :
-                      Icons.keyboard_arrow_down_rounded,
-                  color: Theme.of(context).colorScheme.onPrimary,
-                  size: 30,
-                ),
-                onExpansionChanged: (bool expanded) {
-                  setState(() {
-                    isExpanded = expanded;
-                  });
-                },
-                children: [
-                  Divider(
-                    thickness: 2,
-                    color: Theme.of(context).colorScheme.onPrimary,
-                  ),
-                  ExpItem(
-                    business: S.of(context).altecaTitre,
-                    dates: S.of(context).altecaDates,
-                    infos: S.of(context).altecaInfos,
-                    imageName: 'images/Alteca.png',
-                    isPair: true,
-                    skills: [
-                      Skill(name: S.of(context).skillASP, type: SkillType.hard),
-                      Skill(name: S.of(context).skillJira, type: SkillType.soft),
-                      Skill(name: S.of(context).skillTrello, type: SkillType.mad),
-                    ],
-                  ),
-                  Divider(
-                    thickness: 2,
-                    color: Theme.of(context).colorScheme.onPrimary,
-                  ),
-                  ExpItem(
-                    business: S.of(context).soitecTitre,
-                    dates: S.of(context).soitecDates,
-                    infos: S.of(context).soitecInfos,
-                    imageName: Theme.of(context).brightness == Brightness.light ?
-                    'images/Soitec2.png': 'images/Soitec.png',
-                    isPair: false,
-                    skills: [
-                      Skill(name: S.of(context).skillASP, type: SkillType.hard),
-                      Skill(name: S.of(context).skillJira, type: SkillType.soft),
-                      Skill(name: S.of(context).skillTrello, type: SkillType.mad),
-                    ],
-                  ),
-                  Divider(
-                    thickness: 2,
-                    color: Theme.of(context).colorScheme.onPrimary,
-                  ),
-                  const SizedBox(height: 10,),
-                ],
-              ),
-
-              titleText(S.of(context).diplomas),
-              Divider(
-                thickness: 2,
-                color: Theme.of(context).colorScheme.onPrimary,
-              ),
-              Column(
-                children: [
-                  normalText(S.of(context).diplomas),
-                  normalText(S.of(context).diplomas),
-                ],
-              ),
-              Divider(
-                thickness: 2,
-                color: Theme.of(context).colorScheme.onPrimary,
-              ),
-
-            ],
-          ),
-        );
-      }),
-    ));
-  }
+  Set<PointerDeviceKind> get dragDevices => {
+    PointerDeviceKind.touch,
+    PointerDeviceKind.mouse,
+  };
 }
