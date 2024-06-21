@@ -37,39 +37,42 @@ class _CarouselWithIndicatorState extends State<Carousel> {
   }
 
   List<Widget> myCarouselList(BuildContext context) {
+    S l = S.of(context);
+    Size m = MediaQuery.of(context).size;
+
     return [
       Container(
-          width: MediaQuery.of(context).size.width,
+          width: m.width,
           color: const Color.fromARGB(255, 232, 197, 100),
           child: isOrientationWidth(context)
                   ? Row(
                       children: carouselItem(
-                          'images/Okami.jpeg', S.of(context).okami, true, false))
+                          'assets/images/Okami.jpeg', l.okami, true, false))
                   : Column(
                       children: carouselItem(
-                          'images/Okami.jpeg', S.of(context).okami, false, false))
+                          'assets/images/Okami.jpeg',l.okami, false, false))
               ),
       Container(
-          width: MediaQuery.of(context).size.width,
+          width: m.width,
           color: const Color.fromARGB(255, 23, 48, 69),
           child: isOrientationWidth(context)
                   ? Row(
                       children: carouselItem(
-                          'images/Outer_Wilds.jpeg', S.of(context).outerWilds, true, true))
+                          'assets/images/Outer_Wilds.jpeg', l.outerWilds, true, true))
                   : Column(
                       children: carouselItem(
-                          'images/Outer_Wilds.jpeg', S.of(context).outerWilds, false, true))
+                          'assets/images/Outer_Wilds.jpeg', l.outerWilds, false, true))
           ),
       Container(
-        width: MediaQuery.of(context).size.width,
+        width: m.width,
         color: const Color.fromARGB(255, 113, 158, 218),
         child: isOrientationWidth(context)
                 ? Row(
                     children: carouselItem(
-                        'images/MHW.jpeg', S.of(context).monsterHunter, true, false))
+                        'assets/images/MHW.jpeg', l.monsterHunter, true, false))
                 : Column(
                     children: carouselItem(
-                        'images/MHW.jpeg', S.of(context).monsterHunter, false, false))
+                        'assets/images/MHW.jpeg',l.monsterHunter, false, false))
         ),
     ];
   }

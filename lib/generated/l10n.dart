@@ -51,6 +51,26 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `v0.1`
+  String get version {
+    return Intl.message(
+      'v0.1',
+      name: 'version',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bear with me, this site is an alpha version, development is still ongoing. Thank you for your understanding`
+  String get warningAlpha {
+    return Intl.message(
+      'Bear with me, this site is an alpha version, development is still ongoing. Thank you for your understanding',
+      name: 'warningAlpha',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Elsa Demaine`
   String get appTitle {
     return Intl.message(

@@ -10,27 +10,63 @@ class MyHobbies extends StatefulWidget {
 
   @override
   State<MyHobbies> createState() => _MyHobbiesPageState();
-
 }
 
 class _MyHobbiesPageState extends State<MyHobbies> {
   @override
   Widget build(BuildContext context) {
-    return RouteAwareWidget( child: Scaffold(
-      bottomNavigationBar: myFooter(context),
-      appBar: myAppBar(context, widget.title),
-      body: LayoutBuilder(builder: (context, constraints) {
-        return ListView(
-          scrollDirection: Axis.vertical,
-          padding: const EdgeInsets.all(15),
-          children: [
-            titleText(S.of(context).experiences),
-            htmlText(S.of(context).hobbies),
-            const Carousel(),
-          ],
-        );
-      }),
-    )
+    S l = S.of(context);
+
+    return RouteAwareWidget(
+      child: Scaffold(
+        bottomNavigationBar: myFooter(context),
+        appBar: myAppBar(context, widget.title),
+        body: LayoutBuilder(builder: (context, constraints) {
+          return ListView(
+            scrollDirection: Axis.vertical,
+            padding: const EdgeInsets.all(15),
+            children: [
+              titleText(l.experiences),
+              htmlText(l.hobbies),
+              const Carousel(),
+              Row(
+                children: [
+                  Expanded(
+                      flex: 2,
+                      child: Column(
+                        children: [
+                          titleText(l.experiences),
+                          htmlText(l.hobbies),
+                        ],
+                      )),
+                  Expanded(
+                    child: GridView.count(
+                      primary: false,
+                      padding: const EdgeInsets.all(20),
+                      crossAxisCount: 2,
+                      shrinkWrap: true,
+                      children: const [
+                        Placeholder(
+                          color: Colors.red,
+                        ),
+                        Placeholder(
+                          color: Colors.blue,
+                        ),
+                        Placeholder(
+                          color: Colors.yellow,
+                        ),
+                        Placeholder(
+                          color: Colors.green,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          );
+        }),
+      )
     );
   }
 }

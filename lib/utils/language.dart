@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../views/main.dart';
+import '../main.dart';
 
 List<Language> lang = <Language>[
   english,
   french
 ];
 
-Language english = Language('En', 'en', Image.asset("images/uk-flag.png"));
-Language french = Language('Fr', 'fr', Image.asset("images/fr-flag.png"));
+Language english = Language('En', 'en', Image.asset("assets/images/uk-flag.png"));
+Language french = Language('Fr', 'fr', Image.asset("assets/images/fr-flag.png"));
 
 class Language {
   final String name;

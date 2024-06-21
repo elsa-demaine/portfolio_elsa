@@ -1,4 +1,6 @@
 {
+  "version": "v0.1",
+  "warningAlpha": "Ce site est en version alpha, le développement est toujours en cours. Merci pour votre compréhension",
   "appTitle": "Elsa Demaine",
   "theme": "Thème",
 

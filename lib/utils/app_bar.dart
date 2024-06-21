@@ -7,10 +7,9 @@ AppBar myAppBar(BuildContext context, String title) {
 
   return AppBar(
     automaticallyImplyLeading: false,
-    title:
-    IconButton(
+    title: IconButton(
       icon: Image.asset(
-          'images/Logo_ED.png',
+          Theme.of(context).colorScheme.brightness == Brightness.light ? 'assets/images/Logo_ED.png' : 'assets/images/Logo_ED_White.png',
           height: 50,
           alignment: Alignment.center),
       onPressed: () {
@@ -52,27 +51,28 @@ AppBar myAppBar(BuildContext context, String title) {
               PopupMenuItem(
                 child: ListTile(
                   //Align text with switch widget
-                  leading: const Spacer(),
+                  leading: const SizedBox(),
                   hoverColor: Colors.transparent,
                   title: Text(S.of(context).home),
                   //Align text with switch widget
-                  trailing: const Spacer(),
+                  trailing: const SizedBox(),
                   onTap: () {
                     Navigator.of(context).pop();
                     navigateTo(context, "/home");
                   },
-                )),
+                ),
+              ),
               PopupMenuItem(
                 child: ListTile(
                   //Align text with switch widget
-                  leading: const Spacer(),
+                  leading: const SizedBox(),
                   hoverColor: Colors.transparent,
                   title: Text(S.of(context).hobbies),
                   //Align text with switch widget
-                  trailing: const Spacer(),
+                  trailing: const SizedBox(),
                   onTap: () {
-                    Navigator.of(context).pop();
-                    navigateTo(context, "/hobbies");
+                  Navigator.of(context).pop();
+                  navigateTo(context, "/hobbies");
                   },
                 ),
               ),

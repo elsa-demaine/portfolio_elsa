@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 const Color myLightSurface = Color.fromARGB(255, 230, 230, 255);
@@ -9,7 +11,7 @@ const Color myLightBlue = Color.fromARGB(255, 55, 134, 255);
 const Color myDarkBlue = Color.fromARGB(255, 0, 34, 155);
 const Color hover = Color.fromARGB(50, 0, 0, 0);
 
-final darkNotifier = ValueNotifier<bool>(false);
+final darkNotifier = ValueNotifier<bool>(PlatformDispatcher.instance.platformBrightness == Brightness.light ? true : false);
 
 ThemeData myDarkTheme(BuildContext context) {
   return ThemeData(

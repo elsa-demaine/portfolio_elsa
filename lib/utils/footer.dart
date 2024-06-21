@@ -12,13 +12,14 @@ Container myFooter(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         HoverTextButtonIcon(
-            icon: Image.asset('images/LI-In-Bug.png'),
-            text: S.of(context).linkedin,
-            onPressed: _launchLinkedInURL),
+          icon: Image.asset('assets/images/LI-In-Bug.png'),
+          text: S.of(context).linkedin,
+          onPressed: _launchLinkedInURL),
         HoverTextButtonIcon(
-            icon: Image.asset('images/github-mark.png'),
-            text: S.of(context).github,
-            onPressed: _launchGithubURL),
+          icon: Image.asset('assets/images/github-mark.png'),
+          text: S.of(context).github,
+          onPressed: _launchGithubURL),
+        Text(S.of(context).version),
       ],
     ),
   );
