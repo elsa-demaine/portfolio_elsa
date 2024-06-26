@@ -39,7 +39,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: const EdgeInsets.symmetric(vertical: 5),
                   width: MediaQuery.of(context).size.width,
                   color: const Color.fromARGB(255, 175, 0, 0),
-
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -75,6 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
 
+                //#region Experiences
                 TitleText(text: l.experiences),
                 skillsTable(context, [
                   Skill(name: l.skillASP, type: SkillType.hard),
@@ -215,7 +215,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     const SizedBox(height: 10,),
                   ],
                 ),
+                //#endregion
 
+                //#region Diplomas
                 TitleText(text: l.diplomas),
                 Divider(
                   thickness: 2,
@@ -224,17 +226,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   children: [
                     orientation ?
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Image(
-                          image: const AssetImage('assets/images/EPSI.png'),
-                          width: MediaQuery.of(context).size.width * .25,
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.25,
+                        child: const AspectRatio(
+                          aspectRatio: 3.5,
+                          child: Image(
+                              image: AssetImage('assets/images/EPSI.png'),
+                            ),
                         ),
-                      ) :
-                      const SizedBox(),
+                      ) : const SizedBox(),
                     Flexible(
-                      child: DecoratedBox(
-                        decoration:  orientation ? BoxDecoration(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: DecoratedBox(
+                          decoration: orientation ? BoxDecoration(
                           border: Border(
                             left: BorderSide(
                                 width: 2,
@@ -242,26 +247,27 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                         ) : const BoxDecoration(),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(l.epsiTitre,
-                                style: TextStyle(
-                                  color: Theme.of(context).colorScheme.onPrimary,
-                                  fontWeight: FontWeight.w600,
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(l.epsiTitre,
+                                  style: TextStyle(
+                                    color: Theme.of(context).colorScheme.onPrimary,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
-                              ),
-                              Text(l.epsiDate,
-                                style: TextStyle(
-                                  color: Theme.of(context).colorScheme.onPrimary,
+                                Text(l.epsiDate,
+                                  style: TextStyle(
+                                    color: Theme.of(context).colorScheme.onPrimary,
+                                  ),
                                 ),
-                              ),
-                              Text(l.epsiDevInfo),
-                              Text(l.epsiDevOps),
-                            ],
+                                Text(l.epsiDevInfo),
+                                Text(l.epsiDevOps),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -274,43 +280,47 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   children: [
                     orientation ?
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 5),
-                      child: Image(
-                        image: const AssetImage('assets/images/CSRP.png'),
-                        width: MediaQuery.of(context).size.width * .25,
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.25,
+                      child: const AspectRatio(
+                        aspectRatio: 3.5,
+                        child: Image(
+                          image: AssetImage('assets/images/CSRP.png'),
+                        ),
                       ),
-                    ) :
-                    const SizedBox(),
+                    ) : const SizedBox(),
                     Flexible(
-                      child: DecoratedBox(
-                        decoration:  orientation ? BoxDecoration(
-                          border: Border(
-                            left: BorderSide(
-                                width: 2,
-                                color: Theme.of(context).colorScheme.onPrimary
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: DecoratedBox(
+                          decoration:  orientation ? BoxDecoration(
+                            border: Border(
+                              left: BorderSide(
+                                  width: 2,
+                                  color: Theme.of(context).colorScheme.onPrimary
+                              ),
                             ),
-                          ),
-                        ) : const BoxDecoration(),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(l.csrpTitre,
-                                style: TextStyle(
-                                  color: Theme.of(context).colorScheme.onPrimary,
-                                  fontWeight: FontWeight.w600,
+                          ) : const BoxDecoration(),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(l.csrpTitre,
+                                  style: TextStyle(
+                                    color: Theme.of(context).colorScheme.onPrimary,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
-                              ),
-                              Text(l.csrpDate,
-                                style: TextStyle(
-                                  color: Theme.of(context).colorScheme.onPrimary,
+                                Text(l.csrpDate,
+                                  style: TextStyle(
+                                    color: Theme.of(context).colorScheme.onPrimary,
+                                  ),
                                 ),
-                              ),
-                              Text(l.csrpBacPro),
-                            ],
+                                Text(l.csrpBacPro),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -321,6 +331,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   thickness: 2,
                   color: t.onPrimary,
                 ),
+                //#endregion
+
               ],
             ),
           );

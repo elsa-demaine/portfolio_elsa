@@ -74,50 +74,55 @@ class ExpItemState extends State<ExpItem> {
     if(orientation && !widget.isPair) {
       return Row(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5),
-            child: Image(
-              image: AssetImage(widget.imageName),
-              width: MediaQuery.of(context).size.width * .25,
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.25,
+            child: AspectRatio(
+              aspectRatio: 3.5,
+              child: Image(
+                image: AssetImage(widget.imageName),
+              ),
             ),
           ),
           Flexible(
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                border: Border(
-                  left: BorderSide(
-                    width: 2,
-                    color: Theme.of(context).colorScheme.onPrimary
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  border: Border(
+                    left: BorderSide(
+                      width: 2,
+                      color: Theme.of(context).colorScheme.onPrimary
+                    ),
                   ),
                 ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(widget.business,
-                      style: TextStyle(
-                          color: Theme.of(context).colorScheme.onPrimary,
-                          fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    Text(widget.dates,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(widget.business,
                         style: TextStyle(
                             color: Theme.of(context).colorScheme.onPrimary,
+                            fontWeight: FontWeight.w600,
                         ),
-                    ),
-                    HtmlText(text: widget.infos),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 5),
-                      child: Wrap(
-                        spacing: 5,
-                        runSpacing: 5,
-                        children: widget.skills.map((skill) => skill.build(context)).toList(),
                       ),
-                    ),
-                  ],
+                      Text(widget.dates,
+                          style: TextStyle(
+                              color: Theme.of(context).colorScheme.onPrimary,
+                          ),
+                      ),
+                      HtmlText(text: widget.infos),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 5),
+                        child: Wrap(
+                          spacing: 5,
+                          runSpacing: 5,
+                          children: widget.skills.map((skill) => skill.build(context)).toList(),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -130,51 +135,56 @@ class ExpItemState extends State<ExpItem> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Flexible(
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                border: Border(
-                  right: BorderSide(
-                    width: 2,
-                    color: Theme.of(context).colorScheme.onPrimary
+            child: Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  border: Border(
+                    right: BorderSide(
+                      width: 2,
+                      color: Theme.of(context).colorScheme.onPrimary
+                    ),
                   ),
                 ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Text(widget.business,
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.onPrimary,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    Text(widget.dates,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(widget.business,
                         style: TextStyle(
-                            color: Theme.of(context).colorScheme.onPrimary,
+                          color: Theme.of(context).colorScheme.onPrimary,
+                          fontWeight: FontWeight.w600,
                         ),
-                    ),
-                    HtmlText(text: "<div style='text-align: right'>${widget.infos}<div//>"),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 5),
-                      child: Wrap(
-                        spacing: 5,
-                        runSpacing: 5,
-                        children: widget.skills.map((skill) => skill.build(context)).toList(),
                       ),
-                    ),
-                  ],
+                      Text(widget.dates,
+                          style: TextStyle(
+                              color: Theme.of(context).colorScheme.onPrimary,
+                          ),
+                      ),
+                      HtmlText(text: "<div style='text-align: right'>${widget.infos}<div//>"),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 5),
+                        child: Wrap(
+                          spacing: 5,
+                          runSpacing: 5,
+                          children: widget.skills.map((skill) => skill.build(context)).toList(),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5),
-            child: Image(
-              image: AssetImage(widget.imageName),
-              width: MediaQuery.of(context).size.width * .25,
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.25,
+            child: AspectRatio(
+              aspectRatio: 3.5,
+              child: Image(
+                image: AssetImage(widget.imageName),
+              ),
             ),
           ),
         ],
@@ -186,10 +196,15 @@ class ExpItemState extends State<ExpItem> {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 5),
-                child: Image(
-                  image: AssetImage(widget.imageName),
-                  width: MediaQuery.of(context).size.width * .5,
+                padding: const EdgeInsets.only(right: 10),
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: AspectRatio(
+                    aspectRatio: 3.5,
+                    child: Image(
+                      image: AssetImage(widget.imageName),
+                    ),
+                  ),
                 ),
               ),
               Column(
