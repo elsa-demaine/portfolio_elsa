@@ -23,12 +23,28 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "altecaDates":
-            MessageLookupByLibrary.simpleMessage("Mars 22 - En cours"),
+            MessageLookupByLibrary.simpleMessage("Mars 2022 - Aujourd\'hui"),
         "altecaInfos": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
         "altecaTitre": MessageLookupByLibrary.simpleMessage("Alteca"),
         "appTitle": MessageLookupByLibrary.simpleMessage("Elsa Demaine"),
+        "csrpBacPro": MessageLookupByLibrary.simpleMessage(
+            "Bac Pro Gestion - Administration section Européenne Anglais mention très bien"),
+        "csrpDate": MessageLookupByLibrary.simpleMessage("2016"),
+        "csrpTitre":
+            MessageLookupByLibrary.simpleMessage("Cité Scolaire René Pellet"),
         "diplomas": MessageLookupByLibrary.simpleMessage("Diplômes"),
+        "elsaDates":
+            MessageLookupByLibrary.simpleMessage("Mai 2024 - Aujourd\'hui"),
+        "elsaInfos": MessageLookupByLibrary.simpleMessage(
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
+        "elsaTitre": MessageLookupByLibrary.simpleMessage("Projet Personnel"),
+        "epsiDate": MessageLookupByLibrary.simpleMessage("2019"),
+        "epsiDevInfo": MessageLookupByLibrary.simpleMessage(
+            "Bachelor Concepteur Développeur Informatique"),
+        "epsiDevOps": MessageLookupByLibrary.simpleMessage(
+            "Bachelor Concepteur Intégrateur DevOps"),
+        "epsiTitre": MessageLookupByLibrary.simpleMessage("EPSI"),
         "experiencesExpand":
             MessageLookupByLibrary.simpleMessage("Plus d\'expériences"),
         "github": MessageLookupByLibrary.simpleMessage("Mon Github"),
@@ -47,12 +63,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "skillTitleSoft": MessageLookupByLibrary.simpleMessage("Savoir-être"),
         "skillTrello": MessageLookupByLibrary.simpleMessage("Trello"),
         "soitecDates":
-            MessageLookupByLibrary.simpleMessage("Sept. 18 - Juin 20"),
+            MessageLookupByLibrary.simpleMessage("Sept. 2018 - Juin 2020"),
         "soitecInfos": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
         "soitecTitre": MessageLookupByLibrary.simpleMessage("Soitec"),
         "theme": MessageLookupByLibrary.simpleMessage("Thème"),
-        "version": MessageLookupByLibrary.simpleMessage("v0.1"),
+        "version": MessageLookupByLibrary.simpleMessage("v0.2"),
         "warningAlpha": MessageLookupByLibrary.simpleMessage(
             "Ce site est en version alpha, le développement est toujours en cours. Merci pour votre compréhension")
       };

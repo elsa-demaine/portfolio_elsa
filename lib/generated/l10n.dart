@@ -51,10 +51,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `v0.1`
+  /// `v0.2`
   String get version {
     return Intl.message(
-      'v0.1',
+      'v0.2',
       name: 'version',
       desc: '',
       args: [],
@@ -221,6 +221,36 @@ class S {
     );
   }
 
+  /// `Personal Project`
+  String get elsaTitre {
+    return Intl.message(
+      'Personal Project',
+      name: 'elsaTitre',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `May 2024 - To date`
+  String get elsaDates {
+    return Intl.message(
+      'May 2024 - To date',
+      name: 'elsaDates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+  String get elsaInfos {
+    return Intl.message(
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      name: 'elsaInfos',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Alteca`
   String get altecaTitre {
     return Intl.message(
@@ -231,10 +261,10 @@ class S {
     );
   }
 
-  /// `March 22 - Ongoing`
+  /// `March 2022 - To date`
   String get altecaDates {
     return Intl.message(
-      'March 22 - Ongoing',
+      'March 2022 - To date',
       name: 'altecaDates',
       desc: '',
       args: [],
@@ -261,10 +291,10 @@ class S {
     );
   }
 
-  /// `Sept. 18 - June 20`
+  /// `Sept. 2018 - June 2020`
   String get soitecDates {
     return Intl.message(
-      'Sept. 18 - June 20',
+      'Sept. 2018 - June 2020',
       name: 'soitecDates',
       desc: '',
       args: [],
@@ -276,6 +306,76 @@ class S {
     return Intl.message(
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       name: 'soitecInfos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `EPSI`
+  String get epsiTitre {
+    return Intl.message(
+      'EPSI',
+      name: 'epsiTitre',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2019`
+  String get epsiDate {
+    return Intl.message(
+      '2019',
+      name: 'epsiDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bachelor Concepteur Développeur Informatique`
+  String get epsiDevInfo {
+    return Intl.message(
+      'Bachelor Concepteur Développeur Informatique',
+      name: 'epsiDevInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bachelor Concepteur Intégrateur DevOps`
+  String get epsiDevOps {
+    return Intl.message(
+      'Bachelor Concepteur Intégrateur DevOps',
+      name: 'epsiDevOps',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cité Scolaire René Pellet`
+  String get csrpTitre {
+    return Intl.message(
+      'Cité Scolaire René Pellet',
+      name: 'csrpTitre',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2016`
+  String get csrpDate {
+    return Intl.message(
+      '2016',
+      name: 'csrpDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bac Pro Gestion - Administration section Européenne Anglais mention très bien`
+  String get csrpBacPro {
+    return Intl.message(
+      'Bac Pro Gestion - Administration section Européenne Anglais mention très bien',
+      name: 'csrpBacPro',
       desc: '',
       args: [],
     );

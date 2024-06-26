@@ -4,37 +4,43 @@ import 'package:portfolio_elsa/utils/theme.dart';
 
 import '../generated/l10n.dart';
 
-bool isOrientationWidth(BuildContext context) {
-  return MediaQuery.of(context).size.width > MediaQuery.of(context).size.height;
+class HtmlText extends StatefulWidget {
+  final String text;
+  final Style? style;
+
+  const HtmlText({super.key, required this.text, this.style });
+
+  @override
+  State<HtmlText> createState() => _HtmlTextState();
 }
 
-Html htmlText(String text, [Style? myStyle]) {
-  myStyle = myStyle ?? Style();
-
-  return Html(
-    shrinkWrap: true,
-    data: text,
-    style: {
-      "*": myStyle,
-    },
-  );
-}
-
-Text titleText(String text) {
-  return Text(text,
-    style: const TextStyle(
-      decoration: TextDecoration.underline,
-    ),
-  );
-}
-
-BoxShadow myBoxShadow() {
-  return BoxShadow(
-    color: Colors.black.withOpacity(0.25),
-    spreadRadius: 2,
-    blurRadius: 2,
-    offset: const Offset(2, 2),
+class _HtmlTextState extends State<HtmlText> {
+  @override
+  Widget build(BuildContext context) {
+    return Html(
+      shrinkWrap: true,
+      data: widget.text,
+      style: {
+        "*": widget.style ?? Style(margin: Margins.zero),
+      },
     );
+  }
+}
+
+class TitleText extends StatelessWidget {
+  final String text;
+  const TitleText({super.key, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: const TextStyle(
+        decoration: TextDecoration.underline,
+        fontWeight: FontWeight.w700,
+      ),
+    );
+  }
 }
 
 class ExpItem extends StatefulWidget {
@@ -52,7 +58,7 @@ class ExpItem extends StatefulWidget {
     required this.infos,
     required this.imageName,
     required this.isPair,
-    required this.skills
+    required this.skills,
   });
 
   @override
@@ -63,17 +69,20 @@ class ExpItemState extends State<ExpItem> {
 
   @override
   Widget build(BuildContext context) {
-    bool orientation = isOrientationWidth(context);
+    bool orientation = MediaQuery.of(context).size.width > MediaQuery.of(context).size.height;
 
     if(orientation && !widget.isPair) {
       return Row(
         children: [
-          Image.asset(
-            widget.imageName,
-            width: MediaQuery.of(context).size.width * .25,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: Image(
+              image: AssetImage(widget.imageName),
+              width: MediaQuery.of(context).size.width * .25,
+            ),
           ),
           Flexible(
-            child: Container(
+            child: DecoratedBox(
               decoration: BoxDecoration(
                 border: Border(
                   left: BorderSide(
@@ -82,22 +91,34 @@ class ExpItemState extends State<ExpItem> {
                   ),
                 ),
               ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  htmlText(widget.business),
-                  htmlText(widget.dates),
-                  htmlText(widget.infos),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Wrap(
-                      spacing: 5,
-                      runSpacing: 5,
-                      children: widget.skills.map((skill) => skill.build(context)).toList(),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(widget.business,
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.onPrimary,
+                          fontWeight: FontWeight.w600,
+                      ),
                     ),
-                  ),
-                ],
+                    Text(widget.dates,
+                        style: TextStyle(
+                            color: Theme.of(context).colorScheme.onPrimary,
+                        ),
+                    ),
+                    HtmlText(text: widget.infos),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 5),
+                      child: Wrap(
+                        spacing: 5,
+                        runSpacing: 5,
+                        children: widget.skills.map((skill) => skill.build(context)).toList(),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -109,7 +130,7 @@ class ExpItemState extends State<ExpItem> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Flexible(
-            child: Container(
+            child: DecoratedBox(
               decoration: BoxDecoration(
                 border: Border(
                   right: BorderSide(
@@ -118,29 +139,43 @@ class ExpItemState extends State<ExpItem> {
                   ),
                 ),
               ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  htmlText(widget.business),
-                  htmlText(widget.dates),
-                  htmlText("<div style='text-align: right'>${widget.infos}<div//>"),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Wrap(
-                      alignment: WrapAlignment.end,
-                      spacing: 5,
-                      runSpacing: 5,
-                      children: widget.skills.map((skill) => skill.build(context)).toList(),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(widget.business,
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.onPrimary,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
-                  ),
-                ],
+                    Text(widget.dates,
+                        style: TextStyle(
+                            color: Theme.of(context).colorScheme.onPrimary,
+                        ),
+                    ),
+                    HtmlText(text: "<div style='text-align: right'>${widget.infos}<div//>"),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 5),
+                      child: Wrap(
+                        spacing: 5,
+                        runSpacing: 5,
+                        children: widget.skills.map((skill) => skill.build(context)).toList(),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-          Image.asset(
-            widget.imageName,
-            width: MediaQuery.of(context).size.width * .25,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: Image(
+              image: AssetImage(widget.imageName),
+              width: MediaQuery.of(context).size.width * .25,
+            ),
           ),
         ],
       );
@@ -150,15 +185,27 @@ class ExpItemState extends State<ExpItem> {
         children: [
           Row(
             children: [
-              Image.asset(
-                widget.imageName,
-                width: MediaQuery.of(context).size.width * .5,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Image(
+                  image: AssetImage(widget.imageName),
+                  width: MediaQuery.of(context).size.width * .5,
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  htmlText(widget.business),
-                  htmlText(widget.dates),
+                  Text(widget.business,
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.onPrimary,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(widget.dates,
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.onPrimary,
+                    ),
+                  ),
                 ],
               ),
             ],
@@ -166,11 +213,14 @@ class ExpItemState extends State<ExpItem> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              htmlText(widget.infos),
-              Wrap(
-                spacing: 5,
-                runSpacing: 5,
-                children: widget.skills.map((skill) => skill.build(context)).toList()
+              HtmlText(text: widget.infos),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5),
+                child: Wrap(
+                  spacing: 5,
+                  runSpacing: 5,
+                  children: widget.skills.map((skill) => skill.build(context)).toList(),
+                ),
               ),
             ],
           ),
@@ -194,50 +244,67 @@ class Skill extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      decoration: switch(type) {
-        SkillType.hard => BoxDecoration(
-          color: myLightGreen,
-          borderRadius: const BorderRadius.all(
-            Radius.circular(15.0),
+    return DecoratedBox(
+        decoration: switch(type) {
+          SkillType.hard => BoxDecoration(
+            color: myLightGreen,
+            borderRadius: const BorderRadius.all(
+              Radius.circular(15.0),
+            ),
+            border: Border.all(
+              color: myDarkGreen,
+              width: 1,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.25),
+                spreadRadius: 2,
+                blurRadius: 2,
+                offset: const Offset(2, 2),
+              ),
+            ],
           ),
-          border: Border.all(
-            color: myDarkGreen,
-            width: 1,
+          SkillType.soft => BoxDecoration(
+            color: myLightBlue,
+            borderRadius: const BorderRadius.all(
+              Radius.circular(15.0),
+            ),
+            border: Border.all(
+              color: myDarkBlue,
+              width: 1,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.25),
+                spreadRadius: 2,
+                blurRadius: 2,
+                offset: const Offset(2, 2),
+              ),
+            ],
           ),
-          boxShadow: [
-            myBoxShadow(),
-          ],
-        ),
-        SkillType.soft => BoxDecoration(
-          color: myLightBlue,
-          borderRadius: const BorderRadius.all(
-            Radius.circular(15.0),
+          SkillType.mad => BoxDecoration(
+            color: myLightPurple,
+            borderRadius: const BorderRadius.all(
+              Radius.circular(15.0),
+            ),
+            border: Border.all(
+              color: myDarkPurple,
+              width: 1,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.25),
+                spreadRadius: 2,
+                blurRadius: 2,
+                offset: const Offset(2, 2),
+              ),
+            ],
           ),
-          border: Border.all(
-            color: myDarkBlue,
-            width: 1,
-          ),
-          boxShadow: [
-            myBoxShadow(),
-          ],
-        ),
-        SkillType.mad => BoxDecoration(
-          color: myLightPurple,
-          borderRadius: const BorderRadius.all(
-            Radius.circular(15.0),
-          ),
-          border: Border.all(
-            color: myDarkPurple,
-            width: 1,
-          ),
-          boxShadow: [
-            myBoxShadow(),
-          ],
-        ),
-      },
-      child: Text(name),
+        },
+      child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Text(name),
+      ),
     );
   }
 }
@@ -272,15 +339,12 @@ Widget skillsTable(BuildContext context, List<Skill> skills) {
             children: [
               Container(
                 width: MediaQuery.of(context).size.width * .25,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: myDarkGreen,
-                  borderRadius: const BorderRadius.only(
+                  borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(15.0),
                     topRight: Radius.circular(15.0),
                   ),
-                  boxShadow: [
-                    myBoxShadow(),
-                  ],
                 ),
                 child: Text(S.of(context).skillTitleHard, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
                 ),
@@ -295,9 +359,6 @@ Widget skillsTable(BuildContext context, List<Skill> skills) {
                     bottomLeft: Radius.circular(15.0),
                     bottomRight: Radius.circular(15.0),
                   ),
-                  boxShadow: [
-                    myBoxShadow(),
-                  ],
                 ),
                 child: Wrap(
                     spacing: 5,
@@ -314,15 +375,12 @@ Widget skillsTable(BuildContext context, List<Skill> skills) {
             children: [
               Container(
                 width: MediaQuery.of(context).size.width * .25,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: myDarkBlue,
-                  borderRadius: const BorderRadius.only(
+                  borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(15.0),
                     topRight: Radius.circular(15.0),
                   ),
-                  boxShadow: [
-                    myBoxShadow(),
-                  ],
                 ),
                 child: Text(S.of(context).skillTitleSoft, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
                 ),
@@ -337,9 +395,6 @@ Widget skillsTable(BuildContext context, List<Skill> skills) {
                     bottomLeft: Radius.circular(15.0),
                     bottomRight: Radius.circular(15.0),
                   ),
-                  boxShadow: [
-                    myBoxShadow(),
-                  ],
                 ),
                 child: Wrap(
                     spacing: 5,
@@ -356,15 +411,12 @@ Widget skillsTable(BuildContext context, List<Skill> skills) {
             children: [
               Container(
                 width: MediaQuery.of(context).size.width * .25,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: myDarkPurple,
-                  borderRadius: const BorderRadius.only(
+                  borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(15.0),
                     topRight: Radius.circular(15.0),
                   ),
-                  boxShadow: [
-                    myBoxShadow(),
-                  ],
                 ),
                 child: Text(S.of(context).skillTitleMad, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
                 ),
@@ -379,9 +431,6 @@ Widget skillsTable(BuildContext context, List<Skill> skills) {
                     bottomLeft: Radius.circular(15.0),
                     bottomRight: Radius.circular(15.0),
                   ),
-                  boxShadow: [
-                    myBoxShadow(),
-                  ],
                 ),
                 child: Wrap(
                     spacing: 5,

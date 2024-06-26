@@ -1,5 +1,5 @@
 {
-  "version": "v0.1",
+  "version": "v0.2",
   "warningAlpha": "Ce site est en version alpha, le développement est toujours en cours. Merci pour votre compréhension",
   "appTitle": "Elsa Demaine",
   "theme": "Thème",
@@ -21,13 +21,26 @@
   "skillJira": "Jira",
   "skillTrello": "Trello",
 
+  "elsaTitre": "Projet Personnel",
+  "elsaDates": "Mai 2024 - Aujourd'hui",
+  "elsaInfos": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+
   "altecaTitre": "Alteca",
-  "altecaDates": "Mars 22 - En cours",
+  "altecaDates": "Mars 2022 - Aujourd'hui",
   "altecaInfos": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 
   "soitecTitre": "Soitec",
-  "soitecDates": "Sept. 18 - Juin 20",
+  "soitecDates": "Sept. 2018 - Juin 2020",
   "soitecInfos": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+
+  "epsiTitre": "EPSI",
+  "epsiDate": "2019",
+  "epsiDevInfo": "Bachelor Concepteur Développeur Informatique",
+  "epsiDevOps": "Bachelor Concepteur Intégrateur DevOps",
+
+  "csrpTitre": "Cité Scolaire René Pellet",
+  "csrpDate": "2016",
+  "csrpBacPro": "Bac Pro Gestion - Administration section Européenne Anglais mention très bien",
 
   "hobbies": "Loisirs",
   "okami": "Okami",

@@ -7,8 +7,8 @@ List<Language> lang = <Language>[
   french
 ];
 
-Language english = Language('En', 'en', Image.asset("assets/images/uk-flag.png"));
-Language french = Language('Fr', 'fr', Image.asset("assets/images/fr-flag.png"));
+const Language english =  Language('En', 'en', Image(image: AssetImage("assets/images/uk-flag.png"),));
+const Language french = Language('Fr', 'fr', Image(image: AssetImage("assets/images/fr-flag.png"),));
 
 class Language {
   final String name;

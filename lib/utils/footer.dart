@@ -11,12 +11,12 @@ Container myFooter(BuildContext context) {
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        HoverTextButtonIcon(
-          icon: Image.asset('assets/images/LI-In-Bug.png'),
+        FooterButton(
+          icon: const Image(image: AssetImage('assets/images/LI-In-Bug.png'),),
           text: S.of(context).linkedin,
           onPressed: _launchLinkedInURL),
-        HoverTextButtonIcon(
-          icon: Image.asset('assets/images/github-mark.png'),
+        FooterButton(
+          icon: const Image(image: AssetImage('assets/images/github-mark.png'),),
           text: S.of(context).github,
           onPressed: _launchGithubURL),
         Text(S.of(context).version),
@@ -40,12 +40,12 @@ _launchGithubURL() async {
   }
 }
 
-class HoverTextButtonIcon extends StatefulWidget {
+class FooterButton extends StatefulWidget {
   final Widget icon;
   final String text;
   final Function()? onPressed;
 
-  const HoverTextButtonIcon({
+  const FooterButton({
     super.key,
     required this.icon,
     required this.text,
@@ -53,10 +53,10 @@ class HoverTextButtonIcon extends StatefulWidget {
   });
 
   @override
-  HoverTextButtonIconState createState() => HoverTextButtonIconState();
+  FooterButtonState createState() => FooterButtonState();
 }
 
-class HoverTextButtonIconState extends State<HoverTextButtonIcon> {
+class FooterButtonState extends State<FooterButton> {
   Color _containerColor = Colors.transparent;
 
   @override
@@ -72,7 +72,7 @@ class HoverTextButtonIconState extends State<HoverTextButtonIcon> {
           _containerColor = Colors.transparent;
         });
       },
-      child: Container(
+      child: DecoratedBox(
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
           color: _containerColor,
@@ -80,17 +80,19 @@ class HoverTextButtonIconState extends State<HoverTextButtonIcon> {
             Radius.circular(15.0),
           ),
         ),
-        padding: const EdgeInsets.all(8),
-        child: TextButton.icon(
-          icon: widget.icon,
-          label: Text(
-            widget.text,
-            style: TextStyle(
-              color: Theme.of(context).colorScheme.onSurface,
+        child: Padding(
+          padding: const EdgeInsets.all(8),
+          child: TextButton.icon(
+            icon: widget.icon,
+            label: Text(
+              widget.text,
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.onSurface,
+              ),
             ),
+            onPressed: widget.onPressed,
           ),
-          onPressed: widget.onPressed,
-        ),
+        ) ,
       ),
     );
   }
