@@ -56,10 +56,10 @@ class _CarouselWithIndicatorState extends State<Carousel> {
           child: orientation ?
             Row(
               children: carouselItem(
-                  'assets/images/Okami.jpeg', l.okami, true, false)) :
+                  'assets/images/hobbies/Okami.jpeg', l.okami, true, false)) :
             Column(
               children: carouselItem(
-                  'assets/images/Okami.jpeg',l.okami, false, false)),
+                  'assets/images/hobbies/Okami.jpeg',l.okami, false, false)),
         ),
       ),
       FractionallySizedBox(
@@ -69,10 +69,10 @@ class _CarouselWithIndicatorState extends State<Carousel> {
           child: orientation ?
             Row(
               children: carouselItem(
-                'assets/images/Outer_Wilds.jpeg', l.outerWilds, true, true)) :
+                'assets/images/hobbies/Outer_Wilds.jpeg', l.outerWilds, true, true)) :
             Column(
               children: carouselItem(
-                'assets/images/Outer_Wilds.jpeg', l.outerWilds, false, true)),
+                'assets/images/hobbies/Outer_Wilds.jpeg', l.outerWilds, false, true)),
         ),
       ),
       FractionallySizedBox(
@@ -82,10 +82,10 @@ class _CarouselWithIndicatorState extends State<Carousel> {
           child: orientation ?
             Row(
               children: carouselItem(
-                'assets/images/MHW.jpeg', l.monsterHunter, true, false)) :
+                'assets/images/hobbies/MHW.jpeg', l.monsterHunter, true, false)) :
             Column(
               children: carouselItem(
-                'assets/images/MHW.jpeg',l.monsterHunter, false, false)),
+                'assets/images/hobbies/MHW.jpeg',l.monsterHunter, false, false)),
         ),
       ),
     ];

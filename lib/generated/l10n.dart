@@ -51,10 +51,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `v0.2`
+  /// `v0.3`
   String get version {
     return Intl.message(
-      'v0.2',
+      'v0.3',
       name: 'version',
       desc: '',
       args: [],
@@ -102,10 +102,10 @@ class S {
   }
 
   /// `My Github`
-  String get github {
+  String get myGithub {
     return Intl.message(
       'My Github',
-      name: 'github',
+      name: 'myGithub',
       desc: '',
       args: [],
     );
@@ -126,6 +126,26 @@ class S {
     return Intl.message(
       'Home',
       name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coming soon`
+  String get intro {
+    return Intl.message(
+      'Coming soon',
+      name: 'intro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A common question asked during interviews is, "Why do you enjoy developing?"<br/>It's quite simple, really. I see development as an art;<br/><indent></indent>The art of investigating bugs and turning them into learning opportunities.<br/><indent></indent>The art of writing clean code, it’s like reading a story.<br/><indent></indent>The art of sharing knowledge with coworkers and friends .<br/><indent></indent>The art of creating, modifying, evolving.`
+  String get bonus {
+    return Intl.message(
+      'A common question asked during interviews is, "Why do you enjoy developing?"<br/>It\'s quite simple, really. I see development as an art;<br/><indent></indent>The art of investigating bugs and turning them into learning opportunities.<br/><indent></indent>The art of writing clean code, it’s like reading a story.<br/><indent></indent>The art of sharing knowledge with coworkers and friends .<br/><indent></indent>The art of creating, modifying, evolving.',
+      name: 'bonus',
       desc: '',
       args: [],
     );
@@ -191,31 +211,461 @@ class S {
     );
   }
 
+  /// `Agile`
+  String get agile {
+    return Intl.message(
+      'Agile',
+      name: 'agile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Analysis`
+  String get analysis {
+    return Intl.message(
+      'Analysis',
+      name: 'analysis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Android Studio`
+  String get androidStudio {
+    return Intl.message(
+      'Android Studio',
+      name: 'androidStudio',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `ASP.Net`
-  String get skillASP {
+  String get aspNet {
     return Intl.message(
       'ASP.Net',
-      name: 'skillASP',
+      name: 'aspNet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Attention To Detail`
+  String get attentionToDetail {
+    return Intl.message(
+      'Attention To Detail',
+      name: 'attentionToDetail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Autonomy`
+  String get autonomy {
+    return Intl.message(
+      'Autonomy',
+      name: 'autonomy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `French Bilingual`
+  String get bilang {
+    return Intl.message(
+      'French Bilingual',
+      name: 'bilang',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Big Picture`
+  String get bigPicture {
+    return Intl.message(
+      'Big Picture',
+      name: 'bigPicture',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bootstrap`
+  String get bootstrap {
+    return Intl.message(
+      'Bootstrap',
+      name: 'bootstrap',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `C#`
+  String get cSharp {
+    return Intl.message(
+      'C#',
+      name: 'cSharp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Communication`
+  String get communication {
+    return Intl.message(
+      'Communication',
+      name: 'communication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dart`
+  String get dart {
+    return Intl.message(
+      'Dart',
+      name: 'dart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Doctrine`
+  String get doctrine {
+    return Intl.message(
+      'Doctrine',
+      name: 'doctrine',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flutter`
+  String get flutter {
+    return Intl.message(
+      'Flutter',
+      name: 'flutter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gherkin`
+  String get gherkin {
+    return Intl.message(
+      'Gherkin',
+      name: 'gherkin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Github`
+  String get github {
+    return Intl.message(
+      'Github',
+      name: 'github',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gitlab`
+  String get gitlab {
+    return Intl.message(
+      'Gitlab',
+      name: 'gitlab',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ionos`
+  String get ionos {
+    return Intl.message(
+      'Ionos',
+      name: 'ionos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Initiative`
+  String get initiative {
+    return Intl.message(
+      'Initiative',
+      name: 'initiative',
       desc: '',
       args: [],
     );
   }
 
   /// `Jira`
-  String get skillJira {
+  String get jira {
     return Intl.message(
       'Jira',
-      name: 'skillJira',
+      name: 'jira',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `jQuery`
+  String get jQuery {
+    return Intl.message(
+      'jQuery',
+      name: 'jQuery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Kanban`
+  String get kanban {
+    return Intl.message(
+      'Kanban',
+      name: 'kanban',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log4Net`
+  String get log4Net {
+    return Intl.message(
+      'Log4Net',
+      name: 'log4Net',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `MVC`
+  String get mvc {
+    return Intl.message(
+      'MVC',
+      name: 'mvc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `mySQL`
+  String get mySql {
+    return Intl.message(
+      'mySQL',
+      name: 'mySql',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `.Net Core`
+  String get netCore {
+    return Intl.message(
+      '.Net Core',
+      name: 'netCore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `.Net Standard`
+  String get netStandard {
+    return Intl.message(
+      '.Net Standard',
+      name: 'netStandard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `N-Tiers`
+  String get ntiers {
+    return Intl.message(
+      'N-Tiers',
+      name: 'ntiers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Oracle`
+  String get oracle {
+    return Intl.message(
+      'Oracle',
+      name: 'oracle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `PHP`
+  String get php {
+    return Intl.message(
+      'PHP',
+      name: 'php',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `PHP Storm`
+  String get phpStorm {
+    return Intl.message(
+      'PHP Storm',
+      name: 'phpStorm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Punctuality`
+  String get punctuality {
+    return Intl.message(
+      'Punctuality',
+      name: 'punctuality',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Razor`
+  String get razor {
+    return Intl.message(
+      'Razor',
+      name: 'razor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SCRUM`
+  String get scrum {
+    return Intl.message(
+      'SCRUM',
+      name: 'scrum',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Selenium`
+  String get selenium {
+    return Intl.message(
+      'Selenium',
+      name: 'selenium',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SoapUI`
+  String get soapUI {
+    return Intl.message(
+      'SoapUI',
+      name: 'soapUI',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SonarQube`
+  String get sonarQube {
+    return Intl.message(
+      'SonarQube',
+      name: 'sonarQube',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Source Tree`
+  String get sourceTree {
+    return Intl.message(
+      'Source Tree',
+      name: 'sourceTree',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SQL`
+  String get sql {
+    return Intl.message(
+      'SQL',
+      name: 'sql',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Symfony`
+  String get symfony {
+    return Intl.message(
+      'Symfony',
+      name: 'symfony',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Teams`
+  String get teams {
+    return Intl.message(
+      'Teams',
+      name: 'teams',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Teamwork`
+  String get teamwork {
+    return Intl.message(
+      'Teamwork',
+      name: 'teamwork',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time management`
+  String get timeManagement {
+    return Intl.message(
+      'Time management',
+      name: 'timeManagement',
       desc: '',
       args: [],
     );
   }
 
   /// `Trello`
-  String get skillTrello {
+  String get trello {
     return Intl.message(
       'Trello',
-      name: 'skillTrello',
+      name: 'trello',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Twig`
+  String get twig {
+    return Intl.message(
+      'Twig',
+      name: 'twig',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Visual Studio`
+  String get visualStudio {
+    return Intl.message(
+      'Visual Studio',
+      name: 'visualStudio',
       desc: '',
       args: [],
     );
@@ -241,10 +691,10 @@ class S {
     );
   }
 
-  /// `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+  /// `The goal of this website is to prove to others, and myself, what I am capable of achieving.<br/>During my spare time, I’m self-learning Flutter because I want to expand my horizons.<br/>What caught my attention about Flutter is its unique way of building applications compared to other <tooltip id='Object-oriented programming'>OOP</tooltip> languages.`
   String get elsaInfos {
     return Intl.message(
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'The goal of this website is to prove to others, and myself, what I am capable of achieving.<br/>During my spare time, I’m self-learning Flutter because I want to expand my horizons.<br/>What caught my attention about Flutter is its unique way of building applications compared to other <tooltip id=\'Object-oriented programming\'>OOP</tooltip> languages.',
       name: 'elsaInfos',
       desc: '',
       args: [],
@@ -271,10 +721,10 @@ class S {
     );
   }
 
-  /// `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+  /// `<tooltip id='Third-Party Maintenance'>TPM</tooltip> of a legacy web application to manage environmental directives for Schneider Electric.<br/>Project management in Agile (meetings in English).<br/>Reverse documentation and code refactoring.<br/>Analysis of impact and workload estimations for its implementation.<br/>Development of new features and maintenance of the existing system.<br/>Addition of integration tests.<br/>Deployment of versions on test and production servers.<br/>Client functional support.`
   String get altecaInfos {
     return Intl.message(
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      '<tooltip id=\'Third-Party Maintenance\'>TPM</tooltip> of a legacy web application to manage environmental directives for Schneider Electric.<br/>Project management in Agile (meetings in English).<br/>Reverse documentation and code refactoring.<br/>Analysis of impact and workload estimations for its implementation.<br/>Development of new features and maintenance of the existing system.<br/>Addition of integration tests.<br/>Deployment of versions on test and production servers.<br/>Client functional support.',
       name: 'altecaInfos',
       desc: '',
       args: [],
@@ -301,11 +751,221 @@ class S {
     );
   }
 
-  /// `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+  /// `Coming soon`
   String get soitecInfos {
     return Intl.message(
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Coming soon',
       name: 'soitecInfos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Econocom`
+  String get econocomTitre {
+    return Intl.message(
+      'Econocom',
+      name: 'econocomTitre',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Jan. 2018 - Feb. 2018`
+  String get econocomDates {
+    return Intl.message(
+      'Jan. 2018 - Feb. 2018',
+      name: 'econocomDates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `During this 2 months internship in <tooltip id='Digital Application Services'>DAS</tooltip> within the service center of Grenoble, I had the opportunity to work on 2 different missions.<br/><br/>The first was a tablet application used by sales representatives at Roche Diabetes Care. It was a catalog enabling the placement of products and services orders, reserved for healthcare professionals. I contributed to the CCS part of the front end.<br/><br/>The second involved the implementation of a <tooltip id='Proof of concept'>PoC</tooltip> using the EPPlus library. The specifications were:<br/><lu><li>Create a new .Net Core web application,</li><li>Enable the creation of a new blank file or upload an existing file,</li><li>Allow modification of cell values, number of columns etc,</li><li>Ensure the code is generic so it can be used in other applications.</li></lu>`
+  String get econocomInfos {
+    return Intl.message(
+      'During this 2 months internship in <tooltip id=\'Digital Application Services\'>DAS</tooltip> within the service center of Grenoble, I had the opportunity to work on 2 different missions.<br/><br/>The first was a tablet application used by sales representatives at Roche Diabetes Care. It was a catalog enabling the placement of products and services orders, reserved for healthcare professionals. I contributed to the CCS part of the front end.<br/><br/>The second involved the implementation of a <tooltip id=\'Proof of concept\'>PoC</tooltip> using the EPPlus library. The specifications were:<br/><lu><li>Create a new .Net Core web application,</li><li>Enable the creation of a new blank file or upload an existing file,</li><li>Allow modification of cell values, number of columns etc,</li><li>Ensure the code is generic so it can be used in other applications.</li></lu>',
+      name: 'econocomInfos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Web|Alternatif`
+  String get webfTitre {
+    return Intl.message(
+      'Web|Alternatif',
+      name: 'webfTitre',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `June 2017`
+  String get webfDates {
+    return Intl.message(
+      'June 2017',
+      name: 'webfDates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coming soon`
+  String get webfInfos {
+    return Intl.message(
+      'Coming soon',
+      name: 'webfInfos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Grenoble Ecole de Management`
+  String get gemTitre {
+    return Intl.message(
+      'Grenoble Ecole de Management',
+      name: 'gemTitre',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dec. 2015 (3 weeks internship)`
+  String get gemDates {
+    return Intl.message(
+      'Dec. 2015 (3 weeks internship)',
+      name: 'gemDates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coming soon`
+  String get gemInfos {
+    return Intl.message(
+      'Coming soon',
+      name: 'gemInfos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Air Liquide Advanced Technologies`
+  String get alatTitre {
+    return Intl.message(
+      'Air Liquide Advanced Technologies',
+      name: 'alatTitre',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `July 2015 (1 month seasonal job)`
+  String get alatDates {
+    return Intl.message(
+      'July 2015 (1 month seasonal job)',
+      name: 'alatDates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coming soon`
+  String get alatInfos {
+    return Intl.message(
+      'Coming soon',
+      name: 'alatInfos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `European Radiation Synchrotron Facility`
+  String get esrfTitre {
+    return Intl.message(
+      'European Radiation Synchrotron Facility',
+      name: 'esrfTitre',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Jan. 2015 & May 2015 (10 weeks internship)`
+  String get esrfDates {
+    return Intl.message(
+      'Jan. 2015 & May 2015 (10 weeks internship)',
+      name: 'esrfDates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coming soon`
+  String get esrfInfos {
+    return Intl.message(
+      'Coming soon',
+      name: 'esrfInfos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Roche`
+  String get rocheTitre {
+    return Intl.message(
+      'Roche',
+      name: 'rocheTitre',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `June 2014 (3 weeks internship)`
+  String get rocheDates {
+    return Intl.message(
+      'June 2014 (3 weeks internship)',
+      name: 'rocheDates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coming soon`
+  String get rocheInfos {
+    return Intl.message(
+      'Coming soon',
+      name: 'rocheInfos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mairie de Fontaine`
+  String get mairieTitre {
+    return Intl.message(
+      'Mairie de Fontaine',
+      name: 'mairieTitre',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `March 2014 (3 weeks internship)`
+  String get mairieDates {
+    return Intl.message(
+      'March 2014 (3 weeks internship)',
+      name: 'mairieDates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coming soon`
+  String get mairieInfos {
+    return Intl.message(
+      'Coming soon',
+      name: 'mairieInfos',
       desc: '',
       args: [],
     );
@@ -331,30 +991,30 @@ class S {
     );
   }
 
-  /// `Bachelor Concepteur Développeur Informatique`
+  /// `Bachelor in Software Development and Design`
   String get epsiDevInfo {
     return Intl.message(
-      'Bachelor Concepteur Développeur Informatique',
+      'Bachelor in Software Development and Design',
       name: 'epsiDevInfo',
       desc: '',
       args: [],
     );
   }
 
-  /// `Bachelor Concepteur Intégrateur DevOps`
+  /// `Bachelor in DevOps Development and Integration`
   String get epsiDevOps {
     return Intl.message(
-      'Bachelor Concepteur Intégrateur DevOps',
+      'Bachelor in DevOps Development and Integration',
       name: 'epsiDevOps',
       desc: '',
       args: [],
     );
   }
 
-  /// `Cité Scolaire René Pellet`
+  /// `René Pellet Educational Complex`
   String get csrpTitre {
     return Intl.message(
-      'Cité Scolaire René Pellet',
+      'René Pellet Educational Complex',
       name: 'csrpTitre',
       desc: '',
       args: [],
@@ -371,10 +1031,10 @@ class S {
     );
   }
 
-  /// `Bac Pro Gestion - Administration section Européenne Anglais mention très bien`
+  /// `Vocational Baccalaureate in Management and Administration, European Section (English), with highest honors`
   String get csrpBacPro {
     return Intl.message(
-      'Bac Pro Gestion - Administration section Européenne Anglais mention très bien',
+      'Vocational Baccalaureate in Management and Administration, European Section (English), with highest honors',
       name: 'csrpBacPro',
       desc: '',
       args: [],

@@ -27,6 +27,11 @@ class _MyHobbiesPageState extends State<MyHobbies> {
             padding: const EdgeInsets.all(15),
             children: [
               TitleText(text: l.experiences),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 15),
+                child: HtmlText(text: l.bonus),
+              ),
+              TitleText(text: l.hobbies),
               HtmlText(text: l.hobbies),
               const Carousel(),
               Row(

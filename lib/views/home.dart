@@ -13,6 +13,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   bool isExpanded = false;
+  static const String path = 'assets/images/exp/';
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +28,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ColorScheme t = Theme.of(context).colorScheme;
           S l = S.of(context);
           bool orientation = MediaQuery.of(context).size.width > MediaQuery.of(context).size.height;
+          bool isDark = t.brightness == Brightness.light;
+          final Divider expDiv = Divider(thickness: 2, color: t.onPrimary);
 
           return SingleChildScrollView(
             scrollDirection: Axis.vertical,
@@ -60,82 +63,133 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   children: [
                     Image(
-                      image: AssetImage(t.brightness == Brightness.light ?
-                        'assets/images/Logo_ED_Big.png' : 'assets/images/Logo_ED_Big_White.png',
+                      image: AssetImage(isDark ? 'assets/images/Logo_ED_Big.png' : 'assets/images/Logo_ED_Big_White.png',
                       ),
                       width: MediaQuery.of(context).size.width * .25,
                     ),
-                    Column(
-                      children: [
-                        TitleText(text: l.experiences),
-                        HtmlText(text: l.experiences),
-                      ],
+                    Flexible(
+                      child: Column(
+                        children: [
+                          TitleText(text: l.intro),
+                          HtmlText(text: l.intro),
+                        ],
+                      ),
                     ),
                   ],
                 ),
 
                 //#region Experiences
-                TitleText(text: l.experiences),
-                skillsTable(context, [
-                  Skill(name: l.skillASP, type: SkillType.hard),
-                  Skill(name: l.skillJira, type: SkillType.soft),
-                  Skill(name: l.skillTrello, type: SkillType.mad),
+                SkillsTable(skills: [
+                  agile,
+                  analysis,
+                  androidStudio,
+                  aspNet,
+                  attentionToDetail,
+                  autonomy,
+                  bilang,
+                  bigPicture,
+                  bootstrap,
+                  cSharp,
+                  communication,
+                  dart,
+                  doctrine,
+                  flutter,
+                  gherkin,
+                  github,
+                  gitlab,
+                  ionos,
+                  initiative,
+                  jira,
+                  jQuery,
+                  kanban,
+                  log4Net,
+                  mvc,
+                  mySql,
+                  netCore,
+                  netStandard,
+                  ntiers,
+                  oracle,
+                  php,
+                  phpStorm,
+                  punctuality,
+                  razor,
+                  scrum,
+                  selenium,
+                  soapUI,
+                  sonarQube,
+                  sourceTree,
+                  sql,
+                  symfony,
+                  teams,
+                  teamwork,
+                  timeManagement,
+                  trello,
+                  twig,
+                  visualStudio,
                 ]),
 
                 TitleText(text: l.experiences),
-                Divider(
-                  thickness: 2,
-                  color: t.onPrimary,
-                ),
+                expDiv,
                 ExpItem(
                   business: l.elsaTitre,
                   dates: l.elsaDates,
                   infos: l.elsaInfos,
-                  imageName: t.brightness == Brightness.light ? 'assets/images/Logo_ED_Big.png' : 'assets/images/Logo_ED_Big_White.png',
+                  imageName: isDark ? 'assets/images/Logo_ED_Big.png' : 'assets/images/Logo_ED_Big_White.png',
                   isPair: false,
                   skills: [
-                    Skill(name: l.skillASP, type: SkillType.hard),
-                    Skill(name: l.skillJira, type: SkillType.soft),
-                    Skill(name: l.skillTrello, type: SkillType.mad),
+                    flutter,
+                    dart,
+                    androidStudio,
+                    github,
+                    ionos
                   ],
                 ),
-                Divider(
-                  thickness: 2,
-                  color: t.onPrimary,
-                ),
+                expDiv,
                 ExpItem(
                   business: l.altecaTitre,
                   dates: l.altecaDates,
                   infos: l.altecaInfos,
-                  imageName: 'assets/images/Alteca.png',
+                  imageName: isDark ? '${path}Alteca_noir.png': '${path}Alteca_blanc.png',
                   isPair: true,
                   skills: [
-                    Skill(name: l.skillASP, type: SkillType.hard),
-                    Skill(name: l.skillJira, type: SkillType.soft),
-                    Skill(name: l.skillTrello, type: SkillType.mad),
+                    cSharp,
+                    aspNet,
+                    visualStudio,
+                    gitlab,
+                    gherkin,
+                    selenium,
+                    mvc,
+                    ntiers,
+                    sql,
+                    oracle,
+                    teams,
+                    agile,
+                    trello,
+                    jira,
+                    soapUI,
+                    log4Net,
                   ],
                 ),
-                Divider(
-                  thickness: 2,
-                  color: t.onPrimary,
-                ),
+                expDiv,
                 ExpItem(
                   business: l.soitecTitre,
                   dates: l.soitecDates,
                   infos: l.soitecInfos,
-                  imageName: t.brightness == Brightness.light ?
-                  'assets/images/Soitec2.png': 'assets/images/Soitec.png',
+                  imageName: isDark ? '${path}Soitec_noir.png': '${path}Soitec_blanc.png',
                   isPair: false,
                   skills: [
-                    Skill(name: l.skillASP, type: SkillType.hard),
-                    Skill(name: l.skillJira, type: SkillType.soft),
-                    Skill(name: l.skillTrello, type: SkillType.mad),
+                    cSharp,
+                    netCore,
+                    trello,
+                    kanban,
+                    soapUI,
+                    log4Net,
+                    gitlab,
+                    sourceTree,
+                    sonarQube,
                   ],
                 ),
-                Divider(
-                  thickness: 2,
-                  color: t.onPrimary,
-                ),
+                expDiv,
 
                 ExpansionTile(
                   title: Text(
@@ -159,59 +213,91 @@ class _MyHomePageState extends State<MyHomePage> {
                   // Remove borders
                   shape: const Border(),
                   children: [
-                    Divider(
-                      thickness: 2,
-                      color: t.onPrimary,
-                    ),
+                    expDiv,
                     ExpItem(
-                      business: l.altecaTitre,
-                      dates: l.altecaDates,
-                      infos: l.altecaInfos,
-                      imageName: 'assets/images/Alteca.png',
+                      business: l.econocomTitre,
+                      dates: l.econocomDates,
+                      infos: l.econocomInfos,
+                      imageName: isDark ? '${path}Econocom_noir.png' : '${path}Econocom_blanc.png',
                       isPair: false,
                       skills: [
-                        Skill(name: l.skillASP, type: SkillType.hard),
-                        Skill(name: l.skillJira, type: SkillType.soft),
-                        Skill(name: l.skillTrello, type: SkillType.mad),
+                        cSharp,
+                        razor,
+                        scrum,
+                        log4Net,
+                        netStandard,
                       ],
                     ),
-                    Divider(
-                      thickness: 2,
-                      color: t.onPrimary,
-                    ),
+                    expDiv,
                     ExpItem(
-                      business: l.altecaTitre,
-                      dates: l.altecaDates,
-                      infos: l.altecaInfos,
-                      imageName: 'assets/images/Alteca.png',
+                      business: l.webfTitre,
+                      dates: l.webfDates,
+                      infos: l.webfInfos,
+                      imageName: isDark ? '${path}Webf_noir.png' : '${path}Webf_blanc.png',
                       isPair: true,
                       skills: [
-                        Skill(name: l.skillASP, type: SkillType.hard),
-                        Skill(name: l.skillJira, type: SkillType.soft),
-                        Skill(name: l.skillTrello, type: SkillType.mad),
+                        php,
+                        symfony,
+                        bootstrap,
+                        jQuery,
+                        twig,
+                        doctrine,
+                        mySql,
+                        phpStorm,
+                        gitlab
                       ],
                     ),
-                    Divider(
-                      thickness: 2,
-                      color: t.onPrimary,
-                    ),
+                    expDiv,
                     ExpItem(
-                      business: l.soitecTitre,
-                      dates: l.soitecDates,
-                      infos: l.soitecInfos,
-                      imageName: t.brightness == Brightness.light ?
-                        'assets/images/Soitec2.png': 'assets/images/Soitec.png',
+                      business: l.gemTitre,
+                      dates: l.gemDates,
+                      infos: l.gemInfos,
+                      imageName: isDark ? '${path}GEM_noir.png' : '${path}GEM_blanc.png',
                       isPair: false,
                       skills: [
-                        Skill(name: l.skillASP, type: SkillType.hard),
-                        Skill(name: l.skillJira, type: SkillType.soft),
-                        Skill(name: l.skillTrello, type: SkillType.mad),
                       ],
                     ),
-                    Divider(
-                      thickness: 2,
-                      color: t.onPrimary,
+                    expDiv,
+                    ExpItem(
+                      business: l.alatTitre,
+                      dates: l.alatDates,
+                      infos: l.alatInfos,
+                      imageName: '${path}Alat.png',
+                      isPair: true,
+                      skills: [
+                      ],
                     ),
+                    expDiv,
+                    ExpItem(
+                      business: l.esrfTitre,
+                      dates: l.esrfDates,
+                      infos: l.esrfInfos,
+                      imageName: '${path}ESRF.png',
+                      isPair: false,
+                      skills: [
+                      ],
+                    ),
+                    expDiv,
+                    ExpItem(
+                      business: l.rocheTitre,
+                      dates: l.rocheDates,
+                      infos: l.rocheInfos,
+                      imageName: '${path}Roche.png',
+                      isPair: true,
+                      skills: [
+                      ],
+                    ),
+                    expDiv,
+                    ExpItem(
+                      business: l.mairieTitre,
+                      dates: l.mairieDates,
+                      infos: l.mairieInfos,
+                      imageName: isDark ? '${path}Fontaine_noir.png' : '${path}Fontaine_blanc.png',
+                      isPair: false,
+                      skills: [
+                      ],
+                    ),
+                    expDiv,
                     const SizedBox(height: 10,),
                   ],
                 ),
@@ -219,19 +305,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 //#region Diplomas
                 TitleText(text: l.diplomas),
-                Divider(
-                  thickness: 2,
-                  color: t.onPrimary,
-                ),
+                expDiv,
                 Row(
                   children: [
                     orientation ?
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.25,
-                        child: const AspectRatio(
+                        child: AspectRatio(
                           aspectRatio: 3.5,
                           child: Image(
-                              image: AssetImage('assets/images/EPSI.png'),
+                              image: AssetImage(isDark ? '${path}EPSI_noir.png' : '${path}EPSI_blanc.png',),
                             ),
                         ),
                       ) : const SizedBox(),
@@ -239,14 +322,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10),
                         child: DecoratedBox(
-                          decoration: orientation ? BoxDecoration(
-                          border: Border(
-                            left: BorderSide(
-                                width: 2,
-                                color: Theme.of(context).colorScheme.onPrimary
-                            ),
-                          ),
-                        ) : const BoxDecoration(),
+                          decoration: orientation ?
+                            BoxDecoration(
+                              border: Border(
+                                left: BorderSide(
+                                    width: 2,
+                                    color: Theme.of(context).colorScheme.onPrimary
+                                ),
+                              ),
+                            ) :
+                            const BoxDecoration(),
                           child: Padding(
                             padding: const EdgeInsets.only(left: 10),
                             child: Column(
@@ -262,6 +347,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Text(l.epsiDate,
                                   style: TextStyle(
                                     color: Theme.of(context).colorScheme.onPrimary,
+                                    decoration: TextDecoration.underline,
                                   ),
                                 ),
                                 Text(l.epsiDevInfo),
@@ -274,9 +360,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-                Divider(
-                  thickness: 2,
-                  color: t.onPrimary),
+                expDiv,
                 Row(
                   children: [
                     orientation ?
@@ -285,7 +369,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: const AspectRatio(
                         aspectRatio: 3.5,
                         child: Image(
-                          image: AssetImage('assets/images/CSRP.png'),
+                          image: AssetImage('${path}CSRP.png'),
                         ),
                       ),
                     ) : const SizedBox(),
@@ -293,14 +377,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10),
                         child: DecoratedBox(
-                          decoration:  orientation ? BoxDecoration(
-                            border: Border(
-                              left: BorderSide(
+                          decoration:  orientation ?
+                            BoxDecoration(
+                              border: Border(
+                                left: BorderSide(
                                   width: 2,
                                   color: Theme.of(context).colorScheme.onPrimary
+                                ),
                               ),
-                            ),
-                          ) : const BoxDecoration(),
+                            ) :
+                            const BoxDecoration(),
                           child: Padding(
                             padding: const EdgeInsets.only(left: 10),
                             child: Column(
@@ -316,6 +402,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Text(l.csrpDate,
                                   style: TextStyle(
                                     color: Theme.of(context).colorScheme.onPrimary,
+                                    decoration: TextDecoration.underline,
                                   ),
                                 ),
                                 Text(l.csrpBacPro),
@@ -327,10 +414,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-                Divider(
-                  thickness: 2,
-                  color: t.onPrimary,
-                ),
+                expDiv,
                 //#endregion
 
               ],
