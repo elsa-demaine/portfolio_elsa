@@ -81,7 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "faqDevArt": MessageLookupByLibrary.simpleMessage(
             "<strong>Pourquoi j\'aime développer ?</strong><br/>Je vois le développement en tant qu’art ;<br/><indent></indent>L\'art d\'enquêter sur des bugs pour les transformer en apprentissage.<br/><indent></indent>L\'art d\'écrire du code propre, c’est comme lire une histoire.<br/><indent></indent>L\'art de partager ses connaissances avec ses amis et collègues.<br/><indent></indent>L’art de créer, modifier, évoluer."),
         "faqGit": MessageLookupByLibrary.simpleMessage(
-            "<strong>Le code du site est-il disponible ?</strong><br/>Oui, vous pouvez le trouver via mon <a href=\'https://github.com/elsa-demaine\'>Github</a>. Je suis ouverte aux conseils et aux retours (via Merge Request ou messagerie <a href=\'https://www.linkedin.com/in/elsa-demaine\'>Linkedin</a>)"),
+            "<strong>Le code du site est-il disponible ?</strong><br/>Oui, vous pouvez le trouver via mon <a href=\'https://github.com/elsa-demaine/portfolio_elsa\'>Github</a>. Je suis ouverte aux conseils et aux retours (via Merge Request ou messagerie <a href=\'https://www.linkedin.com/in/elsa-demaine\'>Linkedin</a>)"),
         "faqOpenToWork": MessageLookupByLibrary.simpleMessage(
             "<strong>Suis-je à l\'écoute du marché ?</strong><br/>"),
         "faqTitle": MessageLookupByLibrary.simpleMessage("FAQ"),

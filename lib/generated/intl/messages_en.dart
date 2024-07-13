@@ -81,7 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "faqDevArt": MessageLookupByLibrary.simpleMessage(
             "<strong>Why do I enjoy developing?</strong><br/>I see development as an art;<br/><indent></indent>The art of investigating bugs and turning them into learning opportunities.<br/><indent></indent>The art of writing clean code, it’s like reading a story.<br/><indent></indent>The art of sharing knowledge with coworkers and friends .<br/><indent></indent>The art of creating, modifying, evolving."),
         "faqGit": MessageLookupByLibrary.simpleMessage(
-            "<strong>Is ths site\'s code available?</strong><br/>Yes, you can find it on my <a href=\'https://github.com/elsa-demaine\'>Github</a>. I\'m open to advice and feedback (via Merge Request or messaging <a href=\'https://www.linkedin.com/in/elsa-demaine\'>Linkedin</a>)"),
+            "<strong>Is the site\'s code available?</strong><br/>Yes, you can find it on my <a href=\'https://github.com/elsa-demaine/portfolio_elsa\'>Github</a>. I\'m open to advice and feedback (via Merge Request or messaging <a href=\'https://www.linkedin.com/in/elsa-demaine\'>Linkedin</a>)"),
         "faqOpenToWork": MessageLookupByLibrary.simpleMessage(
             "<strong>Am I open to work?</strong><br/>"),
         "faqTitle": MessageLookupByLibrary.simpleMessage("FAQ"),

@@ -58,6 +58,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 TitleText(text: S.current.intro),
                 HtmlText(text: S.current.intro),
 
+                const SizedBox(height: 30),
+
                 //#region Experiences
                 SkillsTable(skills: [
                   agile,

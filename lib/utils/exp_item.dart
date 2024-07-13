@@ -39,7 +39,7 @@ class ExpItemState extends State<ExpItem> {
   }
 }
 
-extension ExpItemHeader on State<ExpItem> {
+extension _ExpItemHeader on State<ExpItem> {
   List<Widget> header() {
     return [
       Text(widget.business,
@@ -59,7 +59,7 @@ extension ExpItemHeader on State<ExpItem> {
   }
 }
 
-extension ExpItemInfo on State<ExpItem> {
+extension _ExpItemInfo on State<ExpItem> {
   List<Widget> info() {
     return [
       HtmlText(text: widget.infos),
@@ -77,7 +77,7 @@ extension ExpItemInfo on State<ExpItem> {
   }
 }
 
-extension ExpItemLogo on State<ExpItem> {
+extension _ExpItemLogo on State<ExpItem> {
   Widget logo() {
     return Center(
       child: SizedBox(
@@ -93,7 +93,7 @@ extension ExpItemLogo on State<ExpItem> {
   }
 }
 
-extension ExpItemLeft on State<ExpItem> {
+extension _ExpItemLeft on State<ExpItem> {
   buildLeft() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -126,7 +126,7 @@ extension ExpItemLeft on State<ExpItem> {
   }
 }
 
-extension ExpItemRight on State<ExpItem> {
+extension _ExpItemRight on State<ExpItem> {
   buildRight() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -159,7 +159,7 @@ extension ExpItemRight on State<ExpItem> {
   }
 }
 
-extension ExpItemColumn on State<ExpItem> {
+extension _ExpItemColumn on State<ExpItem> {
   buildColumn() {
     return Column(
       children: [

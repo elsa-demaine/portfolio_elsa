@@ -147,23 +147,19 @@ class Skill extends StatelessWidget{
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: Text(name),
+        child: Text(name, textAlign: TextAlign.center),
       ),
     );
   }
 }
 
-class SkillsTable extends StatelessWidget {
+class SkillsTable extends StatefulWidget {
   final List<Skill> skills;
+  final List<Skill> hardSkills = [];
+  final List<Skill> softSkills = [];
+  final List<Skill> madSkills = [];
 
-  const SkillsTable({super.key, required this.skills});
-
-  @override
-  Widget build(BuildContext context) {
-    List<Skill> hardSkills = [];
-    List<Skill> softSkills = [];
-    List<Skill> madSkills = [];
-
+  SkillsTable({super.key, required this.skills}) {
     for(Skill skill in skills) {
       switch(skill.type) {
         case SkillType.hard:
@@ -177,129 +173,121 @@ class SkillsTable extends StatelessWidget {
           break;
       }
     }
+  }
 
+  @override
+  SkillsTableState createState() => SkillsTableState();
+}
+
+class SkillsTableState extends State<SkillsTable> {
+  @override
+  Widget build(BuildContext context) {
+    if(context.mediaQuery.size.width > context.mediaQuery.size.height){
+      return buildHorizontal();
+    }
+    else {
+      return buildVertical();
+    }
+  }
+}
+
+extension _SkillTable on State<SkillsTable> {
+  Widget skillTable({double size = 0.25, required SkillType type}) {
+    List<Skill> skills;
+    String skillTitle;
+    Color? bgTitleColor;
+    Color? bgColor;
+
+    if(type == SkillType.hard) {
+      skills = widget.hardSkills;
+      skillTitle = S.current.skillTitleHard;
+      bgTitleColor = myDarkGreen;
+      bgColor = myLightGreen;
+    }
+    else if (type == SkillType.soft){
+      skills = widget.softSkills;
+      skillTitle = S.current.skillTitleSoft;
+      bgTitleColor = myDarkBlue;
+      bgColor = myLightBlue;
+    }
+    else {
+      skills = widget.madSkills;
+      skillTitle = S.current.skillTitleMad;
+      bgTitleColor = myDarkPurple;
+      bgColor = myLightPurple;
+    }
+
+    return Flexible(
+      child: Column(
+        children: [
+          Container(
+            width: context.mediaQuery.size.width * size,
+            decoration: BoxDecoration(
+              color: bgTitleColor,
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(15.0),
+                topRight: Radius.circular(15.0),
+              ),
+            ),
+            child: Text(skillTitle, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(5),
+            width: context.mediaQuery.size.width * size,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: bgColor.withOpacity(0.75),
+              borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(15.0),
+                bottomRight: Radius.circular(15.0),
+              ),
+            ),
+            child: Center(
+              child: Wrap(
+                  spacing: 5,
+                  runSpacing: 5,
+                  alignment: WrapAlignment.center,
+                  children: skills.map((skill) => skill.build(context)).toList()
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+extension _HorizontalTable on State<SkillsTable> {
+  Widget buildHorizontal() {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: Row(
         mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Flexible(
-            child: Column(
-              children: [
-                Container(
-                  width: context.mediaQuery.size.width * .25,
-                  decoration: const BoxDecoration(
-                    color: myDarkGreen,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15.0),
-                      topRight: Radius.circular(15.0),
-                    ),
-                  ),
-                  child: Text(S.current.skillTitleHard, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  width: context.mediaQuery.size.width * .25,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: myLightGreen.withOpacity(0.75),
-                    borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(15.0),
-                      bottomRight: Radius.circular(15.0),
-                    ),
-                  ),
-                  child: Center(
-                    child: Wrap(
-                      spacing: 5,
-                      runSpacing: 5,
-                      alignment: WrapAlignment.center,
-                      children: hardSkills.map((skill) => skill.build(context)).toList()
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(width: 10,),
-          Flexible(
-            child: Column(
-              children: [
-                Container(
-                  width: context.mediaQuery.size.width * .25,
-                  decoration: const BoxDecoration(
-                    color: myDarkBlue,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15.0),
-                      topRight: Radius.circular(15.0),
-                    ),
-                  ),
-                  child: Text(S.current.skillTitleSoft, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  width: context.mediaQuery.size.width * .25,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: myLightBlue.withOpacity(0.75),
-                    borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(15.0),
-                      bottomRight: Radius.circular(15.0),
-                    ),
-                  ),
-                  child: Center(
-                    child: Wrap(
-                      spacing: 5,
-                      runSpacing: 5,
-                      alignment: WrapAlignment.center,
-                      children: softSkills.map((skill) => skill.build(context)).toList()
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(width: 10,),
-          Flexible(
-            child: Column(
-              children: [
-                Container(
-                  width: context.mediaQuery.size.width * .25,
-                  decoration: const BoxDecoration(
-                    color: myDarkPurple,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15.0),
-                      topRight: Radius.circular(15.0),
-                    ),
-                  ),
-                  child: Text(S.current.skillTitleMad, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  width: context.mediaQuery.size.width * .25,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: myLightPurple.withOpacity(0.75),
-                    borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(15.0),
-                      bottomRight: Radius.circular(15.0),
-                    ),
-                  ),
-                  child: Center(
-                    child: Wrap(
-                      spacing: 5,
-                      runSpacing: 5,
-                      alignment: WrapAlignment.center,
-                      children: madSkills.map((skill) => skill.build(context)).toList()
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          skillTable(type: SkillType.soft),
+          const SizedBox(width: 10),
+          skillTable(type: SkillType.hard),
+          const SizedBox(width: 10),
+          skillTable(type: SkillType.mad),
+        ],
+      ),
+    );
+  }
+}
+
+extension _VerticalTable on State<SkillsTable> {
+  Widget buildVertical() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          skillTable(size: context.mediaQuery.size.width, type: SkillType.soft),
+          const SizedBox(height: 10),
+          skillTable(size: context.mediaQuery.size.width, type: SkillType.hard),
+          const SizedBox(height: 10),
+          skillTable(size: context.mediaQuery.size.width, type: SkillType.mad),
         ],
       ),
     );

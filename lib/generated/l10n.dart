@@ -1071,10 +1071,10 @@ class S {
     );
   }
 
-  /// `<strong>Is ths site's code available?</strong><br/>Yes, you can find it on my <a href='https://github.com/elsa-demaine'>Github</a>. I'm open to advice and feedback (via Merge Request or messaging <a href='https://www.linkedin.com/in/elsa-demaine'>Linkedin</a>)`
+  /// `<strong>Is the site's code available?</strong><br/>Yes, you can find it on my <a href='https://github.com/elsa-demaine/portfolio_elsa'>Github</a>. I'm open to advice and feedback (via Merge Request or messaging <a href='https://www.linkedin.com/in/elsa-demaine'>Linkedin</a>)`
   String get faqGit {
     return Intl.message(
-      '<strong>Is ths site\'s code available?</strong><br/>Yes, you can find it on my <a href=\'https://github.com/elsa-demaine\'>Github</a>. I\'m open to advice and feedback (via Merge Request or messaging <a href=\'https://www.linkedin.com/in/elsa-demaine\'>Linkedin</a>)',
+      '<strong>Is the site\'s code available?</strong><br/>Yes, you can find it on my <a href=\'https://github.com/elsa-demaine/portfolio_elsa\'>Github</a>. I\'m open to advice and feedback (via Merge Request or messaging <a href=\'https://www.linkedin.com/in/elsa-demaine\'>Linkedin</a>)',
       name: 'faqGit',
       desc: '',
       args: [],
