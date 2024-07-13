@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:flutter/material.dart';
+import 'package:portfolio_elsa/all.dart';
 
 const Color myLightSurface = Color.fromARGB(255, 230, 230, 255);
 const Color myLightPurple = Color.fromARGB(255, 150, 94, 225);
@@ -17,7 +17,13 @@ ThemeData myDarkTheme(BuildContext context) {
   return ThemeData(
     hoverColor: hover,
     fontFamily: 'Luciole',
-    textTheme: Theme.of(context).textTheme.apply(
+    scrollbarTheme: const ScrollbarThemeData(
+      thumbVisibility: WidgetStatePropertyAll(true),
+      thumbColor: WidgetStatePropertyAll(myLightPurple),
+      radius: Radius.circular(16),
+      thickness: WidgetStatePropertyAll(7),
+    ),
+    textTheme: context.theme.textTheme.apply(
         fontSizeFactor: 1.2,
         bodyColor: Colors.white,
         decorationColor: Colors.white),
@@ -42,7 +48,13 @@ ThemeData myLightTheme(BuildContext context) {
   return ThemeData(
     hoverColor: hover,
     fontFamily: 'Luciole',
-    textTheme: Theme.of(context).textTheme.apply(
+    scrollbarTheme: const ScrollbarThemeData(
+      thumbVisibility: WidgetStatePropertyAll(true),
+      thumbColor: WidgetStatePropertyAll(myDarkPurple),
+      radius: Radius.circular(16),
+      thickness: WidgetStatePropertyAll(7),
+    ),
+    textTheme: context.theme.textTheme.apply(
         fontSizeFactor: 1.2,
         bodyColor: Colors.black,
         decorationColor: Colors.black),

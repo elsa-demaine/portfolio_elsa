@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio_elsa/generated/l10n.dart';
-import 'package:portfolio_elsa/utils/theme.dart';
+import 'package:portfolio_elsa/all.dart';
 
 //a
 final agile = Skill(name: S.current.agile, type: SkillType.hard);
@@ -190,7 +188,7 @@ class SkillsTable extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width * .25,
+                  width: context.mediaQuery.size.width * .25,
                   decoration: const BoxDecoration(
                     color: myDarkGreen,
                     borderRadius: BorderRadius.only(
@@ -198,12 +196,12 @@ class SkillsTable extends StatelessWidget {
                       topRight: Radius.circular(15.0),
                     ),
                   ),
-                  child: Text(S.of(context).skillTitleHard, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
+                  child: Text(S.current.skillTitleHard, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
                   ),
                 ),
                 Container(
                   padding: const EdgeInsets.all(5),
-                  width: MediaQuery.of(context).size.width * .25,
+                  width: context.mediaQuery.size.width * .25,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: myLightGreen.withOpacity(0.75),
@@ -229,7 +227,7 @@ class SkillsTable extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width * .25,
+                  width: context.mediaQuery.size.width * .25,
                   decoration: const BoxDecoration(
                     color: myDarkBlue,
                     borderRadius: BorderRadius.only(
@@ -237,12 +235,12 @@ class SkillsTable extends StatelessWidget {
                       topRight: Radius.circular(15.0),
                     ),
                   ),
-                  child: Text(S.of(context).skillTitleSoft, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
+                  child: Text(S.current.skillTitleSoft, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
                   ),
                 ),
                 Container(
                   padding: const EdgeInsets.all(5),
-                  width: MediaQuery.of(context).size.width * .25,
+                  width: context.mediaQuery.size.width * .25,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: myLightBlue.withOpacity(0.75),
@@ -268,7 +266,7 @@ class SkillsTable extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width * .25,
+                  width: context.mediaQuery.size.width * .25,
                   decoration: const BoxDecoration(
                     color: myDarkPurple,
                     borderRadius: BorderRadius.only(
@@ -276,12 +274,12 @@ class SkillsTable extends StatelessWidget {
                       topRight: Radius.circular(15.0),
                     ),
                   ),
-                  child: Text(S.of(context).skillTitleMad, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
+                  child: Text(S.current.skillTitleMad, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white),
                   ),
                 ),
                 Container(
                   padding: const EdgeInsets.all(5),
-                  width: MediaQuery.of(context).size.width * .25,
+                  width: context.mediaQuery.size.width * .25,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: myLightPurple.withOpacity(0.75),

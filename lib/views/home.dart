@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio_elsa/generated/l10n.dart';
-import 'package:portfolio_elsa/utils/all.dart';
+import 'package:portfolio_elsa/all.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -17,19 +15,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    setPageTitle(S.of(context).home, context);
+    setPageTitle(S.current.home, context);
 
     return RouteAwareWidget(
       child: Scaffold(
         bottomNavigationBar: myFooter(context),
         appBar: myAppBar(context, widget.title),
         body: LayoutBuilder(builder: (context, constraints) {
-
-          ColorScheme t = Theme.of(context).colorScheme;
-          S l = S.of(context);
-          bool orientation = MediaQuery.of(context).size.width > MediaQuery.of(context).size.height;
-          bool isDark = t.brightness == Brightness.light;
-          final Divider expDiv = Divider(thickness: 2, color: t.onPrimary);
+          bool isDark = context.colorScheme.brightness == Brightness.light;
+          final Divider expDiv = Divider(thickness: 2, color: context.colorScheme.onPrimary);
 
           return SingleChildScrollView(
             scrollDirection: Axis.vertical,
@@ -40,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   margin: const EdgeInsets.symmetric(vertical: 5),
                   padding: const EdgeInsets.symmetric(vertical: 5),
-                  width: MediaQuery.of(context).size.width,
+                  width: context.mediaQuery.size.width,
                   color: const Color.fromARGB(255, 175, 0, 0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -50,33 +44,19 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Icon(Icons.warning, color: Colors.orangeAccent),
                       ),
                       Flexible(
-                        child: Text(l.warningAlpha,
-                            softWrap: true,
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(color: Colors.white),
-                          ),
+                        child: Text(
+                          S.current.warningAlpha,
+                          softWrap: true,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(color: Colors.white),
+                        ),
                       ),
                     ],
                   ),
                 ),
 
-                Row(
-                  children: [
-                    Image(
-                      image: AssetImage(isDark ? 'assets/images/Logo_ED_Big.png' : 'assets/images/Logo_ED_Big_White.png',
-                      ),
-                      width: MediaQuery.of(context).size.width * .25,
-                    ),
-                    Flexible(
-                      child: Column(
-                        children: [
-                          TitleText(text: l.intro),
-                          HtmlText(text: l.intro),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+                TitleText(text: S.current.intro),
+                HtmlText(text: S.current.intro),
 
                 //#region Experiences
                 SkillsTable(skills: [
@@ -128,29 +108,29 @@ class _MyHomePageState extends State<MyHomePage> {
                   visualStudio,
                 ]),
 
-                TitleText(text: l.experiences),
+                const SizedBox(height: 30),
+
+                TitleText(text: S.current.experiences),
                 expDiv,
                 ExpItem(
-                  business: l.elsaTitre,
-                  dates: l.elsaDates,
-                  infos: l.elsaInfos,
-                  imageName: isDark ? 'assets/images/Logo_ED_Big.png' : 'assets/images/Logo_ED_Big_White.png',
-                  isPair: false,
-                  skills: [
-                    flutter,
-                    dart,
-                    androidStudio,
-                    github,
-                    ionos
-                  ],
+                  business: S.current.elsaTitle,
+                  dates: S.current.elsaDates,
+                  infos: S.current.elsaInfos,
+                  imageName: isDark
+                      ? 'assets/images/Logo_ED_Big.png'
+                      : 'assets/images/Logo_ED_Big_White.png',
+                  isLeft: false,
+                  skills: [flutter, dart, androidStudio, github, ionos],
                 ),
                 expDiv,
                 ExpItem(
-                  business: l.altecaTitre,
-                  dates: l.altecaDates,
-                  infos: l.altecaInfos,
-                  imageName: isDark ? '${path}Alteca_noir.png': '${path}Alteca_blanc.png',
-                  isPair: true,
+                  business: S.current.altecaTitle,
+                  dates: S.current.altecaDates,
+                  infos: S.current.altecaInfos,
+                  imageName: isDark
+                      ? '${path}Alteca_noir.png'
+                      : '${path}Alteca_blanc.png',
+                  isLeft: true,
                   skills: [
                     cSharp,
                     aspNet,
@@ -172,11 +152,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 expDiv,
                 ExpItem(
-                  business: l.soitecTitre,
-                  dates: l.soitecDates,
-                  infos: l.soitecInfos,
-                  imageName: isDark ? '${path}Soitec_noir.png': '${path}Soitec_blanc.png',
-                  isPair: false,
+                  business: S.current.soitecTitle,
+                  dates: S.current.soitecDates,
+                  infos: S.current.soitecInfos,
+                  imageName: isDark
+                      ? '${path}Soitec_noir.png'
+                      : '${path}Soitec_blanc.png',
+                  isLeft: false,
                   skills: [
                     cSharp,
                     netCore,
@@ -192,19 +174,31 @@ class _MyHomePageState extends State<MyHomePage> {
                 expDiv,
 
                 ExpansionTile(
-                  title: Text(
-                    l.experiencesExpand,
-                    style: const TextStyle(
-                      fontSize: 20,
-                    ),
+                  title: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Text(
+                          S.current.experiencesExpand,
+                          style: const TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                      Icon(
+                        isExpanded
+                            ? Icons.keyboard_arrow_up_rounded
+                            : Icons.keyboard_arrow_down_rounded,
+                        size: 20,
+                      ),
+                    ],
                   ),
-                  trailing: Icon(
-                    isExpanded ?
-                    Icons.keyboard_arrow_up_rounded :
-                    Icons.keyboard_arrow_down_rounded,
-                    color: t.onPrimary,
-                    size: 30,
-                  ),
+                  // Removing trailing Icon because it's in title
+                  trailing: const SizedBox(),
+                  iconColor: context.colorScheme.onSurface,
+                  collapsedIconColor: context.colorScheme.onSurface,
                   onExpansionChanged: (bool expanded) {
                     setState(() {
                       isExpanded = expanded;
@@ -215,11 +209,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     expDiv,
                     ExpItem(
-                      business: l.econocomTitre,
-                      dates: l.econocomDates,
-                      infos: l.econocomInfos,
-                      imageName: isDark ? '${path}Econocom_noir.png' : '${path}Econocom_blanc.png',
-                      isPair: false,
+                      business: S.current.econocomTitle,
+                      dates: S.current.econocomDates,
+                      infos: S.current.econocomInfos,
+                      imageName: isDark
+                          ? '${path}Econocom_noir.png'
+                          : '${path}Econocom_blanc.png',
+                      isLeft: true,
                       skills: [
                         cSharp,
                         razor,
@@ -230,11 +226,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     expDiv,
                     ExpItem(
-                      business: l.webfTitre,
-                      dates: l.webfDates,
-                      infos: l.webfInfos,
-                      imageName: isDark ? '${path}Webf_noir.png' : '${path}Webf_blanc.png',
-                      isPair: true,
+                      business: S.current.webfTitle,
+                      dates: S.current.webfDates,
+                      infos: S.current.webfInfos,
+                      imageName: isDark
+                          ? '${path}Webf_noir.png'
+                          : '${path}Webf_blanc.png',
+                      isLeft: false,
                       skills: [
                         php,
                         symfony,
@@ -249,179 +247,82 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     expDiv,
                     ExpItem(
-                      business: l.gemTitre,
-                      dates: l.gemDates,
-                      infos: l.gemInfos,
-                      imageName: isDark ? '${path}GEM_noir.png' : '${path}GEM_blanc.png',
-                      isPair: false,
-                      skills: [
-                      ],
+                      business: S.current.gemTitle,
+                      dates: S.current.gemDates,
+                      infos: S.current.gemInfos,
+                      imageName: isDark
+                          ? '${path}GEM_noir.png'
+                          : '${path}GEM_blanc.png',
+                      isLeft: true,
                     ),
                     expDiv,
                     ExpItem(
-                      business: l.alatTitre,
-                      dates: l.alatDates,
-                      infos: l.alatInfos,
+                      business: S.current.alatTitle,
+                      dates: S.current.alatDates,
+                      infos: S.current.alatInfos,
                       imageName: '${path}Alat.png',
-                      isPair: true,
-                      skills: [
-                      ],
+                      isLeft: false,
                     ),
                     expDiv,
                     ExpItem(
-                      business: l.esrfTitre,
-                      dates: l.esrfDates,
-                      infos: l.esrfInfos,
+                      business: S.current.esrfTitle,
+                      dates: S.current.esrfDates,
+                      infos: S.current.esrfInfos,
                       imageName: '${path}ESRF.png',
-                      isPair: false,
-                      skills: [
-                      ],
+                      isLeft: true,
                     ),
                     expDiv,
                     ExpItem(
-                      business: l.rocheTitre,
-                      dates: l.rocheDates,
-                      infos: l.rocheInfos,
+                      business: S.current.rocheTitle,
+                      dates: S.current.rocheDates,
+                      infos: S.current.rocheInfos,
                       imageName: '${path}Roche.png',
-                      isPair: true,
-                      skills: [
-                      ],
+                      isLeft: false,
                     ),
                     expDiv,
                     ExpItem(
-                      business: l.mairieTitre,
-                      dates: l.mairieDates,
-                      infos: l.mairieInfos,
-                      imageName: isDark ? '${path}Fontaine_noir.png' : '${path}Fontaine_blanc.png',
-                      isPair: false,
-                      skills: [
-                      ],
+                      business: S.current.mairieTitle,
+                      dates: S.current.mairieDates,
+                      infos: S.current.mairieInfos,
+                      imageName: isDark
+                          ? '${path}Fontaine_noir.png'
+                          : '${path}Fontaine_blanc.png',
+                      isLeft: true,
                     ),
                     expDiv,
-                    const SizedBox(height: 10,),
                   ],
                 ),
                 //#endregion
+
+                const SizedBox(height: 30),
 
                 //#region Diplomas
-                TitleText(text: l.diplomas),
+                TitleText(text: S.current.diplomas),
                 expDiv,
-                Row(
-                  children: [
-                    orientation ?
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.25,
-                        child: AspectRatio(
-                          aspectRatio: 3.5,
-                          child: Image(
-                              image: AssetImage(isDark ? '${path}EPSI_noir.png' : '${path}EPSI_blanc.png',),
-                            ),
-                        ),
-                      ) : const SizedBox(),
-                    Flexible(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 10),
-                        child: DecoratedBox(
-                          decoration: orientation ?
-                            BoxDecoration(
-                              border: Border(
-                                left: BorderSide(
-                                    width: 2,
-                                    color: Theme.of(context).colorScheme.onPrimary
-                                ),
-                              ),
-                            ) :
-                            const BoxDecoration(),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(l.epsiTitre,
-                                  style: TextStyle(
-                                    color: Theme.of(context).colorScheme.onPrimary,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                                Text(l.epsiDate,
-                                  style: TextStyle(
-                                    color: Theme.of(context).colorScheme.onPrimary,
-                                    decoration: TextDecoration.underline,
-                                  ),
-                                ),
-                                Text(l.epsiDevInfo),
-                                Text(l.epsiDevOps),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                ExpItem(
+                  business: S.current.epsiTitle,
+                  dates: S.current.epsiDate,
+                  infos: '${S.current.epsiDevInfo}<br/>${S.current.epsiDevOps}',
+                  imageName: isDark
+                      ? '${path}EPSI_noir.png'
+                      : '${path}EPSI_blanc.png',
+                  isLeft: false,
                 ),
                 expDiv,
-                Row(
-                  children: [
-                    orientation ?
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.25,
-                      child: const AspectRatio(
-                        aspectRatio: 3.5,
-                        child: Image(
-                          image: AssetImage('${path}CSRP.png'),
-                        ),
-                      ),
-                    ) : const SizedBox(),
-                    Flexible(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 10),
-                        child: DecoratedBox(
-                          decoration:  orientation ?
-                            BoxDecoration(
-                              border: Border(
-                                left: BorderSide(
-                                  width: 2,
-                                  color: Theme.of(context).colorScheme.onPrimary
-                                ),
-                              ),
-                            ) :
-                            const BoxDecoration(),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(l.csrpTitre,
-                                  style: TextStyle(
-                                    color: Theme.of(context).colorScheme.onPrimary,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                                Text(l.csrpDate,
-                                  style: TextStyle(
-                                    color: Theme.of(context).colorScheme.onPrimary,
-                                    decoration: TextDecoration.underline,
-                                  ),
-                                ),
-                                Text(l.csrpBacPro),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                ExpItem(
+                  business: S.current.csrpTitle,
+                  dates: S.current.csrpDate,
+                  infos: S.current.csrpBacPro,
+                  imageName: '${path}CSRP.png',
+                  isLeft: false,
                 ),
                 expDiv,
                 //#endregion
-
               ],
             ),
           );
         }),
-      )
+      ),
     );
   }
 }

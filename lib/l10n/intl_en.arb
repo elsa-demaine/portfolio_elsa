@@ -1,5 +1,5 @@
 {
-  "version": "v0.3",
+  "version": "v0.4",
   "warningAlpha": "Bear with me, this site is an alpha version, development is still ongoing. Thank you for your understanding",
   "appTitle": "Elsa Demaine",
   "theme": "Theme",
@@ -10,7 +10,6 @@
 
   "home": "Home",
   "intro": "Coming soon",
-  "bonus": "A common question asked during interviews is, \"Why do you enjoy developing?\"<br/>It's quite simple, really. I see development as an art;<br/><indent></indent>The art of investigating bugs and turning them into learning opportunities.<br/><indent></indent>The art of writing clean code, it’s like reading a story.<br/><indent></indent>The art of sharing knowledge with coworkers and friends .<br/><indent></indent>The art of creating, modifying, evolving.",
   "experiences": "Experiences",
   "experiencesExpand": "More experiences",
   "diplomas": "Diplomas",
@@ -66,57 +65,63 @@
   "twig": "Twig",
   "visualStudio": "Visual Studio",
 
-  "elsaTitre": "Personal Project",
+  "elsaTitle": "Personal Project",
   "elsaDates": "May 2024 - To date",
   "elsaInfos": "The goal of this website is to prove to others, and myself, what I am capable of achieving.<br/>During my spare time, I’m self-learning Flutter because I want to expand my horizons.<br/>What caught my attention about Flutter is its unique way of building applications compared to other <tooltip id='Object-oriented programming'>OOP</tooltip> languages.",
 
-  "altecaTitre": "Alteca",
+  "altecaTitle": "Alteca",
   "altecaDates": "March 2022 - To date",
   "altecaInfos": "<tooltip id='Third-Party Maintenance'>TPM</tooltip> of a legacy web application to manage environmental directives for Schneider Electric.<br/>Project management in Agile (meetings in English).<br/>Reverse documentation and code refactoring.<br/>Analysis of impact and workload estimations for its implementation.<br/>Development of new features and maintenance of the existing system.<br/>Addition of integration tests.<br/>Deployment of versions on test and production servers.<br/>Client functional support.",
 
-  "soitecTitre": "Soitec",
+  "soitecTitle": "Soitec",
   "soitecDates": "Sept. 2018 - June 2020",
   "soitecInfos": "Coming soon",
 
-  "econocomTitre": "Econocom",
+  "econocomTitle": "Econocom",
   "econocomDates": "Jan. 2018 - Feb. 2018",
   "econocomInfos": "During this 2 months internship in <tooltip id='Digital Application Services'>DAS</tooltip> within the service center of Grenoble, I had the opportunity to work on 2 different missions.<br/><br/>The first was a tablet application used by sales representatives at Roche Diabetes Care. It was a catalog enabling the placement of products and services orders, reserved for healthcare professionals. I contributed to the CCS part of the front end.<br/><br/>The second involved the implementation of a <tooltip id='Proof of concept'>PoC</tooltip> using the EPPlus library. The specifications were:<br/><lu><li>Create a new .Net Core web application,</li><li>Enable the creation of a new blank file or upload an existing file,</li><li>Allow modification of cell values, number of columns etc,</li><li>Ensure the code is generic so it can be used in other applications.</li></lu>",
 
-  "webfTitre": "Web|Alternatif",
+  "webfTitle": "Web|Alternatif",
   "webfDates": "June 2017",
   "webfInfos": "Coming soon",
 
-  "gemTitre": "Grenoble Ecole de Management",
+  "gemTitle": "Grenoble Ecole de Management",
   "gemDates": "Dec. 2015 (3 weeks internship)",
   "gemInfos": "Coming soon",
 
-  "alatTitre": "Air Liquide Advanced Technologies",
+  "alatTitle": "Air Liquide Advanced Technologies",
   "alatDates": "July 2015 (1 month seasonal job)",
   "alatInfos": "Coming soon",
 
-  "esrfTitre": "European Radiation Synchrotron Facility",
+  "esrfTitle": "European Radiation Synchrotron Facility",
   "esrfDates": "Jan. 2015 & May 2015 (10 weeks internship)",
   "esrfInfos": "Coming soon",
 
-  "rocheTitre": "Roche",
+  "rocheTitle": "Roche",
   "rocheDates": "June 2014 (3 weeks internship)",
   "rocheInfos": "Coming soon",
 
-  "mairieTitre": "Mairie de Fontaine",
+  "mairieTitle": "Mairie de Fontaine",
   "mairieDates": "March 2014 (3 weeks internship)",
   "mairieInfos": "Coming soon",
 
-  "epsiTitre": "EPSI",
+  "epsiTitle": "EPSI",
   "epsiDate": "2019",
   "epsiDevInfo": "Bachelor in Software Development and Design",
   "epsiDevOps": "Bachelor in DevOps Development and Integration",
 
-  "csrpTitre": "René Pellet Educational Complex",
+  "csrpTitle": "René Pellet Educational Complex",
   "csrpDate": "2016",
   "csrpBacPro": "Vocational Baccalaureate in Management and Administration, European Section (English), with highest honors",
 
+  "faqTitle": "FAQ",
+  "faqDevArt": "<strong>Why do I enjoy developing?</strong><br/>I see development as an art;<br/><indent></indent>The art of investigating bugs and turning them into learning opportunities.<br/><indent></indent>The art of writing clean code, it’s like reading a story.<br/><indent></indent>The art of sharing knowledge with coworkers and friends .<br/><indent></indent>The art of creating, modifying, evolving.",
+  "faqContact": "<strong>How to contact me?</strong><br/>You can contact me via <a href='https://www.linkedin.com/in/elsa-demaine'>Linkedin</a> where I can give you my CV (in English and/or in French)",
+  "faqOpenToWork": "<strong>Am I open to work?</strong><br/>",
+  "faqGit": "<strong>Is ths site's code available?</strong><br/>Yes, you can find it on my <a href='https://github.com/elsa-demaine'>Github</a>. I'm open to advice and feedback (via Merge Request or messaging <a href='https://www.linkedin.com/in/elsa-demaine'>Linkedin</a>)",
+
   "hobbies": "Hobbies",
-  "okami": "Okami",
-  "outerWilds": "Outer Wilds",
-  "monsterHunter": "Monster Hunter"
+  "okami": "<div style='color:black;'>Experience the critically acclaimed masterpiece with its renowned Sumi-e ink art style in breathtaking high resolution. Take on the role of Amaterasu, the Japanese sun goddess who inhabits the form of a legendary white wolf, on a quest to defeat Orochi, an eight-headed demon and tyrannical monster responsible for turning the world of Nippon into a ruined wasteland.<br/><br/>Players will be able to choose between modern widescreen format or the original release’s 4:3 ratio. Interactive loading game screens from the original game are also included.<br/><br/>Source: <a href='https://store.steampowered.com/app/587620/Okami_HD/'>Steam Okami HD</a></div>",
+  "outerWilds": "<div style='color:white;'>Winner of Best Game at the 2020 BAFTA Games Awards and named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, Outer Wilds is a critically-acclaimed and award-winning open world mystery about a solar system trapped in an endless time loop.<br/><br/>Source: <a href='https://store.steampowered.com/app/753640/Outer_Wilds/'>Steam Outer Wilds</a></div>",
+  "monsterHunter": "<div style='color:black;'>Welcome to a new world! Take on the role of a hunter and slay ferocious monsters in a living, breathing ecosystem where you can use the landscape and its diverse inhabitants to get the upper hand. Hunt alone or in co-op with up to three other players, and use materials collected from fallen foes to craft new gear and take on even bigger, badder beasts!<br/><br/>Source: <a href='https://store.steampowered.com/app/582010/Monster_Hunter_World/'>Steam Monster Hunter World</a></div>"
 }

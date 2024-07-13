@@ -1,8 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
-import 'package:portfolio_elsa/generated/l10n.dart';
-import 'package:portfolio_elsa/utils/custom.dart';
+import 'package:portfolio_elsa/all.dart';
 
 class Carousel extends StatefulWidget {
   const Carousel({super.key});
@@ -16,8 +13,6 @@ class _CarouselWithIndicatorState extends State<Carousel> {
   final CarouselController _controller = CarouselController();
 
   carouselItem(String imageAsset, String text, bool isRow, bool isLight) {
-    Style lightText = Style(color: Colors.white);
-
     return [
       isRow ?
         Image.asset(imageAsset) :
@@ -37,7 +32,22 @@ class _CarouselWithIndicatorState extends State<Carousel> {
           color: const Color.fromARGB(75, 0, 0, 0),
           child: Padding(
             padding: const EdgeInsets.only(left: 5),
-            child: isLight ? HtmlText(text: text, style: lightText) : HtmlText(text: text),
+            child: Theme(
+              data: ThemeData(
+                scrollbarTheme: ScrollbarThemeData(
+                  thumbVisibility: const WidgetStatePropertyAll(true),
+                  thumbColor: WidgetStatePropertyAll(isLight ? myLightPurple : myDarkPurple),
+                  trackVisibility: WidgetStatePropertyAll(isLight ? true : false),
+                  radius: const Radius.circular(16),
+                  thickness: const WidgetStatePropertyAll(7),
+                ),
+              ),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                padding: const EdgeInsets.symmetric(horizontal: 7),
+                child: HtmlText(text: text),
+              ),
+            ),
           ),
         ),
       ),
@@ -123,7 +133,7 @@ class _CarouselWithIndicatorState extends State<Carousel> {
                 const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: (Theme.of(context).highlightColor).withOpacity(_current == entry.key ? 0.9 : 0.4),
+                  color: (_current == entry.key ? Theme.of(context).colorScheme.onPrimary : Theme.of(context).colorScheme.primary),
                 ),
               ),
             );

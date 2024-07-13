@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import '../generated/l10n.dart';
+import 'package:portfolio_elsa/all.dart';
 
 final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 
@@ -46,13 +44,13 @@ void navigateTo(BuildContext context, String routeName) {
 
 void setPageTitle(String routeName, BuildContext context) {
   String title = switch(routeName) {
-    '/home' => S.of(context).home,
-    '/hobbies' => S.of(context).hobbies,
-    _ => S.of(context).home,
+    '/home' => S.current.home,
+    '/hobbies' => S.current.hobbies,
+    _ => S.current.home,
   };
 
   SystemChrome.setApplicationSwitcherDescription(ApplicationSwitcherDescription(
-    label: "${S.of(context).appTitle} - $title",
-    primaryColor: Theme.of(context).primaryColor.value, // This line is required
+    label: "${S.current.appTitle} - $title",
+    primaryColor: context.colorScheme.primary.value, // This line is required
   ));
 }

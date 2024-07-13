@@ -51,10 +51,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `v0.3`
+  /// `v0.4`
   String get version {
     return Intl.message(
-      'v0.3',
+      'v0.4',
       name: 'version',
       desc: '',
       args: [],
@@ -136,16 +136,6 @@ class S {
     return Intl.message(
       'Coming soon',
       name: 'intro',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `A common question asked during interviews is, "Why do you enjoy developing?"<br/>It's quite simple, really. I see development as an art;<br/><indent></indent>The art of investigating bugs and turning them into learning opportunities.<br/><indent></indent>The art of writing clean code, it’s like reading a story.<br/><indent></indent>The art of sharing knowledge with coworkers and friends .<br/><indent></indent>The art of creating, modifying, evolving.`
-  String get bonus {
-    return Intl.message(
-      'A common question asked during interviews is, "Why do you enjoy developing?"<br/>It\'s quite simple, really. I see development as an art;<br/><indent></indent>The art of investigating bugs and turning them into learning opportunities.<br/><indent></indent>The art of writing clean code, it’s like reading a story.<br/><indent></indent>The art of sharing knowledge with coworkers and friends .<br/><indent></indent>The art of creating, modifying, evolving.',
-      name: 'bonus',
       desc: '',
       args: [],
     );
@@ -672,10 +662,10 @@ class S {
   }
 
   /// `Personal Project`
-  String get elsaTitre {
+  String get elsaTitle {
     return Intl.message(
       'Personal Project',
-      name: 'elsaTitre',
+      name: 'elsaTitle',
       desc: '',
       args: [],
     );
@@ -702,10 +692,10 @@ class S {
   }
 
   /// `Alteca`
-  String get altecaTitre {
+  String get altecaTitle {
     return Intl.message(
       'Alteca',
-      name: 'altecaTitre',
+      name: 'altecaTitle',
       desc: '',
       args: [],
     );
@@ -732,10 +722,10 @@ class S {
   }
 
   /// `Soitec`
-  String get soitecTitre {
+  String get soitecTitle {
     return Intl.message(
       'Soitec',
-      name: 'soitecTitre',
+      name: 'soitecTitle',
       desc: '',
       args: [],
     );
@@ -762,10 +752,10 @@ class S {
   }
 
   /// `Econocom`
-  String get econocomTitre {
+  String get econocomTitle {
     return Intl.message(
       'Econocom',
-      name: 'econocomTitre',
+      name: 'econocomTitle',
       desc: '',
       args: [],
     );
@@ -792,10 +782,10 @@ class S {
   }
 
   /// `Web|Alternatif`
-  String get webfTitre {
+  String get webfTitle {
     return Intl.message(
       'Web|Alternatif',
-      name: 'webfTitre',
+      name: 'webfTitle',
       desc: '',
       args: [],
     );
@@ -822,10 +812,10 @@ class S {
   }
 
   /// `Grenoble Ecole de Management`
-  String get gemTitre {
+  String get gemTitle {
     return Intl.message(
       'Grenoble Ecole de Management',
-      name: 'gemTitre',
+      name: 'gemTitle',
       desc: '',
       args: [],
     );
@@ -852,10 +842,10 @@ class S {
   }
 
   /// `Air Liquide Advanced Technologies`
-  String get alatTitre {
+  String get alatTitle {
     return Intl.message(
       'Air Liquide Advanced Technologies',
-      name: 'alatTitre',
+      name: 'alatTitle',
       desc: '',
       args: [],
     );
@@ -882,10 +872,10 @@ class S {
   }
 
   /// `European Radiation Synchrotron Facility`
-  String get esrfTitre {
+  String get esrfTitle {
     return Intl.message(
       'European Radiation Synchrotron Facility',
-      name: 'esrfTitre',
+      name: 'esrfTitle',
       desc: '',
       args: [],
     );
@@ -912,10 +902,10 @@ class S {
   }
 
   /// `Roche`
-  String get rocheTitre {
+  String get rocheTitle {
     return Intl.message(
       'Roche',
-      name: 'rocheTitre',
+      name: 'rocheTitle',
       desc: '',
       args: [],
     );
@@ -942,10 +932,10 @@ class S {
   }
 
   /// `Mairie de Fontaine`
-  String get mairieTitre {
+  String get mairieTitle {
     return Intl.message(
       'Mairie de Fontaine',
-      name: 'mairieTitre',
+      name: 'mairieTitle',
       desc: '',
       args: [],
     );
@@ -972,10 +962,10 @@ class S {
   }
 
   /// `EPSI`
-  String get epsiTitre {
+  String get epsiTitle {
     return Intl.message(
       'EPSI',
-      name: 'epsiTitre',
+      name: 'epsiTitle',
       desc: '',
       args: [],
     );
@@ -1012,10 +1002,10 @@ class S {
   }
 
   /// `René Pellet Educational Complex`
-  String get csrpTitre {
+  String get csrpTitle {
     return Intl.message(
       'René Pellet Educational Complex',
-      name: 'csrpTitre',
+      name: 'csrpTitle',
       desc: '',
       args: [],
     );
@@ -1041,6 +1031,56 @@ class S {
     );
   }
 
+  /// `FAQ`
+  String get faqTitle {
+    return Intl.message(
+      'FAQ',
+      name: 'faqTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `<strong>Why do I enjoy developing?</strong><br/>I see development as an art;<br/><indent></indent>The art of investigating bugs and turning them into learning opportunities.<br/><indent></indent>The art of writing clean code, it’s like reading a story.<br/><indent></indent>The art of sharing knowledge with coworkers and friends .<br/><indent></indent>The art of creating, modifying, evolving.`
+  String get faqDevArt {
+    return Intl.message(
+      '<strong>Why do I enjoy developing?</strong><br/>I see development as an art;<br/><indent></indent>The art of investigating bugs and turning them into learning opportunities.<br/><indent></indent>The art of writing clean code, it’s like reading a story.<br/><indent></indent>The art of sharing knowledge with coworkers and friends .<br/><indent></indent>The art of creating, modifying, evolving.',
+      name: 'faqDevArt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `<strong>How to contact me?</strong><br/>You can contact me via <a href='https://www.linkedin.com/in/elsa-demaine'>Linkedin</a> where I can give you my CV (in English and/or in French)`
+  String get faqContact {
+    return Intl.message(
+      '<strong>How to contact me?</strong><br/>You can contact me via <a href=\'https://www.linkedin.com/in/elsa-demaine\'>Linkedin</a> where I can give you my CV (in English and/or in French)',
+      name: 'faqContact',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `<strong>Am I open to work?</strong><br/>`
+  String get faqOpenToWork {
+    return Intl.message(
+      '<strong>Am I open to work?</strong><br/>',
+      name: 'faqOpenToWork',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `<strong>Is ths site's code available?</strong><br/>Yes, you can find it on my <a href='https://github.com/elsa-demaine'>Github</a>. I'm open to advice and feedback (via Merge Request or messaging <a href='https://www.linkedin.com/in/elsa-demaine'>Linkedin</a>)`
+  String get faqGit {
+    return Intl.message(
+      '<strong>Is ths site\'s code available?</strong><br/>Yes, you can find it on my <a href=\'https://github.com/elsa-demaine\'>Github</a>. I\'m open to advice and feedback (via Merge Request or messaging <a href=\'https://www.linkedin.com/in/elsa-demaine\'>Linkedin</a>)',
+      name: 'faqGit',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Hobbies`
   String get hobbies {
     return Intl.message(
@@ -1051,30 +1091,30 @@ class S {
     );
   }
 
-  /// `Okami`
+  /// `<div style='color:black;'>Experience the critically acclaimed masterpiece with its renowned Sumi-e ink art style in breathtaking high resolution. Take on the role of Amaterasu, the Japanese sun goddess who inhabits the form of a legendary white wolf, on a quest to defeat Orochi, an eight-headed demon and tyrannical monster responsible for turning the world of Nippon into a ruined wasteland.<br/><br/>Players will be able to choose between modern widescreen format or the original release’s 4:3 ratio. Interactive loading game screens from the original game are also included.<br/><br/>Source: <a href='https://store.steampowered.com/app/587620/Okami_HD/'>Steam Okami HD</a></div>`
   String get okami {
     return Intl.message(
-      'Okami',
+      '<div style=\'color:black;\'>Experience the critically acclaimed masterpiece with its renowned Sumi-e ink art style in breathtaking high resolution. Take on the role of Amaterasu, the Japanese sun goddess who inhabits the form of a legendary white wolf, on a quest to defeat Orochi, an eight-headed demon and tyrannical monster responsible for turning the world of Nippon into a ruined wasteland.<br/><br/>Players will be able to choose between modern widescreen format or the original release’s 4:3 ratio. Interactive loading game screens from the original game are also included.<br/><br/>Source: <a href=\'https://store.steampowered.com/app/587620/Okami_HD/\'>Steam Okami HD</a></div>',
       name: 'okami',
       desc: '',
       args: [],
     );
   }
 
-  /// `Outer Wilds`
+  /// `<div style='color:white;'>Winner of Best Game at the 2020 BAFTA Games Awards and named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, Outer Wilds is a critically-acclaimed and award-winning open world mystery about a solar system trapped in an endless time loop.<br/><br/>Source: <a href='https://store.steampowered.com/app/753640/Outer_Wilds/'>Steam Outer Wilds</a></div>`
   String get outerWilds {
     return Intl.message(
-      'Outer Wilds',
+      '<div style=\'color:white;\'>Winner of Best Game at the 2020 BAFTA Games Awards and named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, Outer Wilds is a critically-acclaimed and award-winning open world mystery about a solar system trapped in an endless time loop.<br/><br/>Source: <a href=\'https://store.steampowered.com/app/753640/Outer_Wilds/\'>Steam Outer Wilds</a></div>',
       name: 'outerWilds',
       desc: '',
       args: [],
     );
   }
 
-  /// `Monster Hunter`
+  /// `<div style='color:black;'>Welcome to a new world! Take on the role of a hunter and slay ferocious monsters in a living, breathing ecosystem where you can use the landscape and its diverse inhabitants to get the upper hand. Hunt alone or in co-op with up to three other players, and use materials collected from fallen foes to craft new gear and take on even bigger, badder beasts!<br/><br/>Source: <a href='https://store.steampowered.com/app/582010/Monster_Hunter_World/'>Steam Monster Hunter World</a></div>`
   String get monsterHunter {
     return Intl.message(
-      'Monster Hunter',
+      '<div style=\'color:black;\'>Welcome to a new world! Take on the role of a hunter and slay ferocious monsters in a living, breathing ecosystem where you can use the landscape and its diverse inhabitants to get the upper hand. Hunt alone or in co-op with up to three other players, and use materials collected from fallen foes to craft new gear and take on even bigger, badder beasts!<br/><br/>Source: <a href=\'https://store.steampowered.com/app/582010/Monster_Hunter_World/\'>Steam Monster Hunter World</a></div>',
       name: 'monsterHunter',
       desc: '',
       args: [],

@@ -1,9 +1,8 @@
 import 'dart:ui';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:portfolio_elsa/generated/l10n.dart';
-import 'package:portfolio_elsa/utils/all.dart';
+import 'package:portfolio_elsa/all.dart';
+import 'package:portfolio_elsa/views/faqs.dart';
 import 'package:portfolio_elsa/views/hobbies.dart';
 import 'package:portfolio_elsa/views/home.dart';
 
@@ -57,6 +56,7 @@ class _MyAppState extends State<MyApp> {
           routes: {
             '/home': (context) => const MyHomePage(),
             '/hobbies': (context) => const MyHobbies(),
+            '/faqs': (context) => const MyFAQs(),
           },
         );
       },

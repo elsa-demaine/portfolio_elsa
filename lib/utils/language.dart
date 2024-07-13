@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:portfolio_elsa/all.dart';
 
 import '../main.dart';
 
@@ -38,10 +38,10 @@ class _DropdownLangState extends State<DropdownLang> {
       icon: const Icon(Icons.arrow_drop_down_sharp),
       underline:  Container(
         height: 2,
-        color: Theme.of(context).colorScheme.onPrimary,
+        color: context.colorScheme.onPrimary,
       ),
       focusColor: Colors.transparent,
-      dropdownColor: Theme.of(context).colorScheme.secondary,
+      dropdownColor: context.colorScheme.secondary,
       onChanged: (String? value) {
         setState(() {
           dropdownValue = value!;

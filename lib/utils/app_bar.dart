@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio_elsa/generated/l10n.dart';
-import 'package:portfolio_elsa/utils/all.dart';
+import 'package:portfolio_elsa/all.dart';
 
 AppBar myAppBar(BuildContext context, String title) {
   bool isDark = darkNotifier.value;
@@ -17,8 +15,8 @@ AppBar myAppBar(BuildContext context, String title) {
       },
       hoverColor: Colors.transparent,
     ),
-    backgroundColor: Theme.of(context).colorScheme.primary,
-    foregroundColor: Theme.of(context).colorScheme.onPrimary,
+    backgroundColor: context.colorScheme.primary,
+    foregroundColor: context.colorScheme.onPrimary,
     actions: [
       Transform.scale(
         scale: .75,
@@ -31,10 +29,10 @@ AppBar myAppBar(BuildContext context, String title) {
         ),
         children: [
           PopupMenuButton(
-            color: Theme.of(context).colorScheme.secondary,
+            color: context.colorScheme.secondary,
             padding: EdgeInsets.zero,
             position: PopupMenuPosition.under,
-            tooltip: S.of(context).menu,
+            tooltip: S.current.menu,
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
                 Radius.circular(15.0),
@@ -44,7 +42,7 @@ AppBar myAppBar(BuildContext context, String title) {
               padding: const EdgeInsets.all(8),
               child: Icon(
                 Icons.menu,
-                color: Theme.of(context).colorScheme.onPrimary,
+                color: context.colorScheme.onPrimary,
               ),
             ),
             itemBuilder: (BuildContext context) => <PopupMenuEntry>[
@@ -53,11 +51,11 @@ AppBar myAppBar(BuildContext context, String title) {
                   //Align text with switch widget
                   leading: const SizedBox(),
                   hoverColor: Colors.transparent,
-                  title: Text(S.of(context).home),
+                  title: Text(S.current.home),
                   //Align text with switch widget
                   trailing: const SizedBox(),
                   onTap: () {
-                    Navigator.of(context).pop();
+                    context.navigator.pop();
                     navigateTo(context, "/home");
                   },
                 ),
@@ -67,32 +65,46 @@ AppBar myAppBar(BuildContext context, String title) {
                   //Align text with switch widget
                   leading: const SizedBox(),
                   hoverColor: Colors.transparent,
-                  title: Text(S.of(context).hobbies),
+                  title: Text(S.current.hobbies),
                   //Align text with switch widget
                   trailing: const SizedBox(),
                   onTap: () {
-                  Navigator.of(context).pop();
+                  context.navigator.pop();
                   navigateTo(context, "/hobbies");
+                  },
+                ),
+              ),
+              PopupMenuItem(
+                child: ListTile(
+                  //Align text with switch widget
+                  leading: const SizedBox(),
+                  hoverColor: Colors.transparent,
+                  title: Text(S.current.faqTitle),
+                  //Align text with switch widget
+                  trailing: const SizedBox(),
+                  onTap: () {
+                    context.navigator.pop();
+                    navigateTo(context, "/faqs");
                   },
                 ),
               ),
               PopupMenuItem(
                 child: SwitchListTile.adaptive(
                   hoverColor: Colors.transparent,
-                  title: Text(S.of(context).theme),
+                  title: Text(S.current.theme),
                   secondary: const Icon(Icons.brightness_medium_sharp),
-                  thumbColor: WidgetStatePropertyAll(Theme.of(context).colorScheme.onTertiary ),
+                  thumbColor: WidgetStatePropertyAll(context.colorScheme.onTertiary ),
                   thumbIcon: WidgetStatePropertyAll(
                     isDark ?
-                      Icon(Icons.dark_mode_sharp, color: Theme.of(context).colorScheme.tertiary,) :
-                      Icon(Icons.light_mode_sharp, color: Theme.of(context).colorScheme.tertiary,),
+                      Icon(Icons.dark_mode_sharp, color: context.colorScheme.tertiary,) :
+                      Icon(Icons.light_mode_sharp, color: context.colorScheme.tertiary,),
                   ),
-                  inactiveTrackColor: Theme.of(context).colorScheme.tertiary,
+                  inactiveTrackColor: context.colorScheme.tertiary,
                   value: isDark,
                   onChanged: (bool? value) {
                     isDark = !isDark;
                     darkNotifier.value = isDark;
-                    Navigator.of(context).pop();
+                    context.navigator.pop();
                   },
                 ),
               ),

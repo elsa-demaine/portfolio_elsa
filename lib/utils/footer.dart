@@ -1,23 +1,21 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio_elsa/generated/l10n.dart';
-import 'package:portfolio_elsa/utils/all.dart';
+import 'package:portfolio_elsa/all.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Container myFooter(BuildContext context) {
   return Container(
-    width: MediaQuery.of(context).size.width,
+    width: context.mediaQuery.size.width,
     height: 56,
-    color: Theme.of(context).colorScheme.primary,
+    color: context.colorScheme.primary,
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         FooterButton(
           icon: const Image(image: AssetImage('assets/images/LI-In-Bug.png'),),
-          text: S.of(context).linkedin,
+          text: S.current.linkedin,
           onPressed: _launchLinkedInURL),
         FooterButton(
           icon: const Image(image: AssetImage('assets/images/github-mark.png'),),
-          text: S.of(context).myGithub,
+          text: S.current.myGithub,
           onPressed: _launchGithubURL),
         Text(S.of(context).version),
       ],
@@ -87,7 +85,7 @@ class FooterButtonState extends State<FooterButton> {
             label: Text(
               widget.text,
               style: TextStyle(
-                color: Theme.of(context).colorScheme.onSurface,
+                color: context.colorScheme.onSurface,
               ),
             ),
             onPressed: widget.onPressed,
