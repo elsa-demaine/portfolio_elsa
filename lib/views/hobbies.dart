@@ -22,8 +22,8 @@ class _MyHobbiesPageState extends State<MyHobbies> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                TitleText(text: S.current.hobbies),
-                HtmlText(text: S.current.hobbies),
+                TitleText(text: S.current.videoGames),
+                HtmlText(text: S.current.vgText),
                 const Carousel(),
                 Row(
                   children: [
@@ -31,8 +31,8 @@ class _MyHobbiesPageState extends State<MyHobbies> {
                       flex: 2,
                       child: Column(
                         children: [
-                          TitleText(text: S.current.experiences),
-                          HtmlText(text: S.current.hobbies),
+                          TitleText(text: S.current.series),
+                          HtmlText(text: S.current.seriesText),
                         ],
                       ),
                     ),

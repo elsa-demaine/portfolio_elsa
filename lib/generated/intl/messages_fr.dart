@@ -44,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "bilang": MessageLookupByLibrary.simpleMessage("Bilingue anglais"),
         "bootstrap": MessageLookupByLibrary.simpleMessage("Bootstrap"),
         "cSharp": MessageLookupByLibrary.simpleMessage("C#"),
+        "collaboration": MessageLookupByLibrary.simpleMessage("Collaboration"),
         "communication": MessageLookupByLibrary.simpleMessage("Communication"),
         "csrpBacPro": MessageLookupByLibrary.simpleMessage(
             "Bac Professionnel Gestion - Administration section Européenne Anglais mention très bien"),
@@ -97,11 +98,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "hobbies": MessageLookupByLibrary.simpleMessage("Loisirs"),
         "home": MessageLookupByLibrary.simpleMessage("Accueil"),
         "initiative": MessageLookupByLibrary.simpleMessage("Initiative"),
-        "intro": MessageLookupByLibrary.simpleMessage("Prochainement"),
+        "intro": MessageLookupByLibrary.simpleMessage("Introduction"),
         "ionos": MessageLookupByLibrary.simpleMessage("Ionos"),
         "jQuery": MessageLookupByLibrary.simpleMessage("jQuery"),
         "jira": MessageLookupByLibrary.simpleMessage("Jira"),
         "kanban": MessageLookupByLibrary.simpleMessage("Kanban"),
+        "kind": MessageLookupByLibrary.simpleMessage("Bienveillance"),
         "linkedin": MessageLookupByLibrary.simpleMessage("Mon Linkedin"),
         "log4Net": MessageLookupByLibrary.simpleMessage("Log4Net"),
         "mairieDates": MessageLookupByLibrary.simpleMessage(
@@ -110,22 +112,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "mairieTitle":
             MessageLookupByLibrary.simpleMessage("Mairie de Fontaine"),
         "menu": MessageLookupByLibrary.simpleMessage("Menu"),
-        "monsterHunter": MessageLookupByLibrary.simpleMessage(
-            "<div style=\'color:black;\'>Bienvenue dans le Nouveau Monde ! Incarnez un chasseur et traquez des monstres féroces dans un écosystème luxuriant. Utilisez l\'environnement, la faune et la flore pour triompher de vos proies. Chassez seul ou avec un à trois autres joueurs, et servez-vous des matériaux récupérés sur les monstres abattus pour fabriquer des pièces d\'équipement et affronter des créatures toujours plus redoutables !<br/><br/>Source : <a href=\'https://store.steampowered.com/app/582010/Monster_Hunter_World/\'>Steam Monster Hunter World</a></div>"),
+        "monsterHunter": MessageLookupByLibrary.simpleMessage("Prochainement"),
+        "motivated": MessageLookupByLibrary.simpleMessage("Motivée"),
         "mvc": MessageLookupByLibrary.simpleMessage("MVC"),
         "myGithub": MessageLookupByLibrary.simpleMessage("Mon Github"),
-        "mySql": MessageLookupByLibrary.simpleMessage("mySQL"),
+        "mySql": MessageLookupByLibrary.simpleMessage("MySQL"),
         "netCore": MessageLookupByLibrary.simpleMessage(".Net Core"),
         "netStandard": MessageLookupByLibrary.simpleMessage(".Net Standard"),
         "ntiers": MessageLookupByLibrary.simpleMessage("N-Tiers"),
-        "okami": MessageLookupByLibrary.simpleMessage(
-            "<div style=\'color:black;\'>Découvrez cet incroyable chef-d\'œuvre et son style graphique sumi-e inimitable en haute résolution. Incarnez Amaterasu, la déesse japonaise du soleil, qui prend la forme d\'un loup blanc légendaire pour tenter de vaincre Orochi, un tyrannique démon à huit têtes n\'ayant laissé du Nippon qu\'un vaste champ de ruines.<br/><br/>Les joueurs peuvent choisir entre un affichage écran large moderne et le format 4:3 du titre d\'origine. Des écrans de chargement interactifs du jeu d\'origine ont également été inclus.<br/><br/>Source : <a href=\'https://store.steampowered.com/app/587620/Okami_HD/\'>Steam Okami HD</a></div>"),
+        "okami": MessageLookupByLibrary.simpleMessage("Prochainement"),
         "oracle": MessageLookupByLibrary.simpleMessage("Oracle"),
         "outerWilds": MessageLookupByLibrary.simpleMessage(
-            "<div style=\'color:white;\'>Nommé Game of the Year 2019 par Giant Bomb, Polygon, Eurogamer et The Guardian, acclamé par la critique et récompensé par de nombreux prix, Outer Wilds est un jeu mystérieux en monde ouvert, mettant en scène un système solaire piégé dans une boucle temporelle infinie.<br/><br/>Source : <a href=\'https://store.steampowered.com/app/753640/Outer_Wilds/\'>Steam Outer Wilds</a></div>"),
+            "<div style=\'color:white;\'>Prochainement</div>"),
         "php": MessageLookupByLibrary.simpleMessage("PHP"),
         "phpStorm": MessageLookupByLibrary.simpleMessage("PHP Storm"),
-        "punctuality": MessageLookupByLibrary.simpleMessage("ponctuel"),
+        "proactive": MessageLookupByLibrary.simpleMessage("Proactive"),
+        "proposeInitiatives":
+            MessageLookupByLibrary.simpleMessage("Force de proposition"),
+        "punctuality": MessageLookupByLibrary.simpleMessage("Ponctuel"),
         "razor": MessageLookupByLibrary.simpleMessage("Razor"),
         "rocheDates": MessageLookupByLibrary.simpleMessage(
             "Juin 2014 (stage de 3 semaines)"),
@@ -133,10 +137,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rocheTitle": MessageLookupByLibrary.simpleMessage("Roche"),
         "scrum": MessageLookupByLibrary.simpleMessage("SCRUM"),
         "selenium": MessageLookupByLibrary.simpleMessage("Selenium"),
+        "series": MessageLookupByLibrary.simpleMessage("Séries"),
+        "seriesText": MessageLookupByLibrary.simpleMessage("Prochainement"),
         "skillTitleHard": MessageLookupByLibrary.simpleMessage("Savoir-faire"),
+        "skillTitleLanguage":
+            MessageLookupByLibrary.simpleMessage("Langages :"),
         "skillTitleMad":
             MessageLookupByLibrary.simpleMessage("Compétences originales"),
+        "skillTitleOther": MessageLookupByLibrary.simpleMessage("Autres :"),
         "skillTitleSoft": MessageLookupByLibrary.simpleMessage("Savoir-être"),
+        "skillTitleTool": MessageLookupByLibrary.simpleMessage("Outils :"),
         "soapUI": MessageLookupByLibrary.simpleMessage("SoapUI"),
         "soitecDates":
             MessageLookupByLibrary.simpleMessage("Sept. 2018 - Juin 2020"),
@@ -148,12 +158,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "symfony": MessageLookupByLibrary.simpleMessage("Symfony"),
         "teams": MessageLookupByLibrary.simpleMessage("Teams"),
         "teamwork": MessageLookupByLibrary.simpleMessage("Travail d\'équipe"),
+        "tenacious": MessageLookupByLibrary.simpleMessage("Tenace"),
         "theme": MessageLookupByLibrary.simpleMessage("Thème"),
         "timeManagement":
             MessageLookupByLibrary.simpleMessage("Gestion du temps"),
         "trello": MessageLookupByLibrary.simpleMessage("Trello"),
         "twig": MessageLookupByLibrary.simpleMessage("Twig"),
         "version": MessageLookupByLibrary.simpleMessage("v0.4"),
+        "vgText": MessageLookupByLibrary.simpleMessage("Prochainement"),
+        "videoGames": MessageLookupByLibrary.simpleMessage("Jeux Vidéos"),
         "visualStudio": MessageLookupByLibrary.simpleMessage("Visual Studio"),
         "warningAlpha": MessageLookupByLibrary.simpleMessage(
             "Ce site est en version alpha, le développement est toujours en cours. Merci pour votre compréhension"),

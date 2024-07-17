@@ -1,80 +1,87 @@
 import 'package:portfolio_elsa/all.dart';
 
 //a
-final agile = Skill(name: S.current.agile, type: SkillType.hard);
+final agile = HardSkill(name: S.current.agile, type: SkillType.hard, subType: Subtype.other);
 final analysis = Skill(name: S.current.analysis, type: SkillType.soft);
-final androidStudio = Skill(name: S.current.androidStudio, type: SkillType.hard);
-final aspNet = Skill(name: S.current.aspNet, type: SkillType.hard);
+final androidStudio = HardSkill(name: S.current.androidStudio, type: SkillType.hard, subType: Subtype.tool);
+final aspNet = HardSkill(name: S.current.aspNet, type: SkillType.hard, subType: Subtype.tool);
 final attentionToDetail = Skill(name: S.current.attentionToDetail, type: SkillType.soft);
 final autonomy = Skill(name: S.current.autonomy, type: SkillType.soft);
 //b
-final bilang = Skill(name: S.current.bilang, type: SkillType.hard);
+final bilang = HardSkill(name: S.current.bilang, type: SkillType.hard, subType: Subtype.language);
 final bigPicture = Skill(name: S.current.bigPicture, type: SkillType.soft);
-final bootstrap = Skill(name: S.current.bootstrap, type: SkillType.hard);
+final bootstrap = HardSkill(name: S.current.bootstrap, type: SkillType.hard, subType: Subtype.language,);
 //c
-final cSharp = Skill(name: S.current.cSharp, type: SkillType.hard);
+final cSharp = HardSkill(name: S.current.cSharp, type: SkillType.hard, subType: Subtype.language);
+final collaboration = Skill(name: S.current.collaboration, type: SkillType.soft);
 final communication = Skill(name: S.current.communication, type: SkillType.soft);
 //d
-final dart = Skill(name: S.current.dart, type: SkillType.hard);
-final doctrine = Skill(name: S.current.doctrine, type: SkillType.hard);
+final dart = HardSkill(name: S.current.dart, type: SkillType.hard, subType: Subtype.language);
+final doctrine = HardSkill(name: S.current.doctrine, type: SkillType.hard, subType: Subtype.tool);
 //e
 //f
-final flutter = Skill(name: S.current.flutter, type: SkillType.hard);
+final flutter = HardSkill(name: S.current.flutter, type: SkillType.hard, subType: Subtype.language);
 //g
-final gherkin = Skill(name: S.current.gherkin, type: SkillType.hard);
-final github = Skill(name: S.current.github, type: SkillType.hard);
-final gitlab = Skill(name: S.current.gitlab, type: SkillType.hard);
+final gherkin = HardSkill(name: S.current.gherkin, type: SkillType.hard, subType: Subtype.language);
+final github = HardSkill(name: S.current.github, type: SkillType.hard, subType: Subtype.tool);
+final gitlab = HardSkill(name: S.current.gitlab, type: SkillType.hard, subType: Subtype.tool);
 //h
 //i
-final ionos = Skill(name: S.current.ionos, type: SkillType.hard);
+final ionos = HardSkill(name: S.current.ionos, type: SkillType.hard, subType: Subtype.tool);
 final initiative = Skill(name: S.current.initiative, type: SkillType.soft);
 //j
-final jira = Skill(name: S.current.jira, type: SkillType.hard);
-final jQuery = Skill(name: S.current.jQuery, type: SkillType.hard);
+final jira = HardSkill(name: S.current.jira, type: SkillType.hard, subType: Subtype.tool);
+final jQuery = HardSkill(name: S.current.jQuery, type: SkillType.hard, subType: Subtype.language);
 //k
-final kanban = Skill(name: S.current.kanban, type: SkillType.hard);
+final kanban = HardSkill(name: S.current.kanban, type: SkillType.hard, subType: Subtype.other);
+final kind = Skill(name: S.current.kind, type: SkillType.soft);
 //l
-final log4Net = Skill(name: S.current.log4Net, type: SkillType.hard);
+final log4Net = HardSkill(name: S.current.log4Net, type: SkillType.hard, subType: Subtype.tool);
+final motivated = Skill(name: S.current.motivated, type: SkillType.soft);
 //m
-final mvc = Skill(name: S.current.mvc, type: SkillType.hard);
-final mySql = Skill(name: S.current.mySql, type: SkillType.hard);
+final mvc = HardSkill(name: S.current.mvc, type: SkillType.hard, subType: Subtype.other);
+final mySql = HardSkill(name: S.current.mySql, type: SkillType.hard, subType: Subtype.tool);
 //n
-final netCore = Skill(name: S.current.netCore, type: SkillType.hard);
-final netStandard = Skill(name: S.current.netStandard, type: SkillType.hard);
-final ntiers = Skill(name: S.current.ntiers, type: SkillType.hard);
+final netCore = HardSkill(name: S.current.netCore, type: SkillType.hard, subType: Subtype.tool);
+final netStandard = HardSkill(name: S.current.netStandard, type: SkillType.hard, subType: Subtype.tool);
+final ntiers = HardSkill(name: S.current.ntiers, type: SkillType.hard, subType: Subtype.other);
 //o
-final oracle = Skill(name: S.current.oracle, type: SkillType.hard);
+final oracle = HardSkill(name: S.current.oracle, type: SkillType.hard, subType: Subtype.tool);
 //p
-final php = Skill(name: S.current.php, type: SkillType.hard);
-final phpStorm = Skill(name: S.current.phpStorm, type: SkillType.hard);
+final php = HardSkill(name: S.current.php, type: SkillType.hard, subType: Subtype.language);
+final phpStorm = HardSkill(name: S.current.phpStorm, type: SkillType.hard, subType: Subtype.tool);
+final proactive = Skill(name: S.current.proactive, type: SkillType.soft);
+final proposeInitiatives = Skill(name: S.current.proposeInitiatives, type: SkillType.soft);
 final punctuality = Skill(name: S.current.punctuality, type: SkillType.soft);
 //q
 //u
 //r
-final razor = Skill(name: S.current.razor, type: SkillType.hard);
+final razor = HardSkill(name: S.current.razor, type: SkillType.hard, subType: Subtype.language);
 //s
-final scrum = Skill(name: S.current.scrum, type: SkillType.hard);
-final selenium = Skill(name: S.current.selenium, type: SkillType.hard);
-final soapUI = Skill(name: S.current.soapUI, type: SkillType.hard);
-final sonarQube = Skill(name: S.current.sonarQube, type: SkillType.hard);
-final sourceTree = Skill(name: S.current.sourceTree, type: SkillType.hard);
-final sql = Skill(name: S.current.sql, type: SkillType.hard);
-final symfony = Skill(name: S.current.symfony, type: SkillType.hard);
+final scrum = HardSkill(name: S.current.scrum, type: SkillType.hard, subType: Subtype.other);
+final selenium = HardSkill(name: S.current.selenium, type: SkillType.hard, subType: Subtype.language);
+final soapUI = HardSkill(name: S.current.soapUI, type: SkillType.hard, subType: Subtype.tool);
+final sonarQube = HardSkill(name: S.current.sonarQube, type: SkillType.hard, subType: Subtype.tool);
+final sourceTree = HardSkill(name: S.current.sourceTree, type: SkillType.hard, subType: Subtype.tool);
+final sql = HardSkill(name: S.current.sql, type: SkillType.hard, subType: Subtype.language);
+final symfony = HardSkill(name: S.current.symfony, type: SkillType.hard, subType: Subtype.tool);
 //t
-final teams = Skill(name: S.current.teams, type: SkillType.hard);
+final teams = HardSkill(name: S.current.teams, type: SkillType.hard, subType: Subtype.tool);
 final teamwork = Skill(name: S.current.teamwork, type: SkillType.soft);
-final timeManagement = Skill(name: S.current.timeManagement, type: SkillType.hard);
-final trello = Skill(name: S.current.trello, type: SkillType.hard);
-final twig = Skill(name: S.current.twig, type: SkillType.hard);
+final tenacious = Skill(name: S.current.tenacious, type: SkillType.soft);
+final timeManagement = Skill(name: S.current.timeManagement, type: SkillType.soft);
+final trello = HardSkill(name: S.current.trello, type: SkillType.hard, subType: Subtype.tool);
+final twig = HardSkill(name: S.current.twig, type: SkillType.hard, subType: Subtype.language);
 //u
 //v
 //w
 //x
 //y
-final visualStudio = Skill(name: S.current.visualStudio, type: SkillType.hard);
+final visualStudio = HardSkill(name: S.current.visualStudio, type: SkillType.hard, subType: Subtype.tool);
 //z
 
 enum SkillType { hard, soft, mad }
+enum Subtype { language, tool, other}
 
 class Skill extends StatelessWidget{
   final String name;
@@ -90,60 +97,9 @@ class Skill extends StatelessWidget{
   Widget build(BuildContext context) {
     return DecoratedBox(
       decoration: switch(type) {
-        SkillType.hard => BoxDecoration(
-          color: myLightGreen,
-          borderRadius: const BorderRadius.all(
-            Radius.circular(15.0),
-          ),
-          border: Border.all(
-            color: myDarkGreen,
-            width: 1,
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.25),
-              spreadRadius: 2,
-              blurRadius: 2,
-              offset: const Offset(2, 2),
-            ),
-          ],
-        ),
-        SkillType.soft => BoxDecoration(
-          color: myLightBlue,
-          borderRadius: const BorderRadius.all(
-            Radius.circular(15.0),
-          ),
-          border: Border.all(
-            color: myDarkBlue,
-            width: 1,
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.25),
-              spreadRadius: 2,
-              blurRadius: 2,
-              offset: const Offset(2, 2),
-            ),
-          ],
-        ),
-        SkillType.mad => BoxDecoration(
-          color: myLightPurple,
-          borderRadius: const BorderRadius.all(
-            Radius.circular(15.0),
-          ),
-          border: Border.all(
-            color: myDarkPurple,
-            width: 1,
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.25),
-              spreadRadius: 2,
-              blurRadius: 2,
-              offset: const Offset(2, 2),
-            ),
-          ],
-        ),
+        SkillType.hard => context.isDark ? box(background: myDarkGreen, border: myDarkGreen) : box(background: myLightGreen, border: myDarkGreen),
+        SkillType.soft => context.isDark ? box(background: myDarkBlue, border: myDarkBlue) : box(background: myLightBlue, border: myDarkBlue),
+        SkillType.mad => context.isDark ? box(background: myDarkPurple, border: myDarkPurple) : box(background: myLightPurple, border: myDarkPurple),
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -153,9 +109,38 @@ class Skill extends StatelessWidget{
   }
 }
 
+class HardSkill extends Skill {
+  final Subtype subType;
+
+  const HardSkill({super.key, required this.subType, required super.name, required super.type});
+}
+
+extension _SkillBox on Skill {
+  BoxDecoration box({required Color background, required Color border}) {
+    return BoxDecoration(
+      color: background,
+      borderRadius: const BorderRadius.all(
+        Radius.circular(15.0),
+      ),
+      border: Border.all(
+        color: border,
+        width: 1,
+      ),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.25),
+          spreadRadius: 2,
+          blurRadius: 2,
+          offset: const Offset(2, 2),
+        ),
+      ],
+    );
+  }
+}
+
 class SkillsTable extends StatefulWidget {
   final List<Skill> skills;
-  final List<Skill> hardSkills = [];
+  final List<HardSkill> hardSkills = [];
   final List<Skill> softSkills = [];
   final List<Skill> madSkills = [];
 
@@ -163,7 +148,9 @@ class SkillsTable extends StatefulWidget {
     for(Skill skill in skills) {
       switch(skill.type) {
         case SkillType.hard:
-          hardSkills.add(skill);
+          if (skill is HardSkill) {
+            hardSkills.add(skill);
+          }
           break;
         case SkillType.soft:
           softSkills.add(skill);
@@ -182,7 +169,7 @@ class SkillsTable extends StatefulWidget {
 class SkillsTableState extends State<SkillsTable> {
   @override
   Widget build(BuildContext context) {
-    if(context.mediaQuery.size.width > context.mediaQuery.size.height){
+    if(context.mediaQuery.size.width > context.mediaQuery.size.height && (context.mediaQuery.size.width/3) > 280){
       return buildHorizontal();
     }
     else {
@@ -191,30 +178,63 @@ class SkillsTableState extends State<SkillsTable> {
   }
 }
 
+extension _HorizontalTable on State<SkillsTable> {
+  Widget buildHorizontal() {
+    return Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          skillTable(type: SkillType.soft),
+          const SizedBox(width: 10),
+          skillTable(type: SkillType.hard),
+          const SizedBox(width: 10),
+          skillTable(type: SkillType.mad),
+        ],
+    );
+  }
+}
+
+extension _VerticalTable on State<SkillsTable> {
+  Widget buildVertical() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          skillTable(size: context.mediaQuery.size.width, type: SkillType.soft),
+          const SizedBox(height: 10),
+          skillTable(size: context.mediaQuery.size.width, type: SkillType.hard),
+          const SizedBox(height: 10),
+          skillTable(size: context.mediaQuery.size.width, type: SkillType.mad),
+        ],
+      ),
+    );
+  }
+}
+
 extension _SkillTable on State<SkillsTable> {
-  Widget skillTable({double size = 0.25, required SkillType type}) {
-    List<Skill> skills;
+  Widget skillTable({double size = 0.30, required SkillType type}) {
     String skillTitle;
     Color? bgTitleColor;
     Color? bgColor;
+    List<Widget> skillDisplay;
 
     if(type == SkillType.hard) {
-      skills = widget.hardSkills;
       skillTitle = S.current.skillTitleHard;
       bgTitleColor = myDarkGreen;
       bgColor = myLightGreen;
+      skillDisplay = sorting();
     }
     else if (type == SkillType.soft){
-      skills = widget.softSkills;
       skillTitle = S.current.skillTitleSoft;
       bgTitleColor = myDarkBlue;
       bgColor = myLightBlue;
+      skillDisplay = widget.softSkills.map((skill) => skill.build(context)).toList();
     }
     else {
-      skills = widget.madSkills;
       skillTitle = S.current.skillTitleMad;
       bgTitleColor = myDarkPurple;
       bgColor = myLightPurple;
+      skillDisplay = widget.madSkills.map((skill) => skill.build(context)).toList();
     }
 
     return Flexible(
@@ -248,7 +268,7 @@ extension _SkillTable on State<SkillsTable> {
                   spacing: 5,
                   runSpacing: 5,
                   alignment: WrapAlignment.center,
-                  children: skills.map((skill) => skill.build(context)).toList()
+                  children: skillDisplay,
               ),
             ),
           ),
@@ -258,38 +278,50 @@ extension _SkillTable on State<SkillsTable> {
   }
 }
 
-extension _HorizontalTable on State<SkillsTable> {
-  Widget buildHorizontal() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          skillTable(type: SkillType.soft),
-          const SizedBox(width: 10),
-          skillTable(type: SkillType.hard),
-          const SizedBox(width: 10),
-          skillTable(type: SkillType.mad),
-        ],
-      ),
-    );
-  }
-}
+extension HardSkillDisplay on State<SkillsTable> {
+  List<Widget> sorting() {
+    List<HardSkill> tools = [];
+    List<HardSkill> languages = [];
+    List<HardSkill> others = [];
 
-extension _VerticalTable on State<SkillsTable> {
-  Widget buildVertical() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          skillTable(size: context.mediaQuery.size.width, type: SkillType.soft),
-          const SizedBox(height: 10),
-          skillTable(size: context.mediaQuery.size.width, type: SkillType.hard),
-          const SizedBox(height: 10),
-          skillTable(size: context.mediaQuery.size.width, type: SkillType.mad),
-        ],
+    for(HardSkill skill in widget.hardSkills) {
+        switch(skill.subType) {
+          case Subtype.tool : tools.add(skill);
+          case Subtype.language : languages.add(skill);
+          case Subtype.other : others.add(skill);
+        }
+    }
+
+    return [
+      Align(
+        alignment: Alignment.topLeft,
+        child: Text(S.current.skillTitleLanguage, style: const TextStyle(color: Colors.black),),
       ),
-    );
+      Wrap(
+        spacing: 5,
+        runSpacing: 5,
+        alignment: WrapAlignment.center,
+        children: languages.map((skill) => skill.build(context)).toList()),
+      const Divider(thickness: 1, color: myDarkGreen),
+      Align(
+        alignment: Alignment.topLeft,
+        child: Text(S.current.skillTitleTool),
+      ),
+      Wrap(
+          spacing: 5,
+          runSpacing: 5,
+          alignment: WrapAlignment.center,
+          children: tools.map((skill) => skill.build(context)).toList()),
+      const Divider(thickness: 1, color: myDarkGreen),
+      Align(
+        alignment: Alignment.topLeft,
+        child: Text(S.current.skillTitleOther),
+      ),
+      Wrap(
+          spacing: 5,
+          runSpacing: 5,
+          alignment: WrapAlignment.center,
+          children: others.map((skill) => skill.build(context)).toList()),
+    ];
   }
 }

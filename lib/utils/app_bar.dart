@@ -7,7 +7,7 @@ AppBar myAppBar(BuildContext context, String title) {
     automaticallyImplyLeading: false,
     title: IconButton(
       icon: Image(
-          image: isDark ? const AssetImage('assets/images/Logo_ED_White.png') : const AssetImage('assets/images/Logo_ED.png'),
+          image: context.isDark ? const AssetImage('assets/images/Logo_ED_White.png') : const AssetImage('assets/images/Logo_ED.png'),
           height: 50,
           alignment: Alignment.center),
       onPressed: () {

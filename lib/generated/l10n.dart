@@ -131,10 +131,10 @@ class S {
     );
   }
 
-  /// `Coming soon`
+  /// `Introduction`
   String get intro {
     return Intl.message(
-      'Coming soon',
+      'Introduction',
       name: 'intro',
       desc: '',
       args: [],
@@ -201,6 +201,36 @@ class S {
     );
   }
 
+  /// `Tools:`
+  String get skillTitleTool {
+    return Intl.message(
+      'Tools:',
+      name: 'skillTitleTool',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Languages:`
+  String get skillTitleLanguage {
+    return Intl.message(
+      'Languages:',
+      name: 'skillTitleLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Others:`
+  String get skillTitleOther {
+    return Intl.message(
+      'Others:',
+      name: 'skillTitleOther',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Agile`
   String get agile {
     return Intl.message(
@@ -241,10 +271,10 @@ class S {
     );
   }
 
-  /// `Attention To Detail`
+  /// `Attention to detail`
   String get attentionToDetail {
     return Intl.message(
-      'Attention To Detail',
+      'Attention to detail',
       name: 'attentionToDetail',
       desc: '',
       args: [],
@@ -296,6 +326,16 @@ class S {
     return Intl.message(
       'C#',
       name: 'cSharp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Collaboration`
+  String get collaboration {
+    return Intl.message(
+      'Collaboration',
+      name: 'collaboration',
       desc: '',
       args: [],
     );
@@ -421,11 +461,31 @@ class S {
     );
   }
 
+  /// `Kind`
+  String get kind {
+    return Intl.message(
+      'Kind',
+      name: 'kind',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Log4Net`
   String get log4Net {
     return Intl.message(
       'Log4Net',
       name: 'log4Net',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Motivated`
+  String get motivated {
+    return Intl.message(
+      'Motivated',
+      name: 'motivated',
       desc: '',
       args: [],
     );
@@ -441,10 +501,10 @@ class S {
     );
   }
 
-  /// `mySQL`
+  /// `MySQL`
   String get mySql {
     return Intl.message(
-      'mySQL',
+      'MySQL',
       name: 'mySql',
       desc: '',
       args: [],
@@ -506,6 +566,26 @@ class S {
     return Intl.message(
       'PHP Storm',
       name: 'phpStorm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proactive`
+  String get proactive {
+    return Intl.message(
+      'Proactive',
+      name: 'proactive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Propose Initiatives`
+  String get proposeInitiatives {
+    return Intl.message(
+      'Propose Initiatives',
+      name: 'proposeInitiatives',
       desc: '',
       args: [],
     );
@@ -616,6 +696,16 @@ class S {
     return Intl.message(
       'Teamwork',
       name: 'teamwork',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tenacious`
+  String get tenacious {
+    return Intl.message(
+      'Tenacious',
+      name: 'tenacious',
       desc: '',
       args: [],
     );
@@ -1091,31 +1181,71 @@ class S {
     );
   }
 
-  /// `<div style='color:black;'>Experience the critically acclaimed masterpiece with its renowned Sumi-e ink art style in breathtaking high resolution. Take on the role of Amaterasu, the Japanese sun goddess who inhabits the form of a legendary white wolf, on a quest to defeat Orochi, an eight-headed demon and tyrannical monster responsible for turning the world of Nippon into a ruined wasteland.<br/><br/>Players will be able to choose between modern widescreen format or the original release’s 4:3 ratio. Interactive loading game screens from the original game are also included.<br/><br/>Source: <a href='https://store.steampowered.com/app/587620/Okami_HD/'>Steam Okami HD</a></div>`
+  /// `Video Games`
+  String get videoGames {
+    return Intl.message(
+      'Video Games',
+      name: 'videoGames',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coming soon`
+  String get vgText {
+    return Intl.message(
+      'Coming soon',
+      name: 'vgText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coming soon`
   String get okami {
     return Intl.message(
-      '<div style=\'color:black;\'>Experience the critically acclaimed masterpiece with its renowned Sumi-e ink art style in breathtaking high resolution. Take on the role of Amaterasu, the Japanese sun goddess who inhabits the form of a legendary white wolf, on a quest to defeat Orochi, an eight-headed demon and tyrannical monster responsible for turning the world of Nippon into a ruined wasteland.<br/><br/>Players will be able to choose between modern widescreen format or the original release’s 4:3 ratio. Interactive loading game screens from the original game are also included.<br/><br/>Source: <a href=\'https://store.steampowered.com/app/587620/Okami_HD/\'>Steam Okami HD</a></div>',
+      'Coming soon',
       name: 'okami',
       desc: '',
       args: [],
     );
   }
 
-  /// `<div style='color:white;'>Winner of Best Game at the 2020 BAFTA Games Awards and named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, Outer Wilds is a critically-acclaimed and award-winning open world mystery about a solar system trapped in an endless time loop.<br/><br/>Source: <a href='https://store.steampowered.com/app/753640/Outer_Wilds/'>Steam Outer Wilds</a></div>`
+  /// `<div style='color:white;'>Coming soon</div>`
   String get outerWilds {
     return Intl.message(
-      '<div style=\'color:white;\'>Winner of Best Game at the 2020 BAFTA Games Awards and named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, Outer Wilds is a critically-acclaimed and award-winning open world mystery about a solar system trapped in an endless time loop.<br/><br/>Source: <a href=\'https://store.steampowered.com/app/753640/Outer_Wilds/\'>Steam Outer Wilds</a></div>',
+      '<div style=\'color:white;\'>Coming soon</div>',
       name: 'outerWilds',
       desc: '',
       args: [],
     );
   }
 
-  /// `<div style='color:black;'>Welcome to a new world! Take on the role of a hunter and slay ferocious monsters in a living, breathing ecosystem where you can use the landscape and its diverse inhabitants to get the upper hand. Hunt alone or in co-op with up to three other players, and use materials collected from fallen foes to craft new gear and take on even bigger, badder beasts!<br/><br/>Source: <a href='https://store.steampowered.com/app/582010/Monster_Hunter_World/'>Steam Monster Hunter World</a></div>`
+  /// `Coming soon`
   String get monsterHunter {
     return Intl.message(
-      '<div style=\'color:black;\'>Welcome to a new world! Take on the role of a hunter and slay ferocious monsters in a living, breathing ecosystem where you can use the landscape and its diverse inhabitants to get the upper hand. Hunt alone or in co-op with up to three other players, and use materials collected from fallen foes to craft new gear and take on even bigger, badder beasts!<br/><br/>Source: <a href=\'https://store.steampowered.com/app/582010/Monster_Hunter_World/\'>Steam Monster Hunter World</a></div>',
+      'Coming soon',
       name: 'monsterHunter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Series`
+  String get series {
+    return Intl.message(
+      'Series',
+      name: 'series',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coming soon`
+  String get seriesText {
+    return Intl.message(
+      'Coming soon',
+      name: 'seriesText',
       desc: '',
       args: [],
     );

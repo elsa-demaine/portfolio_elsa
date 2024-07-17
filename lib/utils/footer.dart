@@ -14,7 +14,7 @@ Container myFooter(BuildContext context) {
           text: S.current.linkedin,
           onPressed: _launchLinkedInURL),
         FooterButton(
-          icon: const Image(image: AssetImage('assets/images/github-mark.png'),),
+          icon: Image(image: AssetImage(context.isDark ? 'assets/images/github-mark-white.png' : 'assets/images/github-mark.png'),),
           text: S.current.myGithub,
           onPressed: _launchGithubURL),
         Text(S.of(context).version),

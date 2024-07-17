@@ -22,7 +22,6 @@ class _MyHomePageState extends State<MyHomePage> {
         bottomNavigationBar: myFooter(context),
         appBar: myAppBar(context, widget.title),
         body: LayoutBuilder(builder: (context, constraints) {
-          bool isDark = context.colorScheme.brightness == Brightness.light;
           final Divider expDiv = Divider(thickness: 2, color: context.colorScheme.onPrimary);
 
           return SingleChildScrollView(
@@ -72,6 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   bigPicture,
                   bootstrap,
                   cSharp,
+                  collaboration,
                   communication,
                   dart,
                   doctrine,
@@ -84,6 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   jira,
                   jQuery,
                   kanban,
+                  kind,
                   log4Net,
                   mvc,
                   mySql,
@@ -93,6 +94,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   oracle,
                   php,
                   phpStorm,
+                  proactive,
+                  proposeInitiatives,
                   punctuality,
                   razor,
                   scrum,
@@ -104,6 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   symfony,
                   teams,
                   teamwork,
+                  tenacious,
                   timeManagement,
                   trello,
                   twig,
@@ -118,9 +122,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   business: S.current.elsaTitle,
                   dates: S.current.elsaDates,
                   infos: S.current.elsaInfos,
-                  imageName: isDark
-                      ? 'assets/images/Logo_ED_Big.png'
-                      : 'assets/images/Logo_ED_Big_White.png',
+                  imageName: context.isDark
+                      ? 'assets/images/Logo_ED_Big_White.png'
+                      : 'assets/images/Logo_ED_Big.png',
                   isLeft: false,
                   skills: [flutter, dart, androidStudio, github, ionos],
                 ),
@@ -129,9 +133,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   business: S.current.altecaTitle,
                   dates: S.current.altecaDates,
                   infos: S.current.altecaInfos,
-                  imageName: isDark
-                      ? '${path}Alteca_noir.png'
-                      : '${path}Alteca_blanc.png',
+                  imageName: context.isDark
+                      ? '${path}Alteca_blanc.png'
+                      : '${path}Alteca_noir.png',
                   isLeft: true,
                   skills: [
                     cSharp,
@@ -157,9 +161,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   business: S.current.soitecTitle,
                   dates: S.current.soitecDates,
                   infos: S.current.soitecInfos,
-                  imageName: isDark
-                      ? '${path}Soitec_noir.png'
-                      : '${path}Soitec_blanc.png',
+                  imageName: context.isDark
+                      ? '${path}Soitec_blanc.png'
+                      : '${path}Soitec_noir.png',
                   isLeft: false,
                   skills: [
                     cSharp,
@@ -214,9 +218,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       business: S.current.econocomTitle,
                       dates: S.current.econocomDates,
                       infos: S.current.econocomInfos,
-                      imageName: isDark
-                          ? '${path}Econocom_noir.png'
-                          : '${path}Econocom_blanc.png',
+                      imageName: context.isDark
+                          ? '${path}Econocom_blanc.png'
+                          : '${path}Econocom_noir.png',
                       isLeft: true,
                       skills: [
                         cSharp,
@@ -231,9 +235,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       business: S.current.webfTitle,
                       dates: S.current.webfDates,
                       infos: S.current.webfInfos,
-                      imageName: isDark
-                          ? '${path}Webf_noir.png'
-                          : '${path}Webf_blanc.png',
+                      imageName: context.isDark
+                          ? '${path}Webf_blanc.png'
+                          : '${path}Webf_noir.png',
                       isLeft: false,
                       skills: [
                         php,
@@ -252,9 +256,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       business: S.current.gemTitle,
                       dates: S.current.gemDates,
                       infos: S.current.gemInfos,
-                      imageName: isDark
-                          ? '${path}GEM_noir.png'
-                          : '${path}GEM_blanc.png',
+                      imageName: context.isDark
+                          ? '${path}GEM_blanc.png'
+                          : '${path}GEM_noir.png',
                       isLeft: true,
                     ),
                     expDiv,
@@ -286,9 +290,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       business: S.current.mairieTitle,
                       dates: S.current.mairieDates,
                       infos: S.current.mairieInfos,
-                      imageName: isDark
-                          ? '${path}Fontaine_noir.png'
-                          : '${path}Fontaine_blanc.png',
+                      imageName: context.isDark
+                          ? '${path}Fontaine_blanc.png'
+                          : '${path}Fontaine_noir.png',
                       isLeft: true,
                     ),
                     expDiv,
@@ -305,9 +309,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   business: S.current.epsiTitle,
                   dates: S.current.epsiDate,
                   infos: '${S.current.epsiDevInfo}<br/>${S.current.epsiDevOps}',
-                  imageName: isDark
-                      ? '${path}EPSI_noir.png'
-                      : '${path}EPSI_blanc.png',
+                  imageName: context.isDark
+                      ? '${path}EPSI_blanc.png'
+                      : '${path}EPSI_noir.png',
                   isLeft: false,
                 ),
                 expDiv,

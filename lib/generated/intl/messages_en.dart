@@ -38,12 +38,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "appTitle": MessageLookupByLibrary.simpleMessage("Elsa Demaine"),
         "aspNet": MessageLookupByLibrary.simpleMessage("ASP.Net"),
         "attentionToDetail":
-            MessageLookupByLibrary.simpleMessage("Attention To Detail"),
+            MessageLookupByLibrary.simpleMessage("Attention to detail"),
         "autonomy": MessageLookupByLibrary.simpleMessage("Autonomy"),
         "bigPicture": MessageLookupByLibrary.simpleMessage("Big Picture"),
         "bilang": MessageLookupByLibrary.simpleMessage("French Bilingual"),
         "bootstrap": MessageLookupByLibrary.simpleMessage("Bootstrap"),
         "cSharp": MessageLookupByLibrary.simpleMessage("C#"),
+        "collaboration": MessageLookupByLibrary.simpleMessage("Collaboration"),
         "communication": MessageLookupByLibrary.simpleMessage("Communication"),
         "csrpBacPro": MessageLookupByLibrary.simpleMessage(
             "Vocational Baccalaureate in Management and Administration, European Section (English), with highest honors"),
@@ -97,11 +98,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "hobbies": MessageLookupByLibrary.simpleMessage("Hobbies"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "initiative": MessageLookupByLibrary.simpleMessage("Initiative"),
-        "intro": MessageLookupByLibrary.simpleMessage("Coming soon"),
+        "intro": MessageLookupByLibrary.simpleMessage("Introduction"),
         "ionos": MessageLookupByLibrary.simpleMessage("Ionos"),
         "jQuery": MessageLookupByLibrary.simpleMessage("jQuery"),
         "jira": MessageLookupByLibrary.simpleMessage("Jira"),
         "kanban": MessageLookupByLibrary.simpleMessage("Kanban"),
+        "kind": MessageLookupByLibrary.simpleMessage("Kind"),
         "linkedin": MessageLookupByLibrary.simpleMessage("My Linkedin"),
         "log4Net": MessageLookupByLibrary.simpleMessage("Log4Net"),
         "mairieDates": MessageLookupByLibrary.simpleMessage(
@@ -110,21 +112,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "mairieTitle":
             MessageLookupByLibrary.simpleMessage("Mairie de Fontaine"),
         "menu": MessageLookupByLibrary.simpleMessage("Menu"),
-        "monsterHunter": MessageLookupByLibrary.simpleMessage(
-            "<div style=\'color:black;\'>Welcome to a new world! Take on the role of a hunter and slay ferocious monsters in a living, breathing ecosystem where you can use the landscape and its diverse inhabitants to get the upper hand. Hunt alone or in co-op with up to three other players, and use materials collected from fallen foes to craft new gear and take on even bigger, badder beasts!<br/><br/>Source: <a href=\'https://store.steampowered.com/app/582010/Monster_Hunter_World/\'>Steam Monster Hunter World</a></div>"),
+        "monsterHunter": MessageLookupByLibrary.simpleMessage("Coming soon"),
+        "motivated": MessageLookupByLibrary.simpleMessage("Motivated"),
         "mvc": MessageLookupByLibrary.simpleMessage("MVC"),
         "myGithub": MessageLookupByLibrary.simpleMessage("My Github"),
-        "mySql": MessageLookupByLibrary.simpleMessage("mySQL"),
+        "mySql": MessageLookupByLibrary.simpleMessage("MySQL"),
         "netCore": MessageLookupByLibrary.simpleMessage(".Net Core"),
         "netStandard": MessageLookupByLibrary.simpleMessage(".Net Standard"),
         "ntiers": MessageLookupByLibrary.simpleMessage("N-Tiers"),
-        "okami": MessageLookupByLibrary.simpleMessage(
-            "<div style=\'color:black;\'>Experience the critically acclaimed masterpiece with its renowned Sumi-e ink art style in breathtaking high resolution. Take on the role of Amaterasu, the Japanese sun goddess who inhabits the form of a legendary white wolf, on a quest to defeat Orochi, an eight-headed demon and tyrannical monster responsible for turning the world of Nippon into a ruined wasteland.<br/><br/>Players will be able to choose between modern widescreen format or the original release’s 4:3 ratio. Interactive loading game screens from the original game are also included.<br/><br/>Source: <a href=\'https://store.steampowered.com/app/587620/Okami_HD/\'>Steam Okami HD</a></div>"),
+        "okami": MessageLookupByLibrary.simpleMessage("Coming soon"),
         "oracle": MessageLookupByLibrary.simpleMessage("Oracle"),
         "outerWilds": MessageLookupByLibrary.simpleMessage(
-            "<div style=\'color:white;\'>Winner of Best Game at the 2020 BAFTA Games Awards and named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, Outer Wilds is a critically-acclaimed and award-winning open world mystery about a solar system trapped in an endless time loop.<br/><br/>Source: <a href=\'https://store.steampowered.com/app/753640/Outer_Wilds/\'>Steam Outer Wilds</a></div>"),
+            "<div style=\'color:white;\'>Coming soon</div>"),
         "php": MessageLookupByLibrary.simpleMessage("PHP"),
         "phpStorm": MessageLookupByLibrary.simpleMessage("PHP Storm"),
+        "proactive": MessageLookupByLibrary.simpleMessage("Proactive"),
+        "proposeInitiatives":
+            MessageLookupByLibrary.simpleMessage("Propose Initiatives"),
         "punctuality": MessageLookupByLibrary.simpleMessage("Punctuality"),
         "razor": MessageLookupByLibrary.simpleMessage("Razor"),
         "rocheDates": MessageLookupByLibrary.simpleMessage(
@@ -133,9 +137,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rocheTitle": MessageLookupByLibrary.simpleMessage("Roche"),
         "scrum": MessageLookupByLibrary.simpleMessage("SCRUM"),
         "selenium": MessageLookupByLibrary.simpleMessage("Selenium"),
+        "series": MessageLookupByLibrary.simpleMessage("Series"),
+        "seriesText": MessageLookupByLibrary.simpleMessage("Coming soon"),
         "skillTitleHard": MessageLookupByLibrary.simpleMessage("Hard Skills"),
+        "skillTitleLanguage":
+            MessageLookupByLibrary.simpleMessage("Languages:"),
         "skillTitleMad": MessageLookupByLibrary.simpleMessage("Mad Skills"),
+        "skillTitleOther": MessageLookupByLibrary.simpleMessage("Others:"),
         "skillTitleSoft": MessageLookupByLibrary.simpleMessage("Soft Skills"),
+        "skillTitleTool": MessageLookupByLibrary.simpleMessage("Tools:"),
         "soapUI": MessageLookupByLibrary.simpleMessage("SoapUI"),
         "soitecDates":
             MessageLookupByLibrary.simpleMessage("Sept. 2018 - June 2020"),
@@ -147,12 +157,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "symfony": MessageLookupByLibrary.simpleMessage("Symfony"),
         "teams": MessageLookupByLibrary.simpleMessage("Teams"),
         "teamwork": MessageLookupByLibrary.simpleMessage("Teamwork"),
+        "tenacious": MessageLookupByLibrary.simpleMessage("Tenacious"),
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "timeManagement":
             MessageLookupByLibrary.simpleMessage("Time management"),
         "trello": MessageLookupByLibrary.simpleMessage("Trello"),
         "twig": MessageLookupByLibrary.simpleMessage("Twig"),
         "version": MessageLookupByLibrary.simpleMessage("v0.4"),
+        "vgText": MessageLookupByLibrary.simpleMessage("Coming soon"),
+        "videoGames": MessageLookupByLibrary.simpleMessage("Video Games"),
         "visualStudio": MessageLookupByLibrary.simpleMessage("Visual Studio"),
         "warningAlpha": MessageLookupByLibrary.simpleMessage(
             "Bear with me, this site is an alpha version, development is still ongoing. Thank you for your understanding"),

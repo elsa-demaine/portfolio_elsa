@@ -25,12 +25,10 @@ class ExpItem extends StatefulWidget {
 class ExpItemState extends State<ExpItem> {
   @override
   Widget build(BuildContext context) {
-    bool orientation = context.mediaQuery.size.width > context.mediaQuery.size.height;
-
-    if (orientation && widget.isLeft) {
+    if (context.orientation && widget.isLeft) {
       return buildLeft();
     }
-    else if (orientation && !widget.isLeft) {
+    else if (context.orientation && !widget.isLeft) {
       return buildRight();
     }
     else {

@@ -7,6 +7,8 @@ extension BuildContextExtensions on BuildContext {
   ColorScheme get colorScheme => theme.colorScheme;
   NavigatorState get navigator => Navigator.of(this);
   MediaQueryData get mediaQuery => MediaQuery.of(this);
+  bool get isDark => colorScheme.brightness == Brightness.dark;
+  bool get orientation => mediaQuery.size.width > mediaQuery.size.height;
 }
 
 class HtmlText extends StatefulWidget {

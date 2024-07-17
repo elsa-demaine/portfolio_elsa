@@ -55,47 +55,44 @@ class _CarouselWithIndicatorState extends State<Carousel> {
   }
 
   List<Widget> myCarouselList(BuildContext context) {
-    S l = S.of(context);
-    bool orientation = MediaQuery.of(context).size.width > MediaQuery.of(context).size.height;
-
     return [
       FractionallySizedBox(
         widthFactor: 1,
         child: ColoredBox(
           color: const Color.fromARGB(255, 232, 197, 100),
-          child: orientation ?
+          child: context.orientation ?
             Row(
               children: carouselItem(
-                  'assets/images/hobbies/Okami.jpeg', l.okami, true, false)) :
+                  'assets/images/hobbies/Okami.jpeg', S.current.okami, true, false)) :
             Column(
               children: carouselItem(
-                  'assets/images/hobbies/Okami.jpeg',l.okami, false, false)),
+                  'assets/images/hobbies/Okami.jpeg',S.current.okami, false, false)),
         ),
       ),
       FractionallySizedBox(
         widthFactor: 1,
         child: ColoredBox(
           color: const Color.fromARGB(255, 23, 48, 69),
-          child: orientation ?
+          child: context.orientation ?
             Row(
               children: carouselItem(
-                'assets/images/hobbies/Outer_Wilds.jpeg', l.outerWilds, true, true)) :
+                'assets/images/hobbies/Outer_Wilds.jpeg', S.current.outerWilds, true, true)) :
             Column(
               children: carouselItem(
-                'assets/images/hobbies/Outer_Wilds.jpeg', l.outerWilds, false, true)),
+                'assets/images/hobbies/Outer_Wilds.jpeg', S.current.outerWilds, false, true)),
         ),
       ),
       FractionallySizedBox(
         widthFactor: 1,
         child: ColoredBox(
           color: const Color.fromARGB(255, 113, 158, 218),
-          child: orientation ?
+          child: context.orientation ?
             Row(
               children: carouselItem(
-                'assets/images/hobbies/MHW.jpeg', l.monsterHunter, true, false)) :
+                'assets/images/hobbies/MHW.jpeg', S.current.monsterHunter, true, false)) :
             Column(
               children: carouselItem(
-                'assets/images/hobbies/MHW.jpeg',l.monsterHunter, false, false)),
+                'assets/images/hobbies/MHW.jpeg', S.current.monsterHunter, false, false)),
         ),
       ),
     ];
@@ -113,7 +110,7 @@ class _CarouselWithIndicatorState extends State<Carousel> {
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: false,
             viewportFraction: 1,
-            height: MediaQuery.of(context).size.height * .5,
+            height: context.mediaQuery.size.height * .5,
             onPageChanged: (index, reason) {
               setState(() {
                 _current = index;
@@ -133,7 +130,7 @@ class _CarouselWithIndicatorState extends State<Carousel> {
                 const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: (_current == entry.key ? Theme.of(context).colorScheme.onPrimary : Theme.of(context).colorScheme.primary),
+                  color: (_current == entry.key ? context.colorScheme.onPrimary : context.colorScheme.primary),
                 ),
               ),
             );
