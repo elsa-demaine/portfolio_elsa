@@ -2,7 +2,7 @@
 
 Creating my own portfolio website.
 
-## Getting Started
+## Getting Starting
 
 This project is a starting point for a Flutter application.
 
