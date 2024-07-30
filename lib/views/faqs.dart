@@ -24,7 +24,7 @@ class _MyFAQsPageState extends State<MyFAQs> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 TitleText(text: S.current.faqTitle),
-                const SizedBox(height: 30),
+                mySpacer,
                 Padding(
                   padding: const EdgeInsets.only(bottom: 15),
                   child: HtmlText(text: S.current.faqDevArt),

@@ -25,7 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "agile": MessageLookupByLibrary.simpleMessage("Agile"),
         "alatDates": MessageLookupByLibrary.simpleMessage(
             "July 2015 (1 month seasonal job)"),
-        "alatInfos": MessageLookupByLibrary.simpleMessage("Coming soon"),
+        "alatInfos": MessageLookupByLibrary.simpleMessage(
+            "Quality Assistant: Updated standards and guidelines"),
         "alatTitle": MessageLookupByLibrary.simpleMessage(
             "Air Liquide Advanced Technologies"),
         "altecaDates":
@@ -57,7 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "econocomDates":
             MessageLookupByLibrary.simpleMessage("Jan. 2018 - Feb. 2018"),
         "econocomInfos": MessageLookupByLibrary.simpleMessage(
-            "During this 2 months internship in <tooltip id=\'Digital Application Services\'>DAS</tooltip> within the service center of Grenoble, I had the opportunity to work on 2 different missions.<br/><br/>The first was a tablet application used by sales representatives at Roche Diabetes Care. It was a catalog enabling the placement of products and services orders, reserved for healthcare professionals. I contributed to the CCS part of the front end.<br/><br/>The second involved the implementation of a <tooltip id=\'Proof of concept\'>PoC</tooltip> using the EPPlus library. The specifications were:<br/><lu><li>Create a new .Net Core web application,</li><li>Enable the creation of a new blank file or upload an existing file,</li><li>Allow modification of cell values, number of columns etc,</li><li>Ensure the code is generic so it can be used in other applications.</li></lu>"),
+            "During this 2 months internship in <tooltip id=\'Digital Application Services\'>DAS</tooltip> within the service center of Grenoble, I had the opportunity to work on 2 different missions.<br/><br/>The first was a tablet application used by sales representatives at Roche Diabetes Care. It was a catalog enabling the placement of products and services orders, reserved for healthcare professionals. I contributed to the CCS part of the front end.<br/><br/>The second involved the implementation of a <tooltip id=\'Proof of concept\'>PoC</tooltip> using the EPPlus library. The specifications were:<br/><ul><li>Create a new .Net Core web application,</li><li>Enable the creation of a new blank file or upload an existing file,</li><li>Allow modification of cell values, number of columns etc,</li><li>Ensure the code is generic so it can be used in other applications.</li></ul>"),
         "econocomTitle": MessageLookupByLibrary.simpleMessage("Econocom"),
         "elsaDates": MessageLookupByLibrary.simpleMessage("May 2024 - To date"),
         "elsaInfos": MessageLookupByLibrary.simpleMessage(
@@ -71,7 +72,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "epsiTitle": MessageLookupByLibrary.simpleMessage("EPSI"),
         "esrfDates": MessageLookupByLibrary.simpleMessage(
             "Jan. 2015 & May 2015 (10 weeks internship)"),
-        "esrfInfos": MessageLookupByLibrary.simpleMessage("Coming soon"),
+        "esrfInfos": MessageLookupByLibrary.simpleMessage(
+            "Sales Assistant / Project Assistant<br/>- Created annual sales dashboards by product<br/>- Formatted and organized the project budget"),
         "esrfTitle": MessageLookupByLibrary.simpleMessage(
             "European Radiation Synchrotron Facility"),
         "experiences": MessageLookupByLibrary.simpleMessage("Experiences"),
@@ -89,7 +91,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "flutter": MessageLookupByLibrary.simpleMessage("Flutter"),
         "gemDates": MessageLookupByLibrary.simpleMessage(
             "Dec. 2015 (3 weeks internship)"),
-        "gemInfos": MessageLookupByLibrary.simpleMessage("Coming soon"),
+        "gemInfos": MessageLookupByLibrary.simpleMessage(
+            "HR Assistant / Accounting Assistant / International Affairs Assistant<br/>- Participated in job interviews<br/>- Communicated via email with global partner schools"),
         "gemTitle": MessageLookupByLibrary.simpleMessage(
             "Grenoble Ecole de Management"),
         "gherkin": MessageLookupByLibrary.simpleMessage("Gherkin"),
@@ -108,7 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "log4Net": MessageLookupByLibrary.simpleMessage("Log4Net"),
         "mairieDates": MessageLookupByLibrary.simpleMessage(
             "March 2014 (3 weeks internship)"),
-        "mairieInfos": MessageLookupByLibrary.simpleMessage("Coming soon"),
+        "mairieInfos":
+            MessageLookupByLibrary.simpleMessage("Civil Registry Assistant"),
         "mairieTitle":
             MessageLookupByLibrary.simpleMessage("Mairie de Fontaine"),
         "menu": MessageLookupByLibrary.simpleMessage("Menu"),
@@ -120,7 +124,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "netCore": MessageLookupByLibrary.simpleMessage(".Net Core"),
         "netStandard": MessageLookupByLibrary.simpleMessage(".Net Standard"),
         "ntiers": MessageLookupByLibrary.simpleMessage("N-Tiers"),
-        "okami": MessageLookupByLibrary.simpleMessage("Coming soon"),
+        "okami": MessageLookupByLibrary.simpleMessage(
+            "Okami is a solo adventure game, taking place in Nippon, which is overrunned by demons. Thanks to the power of different “brush techniques” gathered throughout explorations, we can purify the land. I had the chance to play Okami on Switch, allowing me to draw with the Joy-cons, adding a new dimension to the game."),
         "oracle": MessageLookupByLibrary.simpleMessage("Oracle"),
         "outerWilds": MessageLookupByLibrary.simpleMessage(
             "<div style=\'color:white;\'>Coming soon</div>"),
@@ -133,7 +138,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "razor": MessageLookupByLibrary.simpleMessage("Razor"),
         "rocheDates": MessageLookupByLibrary.simpleMessage(
             "June 2014 (3 weeks internship)"),
-        "rocheInfos": MessageLookupByLibrary.simpleMessage("Coming soon"),
+        "rocheInfos": MessageLookupByLibrary.simpleMessage(
+            "Sales Assistant: Checked client inventories on SAP"),
         "rocheTitle": MessageLookupByLibrary.simpleMessage("Roche"),
         "scrum": MessageLookupByLibrary.simpleMessage("SCRUM"),
         "selenium": MessageLookupByLibrary.simpleMessage("Selenium"),
@@ -149,7 +155,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "soapUI": MessageLookupByLibrary.simpleMessage("SoapUI"),
         "soitecDates":
             MessageLookupByLibrary.simpleMessage("Sept. 2018 - June 2020"),
-        "soitecInfos": MessageLookupByLibrary.simpleMessage("Coming soon"),
+        "soitecInfos": MessageLookupByLibrary.simpleMessage(
+            "Creation of new features and applications for production automations:<br/>- Priority management,<br/>- Enhancement of user experience,<br/>- Continuous improvement of existing systems.<br/>Interactions with internal clients."),
         "soitecTitle": MessageLookupByLibrary.simpleMessage("Soitec"),
         "sonarQube": MessageLookupByLibrary.simpleMessage("SonarQube"),
         "sourceTree": MessageLookupByLibrary.simpleMessage("Source Tree"),
@@ -170,7 +177,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "warningAlpha": MessageLookupByLibrary.simpleMessage(
             "Bear with me, this site is an alpha version, development is still ongoing. Thank you for your understanding"),
         "webfDates": MessageLookupByLibrary.simpleMessage("June 2017"),
-        "webfInfos": MessageLookupByLibrary.simpleMessage("Coming soon"),
+        "webfInfos": MessageLookupByLibrary.simpleMessage(
+            "PHP Developer: Developed a website using Symfony with Doctrine, MySQL, Twig, and Bootstrap."),
         "webfTitle": MessageLookupByLibrary.simpleMessage("Web|Alternatif")
       };
 }

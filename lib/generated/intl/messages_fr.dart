@@ -25,7 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "agile": MessageLookupByLibrary.simpleMessage("Agile"),
         "alatDates": MessageLookupByLibrary.simpleMessage(
             "Juil. 2015 (emploi saisonnier d\'1 mois)"),
-        "alatInfos": MessageLookupByLibrary.simpleMessage("Prochainement"),
+        "alatInfos": MessageLookupByLibrary.simpleMessage(
+            "Assistante Qualité : Mise à jour de normes et standards"),
         "alatTitle": MessageLookupByLibrary.simpleMessage(
             "Air Liquide Advanced Technologies"),
         "altecaDates":
@@ -72,7 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "epsiTitle": MessageLookupByLibrary.simpleMessage("EPSI"),
         "esrfDates": MessageLookupByLibrary.simpleMessage(
             "Jan. 2015 & Mai 2015 (stage de 10 semaines)"),
-        "esrfInfos": MessageLookupByLibrary.simpleMessage("Prochainement"),
+        "esrfInfos": MessageLookupByLibrary.simpleMessage(
+            "Assistante Commerciale / Assistante Projet<br/>- Création de tableaux de bord des ventes annuelles par produits<br/>- Formatage et organisation du budget du projet"),
         "esrfTitle": MessageLookupByLibrary.simpleMessage(
             "European Radiation Synchrotron Facility"),
         "experiencesExpand":
@@ -89,7 +91,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "flutter": MessageLookupByLibrary.simpleMessage("Flutter"),
         "gemDates": MessageLookupByLibrary.simpleMessage(
             "Déc. 2015 (stage de 3 semaines)"),
-        "gemInfos": MessageLookupByLibrary.simpleMessage("Prochainement"),
+        "gemInfos": MessageLookupByLibrary.simpleMessage(
+            "Assistante RH / Assistante Comptable / Assistante Affaires Internationales<br/>- Participation à des entretiens d’embauche<br/>- Communication par mél avec des écoles partenaires mondiales"),
         "gemTitle": MessageLookupByLibrary.simpleMessage(
             "Grenoble Ecole de Management"),
         "gherkin": MessageLookupByLibrary.simpleMessage("Gherkin"),
@@ -108,7 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "log4Net": MessageLookupByLibrary.simpleMessage("Log4Net"),
         "mairieDates": MessageLookupByLibrary.simpleMessage(
             "Mars 2014 (stage de 3 semaines)"),
-        "mairieInfos": MessageLookupByLibrary.simpleMessage("Prochainement"),
+        "mairieInfos":
+            MessageLookupByLibrary.simpleMessage("Assistante Etat civil"),
         "mairieTitle":
             MessageLookupByLibrary.simpleMessage("Mairie de Fontaine"),
         "menu": MessageLookupByLibrary.simpleMessage("Menu"),
@@ -120,7 +124,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "netCore": MessageLookupByLibrary.simpleMessage(".Net Core"),
         "netStandard": MessageLookupByLibrary.simpleMessage(".Net Standard"),
         "ntiers": MessageLookupByLibrary.simpleMessage("N-Tiers"),
-        "okami": MessageLookupByLibrary.simpleMessage("Prochainement"),
+        "okami": MessageLookupByLibrary.simpleMessage(
+            "Okami est un jeu d’aventure solitaire, se déroulant au Nippon, actuellement envahi par des démons. Grâce au pouvoir, des différentes “techniques du pinceau”, récupéré au fil des explorations, on peut purifier les terres. J’ai eu la chance de jouer à Okami sur Switch me permettant de dessiner avec les Joy-cons, ce qui amenait une dimension supplémentaire au jeu."),
         "oracle": MessageLookupByLibrary.simpleMessage("Oracle"),
         "outerWilds": MessageLookupByLibrary.simpleMessage(
             "<div style=\'color:white;\'>Prochainement</div>"),
@@ -133,7 +138,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "razor": MessageLookupByLibrary.simpleMessage("Razor"),
         "rocheDates": MessageLookupByLibrary.simpleMessage(
             "Juin 2014 (stage de 3 semaines)"),
-        "rocheInfos": MessageLookupByLibrary.simpleMessage("Prochainement"),
+        "rocheInfos": MessageLookupByLibrary.simpleMessage(
+            "Assistante des ventes : Vérifications des stocks clients sur SAP"),
         "rocheTitle": MessageLookupByLibrary.simpleMessage("Roche"),
         "scrum": MessageLookupByLibrary.simpleMessage("SCRUM"),
         "selenium": MessageLookupByLibrary.simpleMessage("Selenium"),
@@ -150,7 +156,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "soapUI": MessageLookupByLibrary.simpleMessage("SoapUI"),
         "soitecDates":
             MessageLookupByLibrary.simpleMessage("Sept. 2018 - Juin 2020"),
-        "soitecInfos": MessageLookupByLibrary.simpleMessage("Prochainement"),
+        "soitecInfos": MessageLookupByLibrary.simpleMessage(
+            "Création de nouvelles fonctionnalités et d’applications pour les automations de production :<br/>- Gestion des priorités,<br/>- Perfectionnement de l’expérience utilisateur,<br/>- Amélioration continue de l’existant.<br/>Interactions avec les clients internes."),
         "soitecTitle": MessageLookupByLibrary.simpleMessage("Soitec"),
         "sonarQube": MessageLookupByLibrary.simpleMessage("SonarQube"),
         "sourceTree": MessageLookupByLibrary.simpleMessage("Source Tree"),
@@ -171,7 +178,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "warningAlpha": MessageLookupByLibrary.simpleMessage(
             "Ce site est en version alpha, le développement est toujours en cours. Merci pour votre compréhension"),
         "webfDates": MessageLookupByLibrary.simpleMessage("Juin 2017"),
-        "webfInfos": MessageLookupByLibrary.simpleMessage("Prochainement"),
+        "webfInfos": MessageLookupByLibrary.simpleMessage(
+            "Développeuse PHP : Programmation d’un site web avec Symfony en utilisent Doctrine, MySQL, Twig & Bootstrap"),
         "webfTitle": MessageLookupByLibrary.simpleMessage("Web|Alternatif")
       };
 }

@@ -831,10 +831,10 @@ class S {
     );
   }
 
-  /// `Coming soon`
+  /// `Creation of new features and applications for production automations:<br/>- Priority management,<br/>- Enhancement of user experience,<br/>- Continuous improvement of existing systems.<br/>Interactions with internal clients.`
   String get soitecInfos {
     return Intl.message(
-      'Coming soon',
+      'Creation of new features and applications for production automations:<br/>- Priority management,<br/>- Enhancement of user experience,<br/>- Continuous improvement of existing systems.<br/>Interactions with internal clients.',
       name: 'soitecInfos',
       desc: '',
       args: [],
@@ -861,10 +861,10 @@ class S {
     );
   }
 
-  /// `During this 2 months internship in <tooltip id='Digital Application Services'>DAS</tooltip> within the service center of Grenoble, I had the opportunity to work on 2 different missions.<br/><br/>The first was a tablet application used by sales representatives at Roche Diabetes Care. It was a catalog enabling the placement of products and services orders, reserved for healthcare professionals. I contributed to the CCS part of the front end.<br/><br/>The second involved the implementation of a <tooltip id='Proof of concept'>PoC</tooltip> using the EPPlus library. The specifications were:<br/><lu><li>Create a new .Net Core web application,</li><li>Enable the creation of a new blank file or upload an existing file,</li><li>Allow modification of cell values, number of columns etc,</li><li>Ensure the code is generic so it can be used in other applications.</li></lu>`
+  /// `During this 2 months internship in <tooltip id='Digital Application Services'>DAS</tooltip> within the service center of Grenoble, I had the opportunity to work on 2 different missions.<br/><br/>The first was a tablet application used by sales representatives at Roche Diabetes Care. It was a catalog enabling the placement of products and services orders, reserved for healthcare professionals. I contributed to the CCS part of the front end.<br/><br/>The second involved the implementation of a <tooltip id='Proof of concept'>PoC</tooltip> using the EPPlus library. The specifications were:<br/><ul><li>Create a new .Net Core web application,</li><li>Enable the creation of a new blank file or upload an existing file,</li><li>Allow modification of cell values, number of columns etc,</li><li>Ensure the code is generic so it can be used in other applications.</li></ul>`
   String get econocomInfos {
     return Intl.message(
-      'During this 2 months internship in <tooltip id=\'Digital Application Services\'>DAS</tooltip> within the service center of Grenoble, I had the opportunity to work on 2 different missions.<br/><br/>The first was a tablet application used by sales representatives at Roche Diabetes Care. It was a catalog enabling the placement of products and services orders, reserved for healthcare professionals. I contributed to the CCS part of the front end.<br/><br/>The second involved the implementation of a <tooltip id=\'Proof of concept\'>PoC</tooltip> using the EPPlus library. The specifications were:<br/><lu><li>Create a new .Net Core web application,</li><li>Enable the creation of a new blank file or upload an existing file,</li><li>Allow modification of cell values, number of columns etc,</li><li>Ensure the code is generic so it can be used in other applications.</li></lu>',
+      'During this 2 months internship in <tooltip id=\'Digital Application Services\'>DAS</tooltip> within the service center of Grenoble, I had the opportunity to work on 2 different missions.<br/><br/>The first was a tablet application used by sales representatives at Roche Diabetes Care. It was a catalog enabling the placement of products and services orders, reserved for healthcare professionals. I contributed to the CCS part of the front end.<br/><br/>The second involved the implementation of a <tooltip id=\'Proof of concept\'>PoC</tooltip> using the EPPlus library. The specifications were:<br/><ul><li>Create a new .Net Core web application,</li><li>Enable the creation of a new blank file or upload an existing file,</li><li>Allow modification of cell values, number of columns etc,</li><li>Ensure the code is generic so it can be used in other applications.</li></ul>',
       name: 'econocomInfos',
       desc: '',
       args: [],
@@ -891,10 +891,10 @@ class S {
     );
   }
 
-  /// `Coming soon`
+  /// `PHP Developer: Developed a website using Symfony with Doctrine, MySQL, Twig, and Bootstrap.`
   String get webfInfos {
     return Intl.message(
-      'Coming soon',
+      'PHP Developer: Developed a website using Symfony with Doctrine, MySQL, Twig, and Bootstrap.',
       name: 'webfInfos',
       desc: '',
       args: [],
@@ -921,10 +921,10 @@ class S {
     );
   }
 
-  /// `Coming soon`
+  /// `HR Assistant / Accounting Assistant / International Affairs Assistant<br/>- Participated in job interviews<br/>- Communicated via email with global partner schools`
   String get gemInfos {
     return Intl.message(
-      'Coming soon',
+      'HR Assistant / Accounting Assistant / International Affairs Assistant<br/>- Participated in job interviews<br/>- Communicated via email with global partner schools',
       name: 'gemInfos',
       desc: '',
       args: [],
@@ -951,10 +951,10 @@ class S {
     );
   }
 
-  /// `Coming soon`
+  /// `Quality Assistant: Updated standards and guidelines`
   String get alatInfos {
     return Intl.message(
-      'Coming soon',
+      'Quality Assistant: Updated standards and guidelines',
       name: 'alatInfos',
       desc: '',
       args: [],
@@ -981,10 +981,10 @@ class S {
     );
   }
 
-  /// `Coming soon`
+  /// `Sales Assistant / Project Assistant<br/>- Created annual sales dashboards by product<br/>- Formatted and organized the project budget`
   String get esrfInfos {
     return Intl.message(
-      'Coming soon',
+      'Sales Assistant / Project Assistant<br/>- Created annual sales dashboards by product<br/>- Formatted and organized the project budget',
       name: 'esrfInfos',
       desc: '',
       args: [],
@@ -1011,10 +1011,10 @@ class S {
     );
   }
 
-  /// `Coming soon`
+  /// `Sales Assistant: Checked client inventories on SAP`
   String get rocheInfos {
     return Intl.message(
-      'Coming soon',
+      'Sales Assistant: Checked client inventories on SAP',
       name: 'rocheInfos',
       desc: '',
       args: [],
@@ -1041,10 +1041,10 @@ class S {
     );
   }
 
-  /// `Coming soon`
+  /// `Civil Registry Assistant`
   String get mairieInfos {
     return Intl.message(
-      'Coming soon',
+      'Civil Registry Assistant',
       name: 'mairieInfos',
       desc: '',
       args: [],
@@ -1201,10 +1201,10 @@ class S {
     );
   }
 
-  /// `Coming soon`
+  /// `Okami is a solo adventure game, taking place in Nippon, which is overrunned by demons. Thanks to the power of different “brush techniques” gathered throughout explorations, we can purify the land. I had the chance to play Okami on Switch, allowing me to draw with the Joy-cons, adding a new dimension to the game.`
   String get okami {
     return Intl.message(
-      'Coming soon',
+      'Okami is a solo adventure game, taking place in Nippon, which is overrunned by demons. Thanks to the power of different “brush techniques” gathered throughout explorations, we can purify the land. I had the chance to play Okami on Switch, allowing me to draw with the Joy-cons, adding a new dimension to the game.',
       name: 'okami',
       desc: '',
       args: [],

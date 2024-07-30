@@ -11,6 +11,8 @@ extension BuildContextExtensions on BuildContext {
   bool get orientation => mediaQuery.size.width > mediaQuery.size.height;
 }
 
+const mySpacer = SizedBox(height: 50);
+
 class HtmlText extends StatefulWidget {
   final String text;
   final Style? style;

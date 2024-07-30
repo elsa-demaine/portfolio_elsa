@@ -25,6 +25,7 @@ class _MyHobbiesPageState extends State<MyHobbies> {
                 TitleText(text: S.current.videoGames),
                 HtmlText(text: S.current.vgText),
                 const Carousel(),
+                mySpacer,
                 Row(
                   children: [
                     Expanded(

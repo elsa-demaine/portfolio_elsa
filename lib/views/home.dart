@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 TitleText(text: S.current.intro),
                 HtmlText(text: S.current.intro),
 
-                const SizedBox(height: 30),
+                mySpacer,
 
                 //#region Experiences
                 SkillsTable(skills: [
@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   visualStudio,
                 ]),
 
-                const SizedBox(height: 30),
+                mySpacer,
 
                 TitleText(text: S.current.experiences),
                 expDiv,
@@ -300,7 +300,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 //#endregion
 
-                const SizedBox(height: 30),
+                mySpacer,
 
                 //#region Diplomas
                 TitleText(text: S.current.diplomas),

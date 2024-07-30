@@ -305,7 +305,7 @@ extension HardSkillDisplay on State<SkillsTable> {
       const Divider(thickness: 1, color: myDarkGreen),
       Align(
         alignment: Alignment.topLeft,
-        child: Text(S.current.skillTitleTool),
+        child: Text(S.current.skillTitleTool, style: const TextStyle(color: Colors.black),),
       ),
       Wrap(
           spacing: 5,
@@ -315,7 +315,7 @@ extension HardSkillDisplay on State<SkillsTable> {
       const Divider(thickness: 1, color: myDarkGreen),
       Align(
         alignment: Alignment.topLeft,
-        child: Text(S.current.skillTitleOther),
+        child: Text(S.current.skillTitleOther, style: const TextStyle(color: Colors.black),),
       ),
       Wrap(
           spacing: 5,
