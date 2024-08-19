@@ -1,90 +1,92 @@
 import 'package:portfolio_elsa/all.dart';
 
-//a
-final agile = HardSkill(name: S.current.agile, type: SkillType.hard, subType: Subtype.other);
-final analysis = Skill(name: S.current.analysis, type: SkillType.soft);
-final androidStudio = HardSkill(name: S.current.androidStudio, type: SkillType.hard, subType: Subtype.tool);
-final aspNet = HardSkill(name: S.current.aspNet, type: SkillType.hard, subType: Subtype.tool);
-final attentionToDetail = Skill(name: S.current.attentionToDetail, type: SkillType.soft);
-final autonomy = Skill(name: S.current.autonomy, type: SkillType.soft);
+enum SkillType { hard, soft, mad }
+enum Subtype { language, tool, other }
+
+class SkillRepo {
+  //a
+  static HardSkill agile = HardSkill(name: (BuildContext context) => S.current.agile, type: SkillType.hard, subType: Subtype.other);
+  static Skill analysis = Skill(name: (BuildContext context) => S.current.analysis, type: SkillType.soft);
+  static HardSkill androidStudio = HardSkill(name: (BuildContext context) => S.current.androidStudio, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill aspNet = HardSkill(name: (BuildContext context) => S.current.aspNet, type: SkillType.hard, subType: Subtype.tool);
+  static Skill attentionToDetail = Skill(name: (BuildContext context) => S.current.attentionToDetail, type: SkillType.soft);
+  static Skill autonomy = Skill(name: (BuildContext context) => S.current.autonomy, type: SkillType.soft);
 //b
-final bilang = HardSkill(name: S.current.bilang, type: SkillType.hard, subType: Subtype.language);
-final bigPicture = Skill(name: S.current.bigPicture, type: SkillType.soft);
-final bootstrap = HardSkill(name: S.current.bootstrap, type: SkillType.hard, subType: Subtype.language,);
+  static HardSkill bilang = HardSkill(name: (BuildContext context) => S.current.bilang, type: SkillType.hard, subType: Subtype.language);
+  static Skill bigPicture = Skill(name: (BuildContext context) => S.current.bigPicture, type: SkillType.soft);
+  static HardSkill bootstrap = HardSkill(name: (BuildContext context) => S.current.bootstrap, type: SkillType.hard, subType: Subtype.language,);
 //c
-final cSharp = HardSkill(name: S.current.cSharp, type: SkillType.hard, subType: Subtype.language);
-final collaboration = Skill(name: S.current.collaboration, type: SkillType.soft);
-final communication = Skill(name: S.current.communication, type: SkillType.soft);
+  static HardSkill cSharp = HardSkill(name: (BuildContext context) => S.current.cSharp, type: SkillType.hard, subType: Subtype.language);
+  static Skill collaboration = Skill(name: (BuildContext context) => S.current.collaboration, type: SkillType.soft);
+  static Skill communication = Skill(name: (BuildContext context) => S.current.communication, type: SkillType.soft);
 //d
-final dart = HardSkill(name: S.current.dart, type: SkillType.hard, subType: Subtype.language);
-final doctrine = HardSkill(name: S.current.doctrine, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill dart = HardSkill(name: (BuildContext context) => S.current.dart, type: SkillType.hard, subType: Subtype.language);
+  static HardSkill doctrine = HardSkill(name: (BuildContext context) => S.current.doctrine, type: SkillType.hard, subType: Subtype.tool);
 //e
 //f
-final flutter = HardSkill(name: S.current.flutter, type: SkillType.hard, subType: Subtype.language);
+  static HardSkill flutter = HardSkill(name: (BuildContext context) => S.current.flutter, type: SkillType.hard, subType: Subtype.language);
 //g
-final gherkin = HardSkill(name: S.current.gherkin, type: SkillType.hard, subType: Subtype.language);
-final github = HardSkill(name: S.current.github, type: SkillType.hard, subType: Subtype.tool);
-final gitlab = HardSkill(name: S.current.gitlab, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill gherkin = HardSkill(name: (BuildContext context) => S.current.gherkin, type: SkillType.hard, subType: Subtype.language);
+  static HardSkill github = HardSkill(name: (BuildContext context) => S.current.github, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill gitlab = HardSkill(name: (BuildContext context) => S.current.gitlab, type: SkillType.hard, subType: Subtype.tool);
 //h
 //i
-final ionos = HardSkill(name: S.current.ionos, type: SkillType.hard, subType: Subtype.tool);
-final initiative = Skill(name: S.current.initiative, type: SkillType.soft);
+  static HardSkill ionos = HardSkill(name: (BuildContext context) => S.current.ionos, type: SkillType.hard, subType: Subtype.tool);
+  static Skill initiative = Skill(name: (BuildContext context) => S.current.initiative, type: SkillType.soft);
 //j
-final jira = HardSkill(name: S.current.jira, type: SkillType.hard, subType: Subtype.tool);
-final jQuery = HardSkill(name: S.current.jQuery, type: SkillType.hard, subType: Subtype.language);
+  static HardSkill jira = HardSkill(name: (BuildContext context) => S.current.jira, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill jQuery = HardSkill(name: (BuildContext context) => S.current.jQuery, type: SkillType.hard, subType: Subtype.language);
 //k
-final kanban = HardSkill(name: S.current.kanban, type: SkillType.hard, subType: Subtype.other);
-final kind = Skill(name: S.current.kind, type: SkillType.soft);
+  static HardSkill kanban = HardSkill(name: (BuildContext context) => S.current.kanban, type: SkillType.hard, subType: Subtype.other);
+  static Skill kind = Skill(name: (BuildContext context) => S.current.kind, type: SkillType.soft);
 //l
-final log4Net = HardSkill(name: S.current.log4Net, type: SkillType.hard, subType: Subtype.tool);
-final motivated = Skill(name: S.current.motivated, type: SkillType.soft);
+  static HardSkill log4Net = HardSkill(name: (BuildContext context) => S.current.log4Net, type: SkillType.hard, subType: Subtype.tool);
+  static Skill motivated = Skill(name: (BuildContext context) => S.current.motivated, type: SkillType.soft);
 //m
-final mvc = HardSkill(name: S.current.mvc, type: SkillType.hard, subType: Subtype.other);
-final mySql = HardSkill(name: S.current.mySql, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill mvc = HardSkill(name: (BuildContext context) => S.current.mvc, type: SkillType.hard, subType: Subtype.other);
+  static HardSkill mySql = HardSkill(name: (BuildContext context) => S.current.mySql, type: SkillType.hard, subType: Subtype.tool);
 //n
-final netCore = HardSkill(name: S.current.netCore, type: SkillType.hard, subType: Subtype.tool);
-final netStandard = HardSkill(name: S.current.netStandard, type: SkillType.hard, subType: Subtype.tool);
-final ntiers = HardSkill(name: S.current.ntiers, type: SkillType.hard, subType: Subtype.other);
+  static HardSkill netCore = HardSkill(name: (BuildContext context) => S.current.netCore, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill netStandard = HardSkill(name: (BuildContext context) => S.current.netStandard, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill ntiers = HardSkill(name: (BuildContext context) => S.current.ntiers, type: SkillType.hard, subType: Subtype.other);
 //o
-final oracle = HardSkill(name: S.current.oracle, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill oracle = HardSkill(name: (BuildContext context) => S.current.oracle, type: SkillType.hard, subType: Subtype.tool);
 //p
-final php = HardSkill(name: S.current.php, type: SkillType.hard, subType: Subtype.language);
-final phpStorm = HardSkill(name: S.current.phpStorm, type: SkillType.hard, subType: Subtype.tool);
-final proactive = Skill(name: S.current.proactive, type: SkillType.soft);
-final proposeInitiatives = Skill(name: S.current.proposeInitiatives, type: SkillType.soft);
-final punctuality = Skill(name: S.current.punctuality, type: SkillType.soft);
+  static HardSkill php = HardSkill(name: (BuildContext context) => S.current.php, type: SkillType.hard, subType: Subtype.language);
+  static HardSkill phpStorm = HardSkill(name: (BuildContext context) => S.current.phpStorm, type: SkillType.hard, subType: Subtype.tool);
+  static Skill proactive = Skill(name: (BuildContext context) => S.current.proactive, type: SkillType.soft);
+  static Skill proposeInitiatives = Skill(name: (BuildContext context) => S.current.proposeInitiatives, type: SkillType.soft);
+  static Skill punctuality = Skill(name: (BuildContext context) => S.current.punctuality, type: SkillType.soft);
 //q
 //u
 //r
-final razor = HardSkill(name: S.current.razor, type: SkillType.hard, subType: Subtype.language);
+  static HardSkill razor = HardSkill(name: (BuildContext context) => S.current.razor, type: SkillType.hard, subType: Subtype.language);
 //s
-final scrum = HardSkill(name: S.current.scrum, type: SkillType.hard, subType: Subtype.other);
-final selenium = HardSkill(name: S.current.selenium, type: SkillType.hard, subType: Subtype.language);
-final soapUI = HardSkill(name: S.current.soapUI, type: SkillType.hard, subType: Subtype.tool);
-final sonarQube = HardSkill(name: S.current.sonarQube, type: SkillType.hard, subType: Subtype.tool);
-final sourceTree = HardSkill(name: S.current.sourceTree, type: SkillType.hard, subType: Subtype.tool);
-final sql = HardSkill(name: S.current.sql, type: SkillType.hard, subType: Subtype.language);
-final symfony = HardSkill(name: S.current.symfony, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill scrum = HardSkill(name: (BuildContext context) => S.current.scrum, type: SkillType.hard, subType: Subtype.other);
+  static HardSkill selenium = HardSkill(name: (BuildContext context) => S.current.selenium, type: SkillType.hard, subType: Subtype.language);
+  static HardSkill soapUI = HardSkill(name: (BuildContext context) => S.current.soapUI, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill sonarQube = HardSkill(name: (BuildContext context) => S.current.sonarQube, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill sourceTree = HardSkill(name: (BuildContext context) => S.current.sourceTree, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill sql = HardSkill(name: (BuildContext context) => S.current.sql, type: SkillType.hard, subType: Subtype.language);
+  static HardSkill symfony = HardSkill(name: (BuildContext context) => S.current.symfony, type: SkillType.hard, subType: Subtype.tool);
 //t
-final teams = HardSkill(name: S.current.teams, type: SkillType.hard, subType: Subtype.tool);
-final teamwork = Skill(name: S.current.teamwork, type: SkillType.soft);
-final tenacious = Skill(name: S.current.tenacious, type: SkillType.soft);
-final timeManagement = Skill(name: S.current.timeManagement, type: SkillType.soft);
-final trello = HardSkill(name: S.current.trello, type: SkillType.hard, subType: Subtype.tool);
-final twig = HardSkill(name: S.current.twig, type: SkillType.hard, subType: Subtype.language);
+  static HardSkill teams = HardSkill(name: (BuildContext context) => S.current.teams, type: SkillType.hard, subType: Subtype.tool);
+  static Skill teamwork = Skill(name: (BuildContext context) => S.current.teamwork, type: SkillType.soft);
+  static Skill tenacious = Skill(name: (BuildContext context) => S.current.tenacious, type: SkillType.soft);
+  static Skill timeManagement = Skill(name: (BuildContext context) => S.current.timeManagement, type: SkillType.soft);
+  static HardSkill trello = HardSkill(name: (BuildContext context) => S.current.trello, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill twig = HardSkill(name: (BuildContext context) => S.current.twig, type: SkillType.hard, subType: Subtype.language);
 //u
 //v
 //w
 //x
 //y
-final visualStudio = HardSkill(name: S.current.visualStudio, type: SkillType.hard, subType: Subtype.tool);
+  static HardSkill visualStudio = HardSkill(name: (BuildContext context) => S.current.visualStudio, type: SkillType.hard, subType: Subtype.tool);
 //z
-
-enum SkillType { hard, soft, mad }
-enum Subtype { language, tool, other}
+}
 
 class Skill extends StatelessWidget{
-  final String name;
+  final String Function(BuildContext context) name;
   final SkillType type;
 
   const Skill({
@@ -103,7 +105,7 @@ class Skill extends StatelessWidget{
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: Text(name, textAlign: TextAlign.center),
+        child: Text(name(context), textAlign: TextAlign.center),
       ),
     );
   }
